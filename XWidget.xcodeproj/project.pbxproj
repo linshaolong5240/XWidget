@@ -1,0 +1,1114 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44B8584D27F5CAF200436B55 /* XWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8583D27F5CAF200436B55 /* XWidgetApp.swift */; };
+		44B8584E27F5CAF200436B55 /* XWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8583D27F5CAF200436B55 /* XWidgetApp.swift */; };
+		44B8584F27F5CAF200436B55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8583E27F5CAF200436B55 /* ContentView.swift */; };
+		44B8585027F5CAF200436B55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8583E27F5CAF200436B55 /* ContentView.swift */; };
+		44B8585127F5CAF200436B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B8583F27F5CAF200436B55 /* Assets.xcassets */; };
+		44B8585227F5CAF200436B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B8583F27F5CAF200436B55 /* Assets.xcassets */; };
+		44B8587B27F5CB5900436B55 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B8587A27F5CB5900436B55 /* Intents.framework */; };
+		44B8587E27F5CB5900436B55 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8587D27F5CB5900436B55 /* IntentHandler.swift */; };
+		44B8588227F5CB5900436B55 /* Intent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44B8587927F5CB5900436B55 /* Intent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		44B8588B27F5CBB400436B55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B8586127F5CB3900436B55 /* WidgetKit.framework */; };
+		44B8588C27F5CBB400436B55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B8586327F5CB3900436B55 /* SwiftUI.framework */; };
+		44B8588F27F5CBB400436B55 /* XWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8588E27F5CBB400436B55 /* XWidget.swift */; };
+		44B8589227F5CBB500436B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B8589127F5CBB500436B55 /* Assets.xcassets */; };
+		44B8589427F5CBB500436B55 /* XWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 44B8589027F5CBB400436B55 /* XWidget.intentdefinition */; };
+		44B8589527F5CBB500436B55 /* XWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 44B8589027F5CBB400436B55 /* XWidget.intentdefinition */; };
+		44B8589827F5CBB500436B55 /* XWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44B8588A27F5CBB400436B55 /* XWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		44B8589E27F5CDAB00436B55 /* XWAppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8589D27F5CDAB00436B55 /* XWAppAction.swift */; };
+		44B8589F27F5CDAB00436B55 /* XWAppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8589D27F5CDAB00436B55 /* XWAppAction.swift */; };
+		44B858A127F5CDE900436B55 /* XWAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A027F5CDE900436B55 /* XWAppError.swift */; };
+		44B858A227F5CDE900436B55 /* XWAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A027F5CDE900436B55 /* XWAppError.swift */; };
+		44B858A427F5CE9300436B55 /* XWAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A327F5CE9300436B55 /* XWAppState.swift */; };
+		44B858A527F5CE9300436B55 /* XWAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A327F5CE9300436B55 /* XWAppState.swift */; };
+		44B858A827F5CEDC00436B55 /* XWUserStoregeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */; };
+		44B858A927F5CEDC00436B55 /* XWUserStoregeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */; };
+		44B858AB27F5CF4E00436B55 /* XWAppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858AA27F5CF4E00436B55 /* XWAppCommand.swift */; };
+		44B858AC27F5CF4E00436B55 /* XWAppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858AA27F5CF4E00436B55 /* XWAppCommand.swift */; };
+		44B858AE27F5CF5A00436B55 /* XWStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858AD27F5CF5A00436B55 /* XWStore.swift */; };
+		44B858AF27F5CF5A00436B55 /* XWStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858AD27F5CF5A00436B55 /* XWStore.swift */; };
+		44B858B227F5CFD400436B55 /* XWWidgetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */; };
+		44B858B327F5CFD400436B55 /* XWWidgetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */; };
+		44B858B527F5CFFC00436B55 /* XWScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */; };
+		44B858B627F5CFFC00436B55 /* XWScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */; };
+		44B858B827F5D03600436B55 /* XWWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B727F5D03600436B55 /* XWWidgetEntry.swift */; };
+		44B858B927F5D03600436B55 /* XWWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B727F5D03600436B55 /* XWWidgetEntry.swift */; };
+		44B858BB27F5D05900436B55 /* XWWidgetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */; };
+		44B858BC27F5D05900436B55 /* XWWidgetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */; };
+		44B858BE27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */; };
+		44B858BF27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */; };
+		44B858C127F5D09900436B55 /* XWColorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C027F5D09900436B55 /* XWColorWrapper.swift */; };
+		44B858C227F5D09900436B55 /* XWColorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C027F5D09900436B55 /* XWColorWrapper.swift */; };
+		44B858C427F5D0C900436B55 /* XWImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C327F5D0C900436B55 /* XWImageHelper.swift */; };
+		44B858C527F5D0C900436B55 /* XWImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C327F5D0C900436B55 /* XWImageHelper.swift */; };
+		44B858C727F5D0ED00436B55 /* XWCrossHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C627F5D0ED00436B55 /* XWCrossHelper.swift */; };
+		44B858C827F5D0ED00436B55 /* XWCrossHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C627F5D0ED00436B55 /* XWCrossHelper.swift */; };
+		44B858CA27F5D11800436B55 /* XWFontWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C927F5D11800436B55 /* XWFontWrapper.swift */; };
+		44B858CB27F5D11800436B55 /* XWFontWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C927F5D11800436B55 /* XWFontWrapper.swift */; };
+		44B858CD27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858CC27F5D19500436B55 /* XWFileManagerHelper.swift */; };
+		44B858CE27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858CC27F5D19500436B55 /* XWFileManagerHelper.swift */; };
+		44B858D027F5D1C100436B55 /* XWBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858CF27F5D1C100436B55 /* XWBundleHelper.swift */; };
+		44B858D127F5D1C100436B55 /* XWBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858CF27F5D1C100436B55 /* XWBundleHelper.swift */; };
+		44B858D327F5D1F000436B55 /* XWWidgetKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D227F5D1F000436B55 /* XWWidgetKind.swift */; };
+		44B858D427F5D1F000436B55 /* XWWidgetKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D227F5D1F000436B55 /* XWWidgetKind.swift */; };
+		44B858D627F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */; };
+		44B858D727F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */; };
+		44B858D927F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D827F5D2BF00436B55 /* XWCryptoHelper.swift */; };
+		44B858DA27F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D827F5D2BF00436B55 /* XWCryptoHelper.swift */; };
+		44B858DC27F5D30100436B55 /* XWidgetKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858DB27F5D30100436B55 /* XWidgetKind.swift */; };
+		44B858DD27F5D30100436B55 /* XWidgetKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858DB27F5D30100436B55 /* XWidgetKind.swift */; };
+		44B858E127F5D35D00436B55 /* XWCalendarWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E027F5D35D00436B55 /* XWCalendarWidgetView.swift */; };
+		44B858E227F5D35D00436B55 /* XWCalendarWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E027F5D35D00436B55 /* XWCalendarWidgetView.swift */; };
+		44B858E427F5D38600436B55 /* XWCalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E327F5D38600436B55 /* XWCalendarHelper.swift */; };
+		44B858E527F5D38600436B55 /* XWCalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E327F5D38600436B55 /* XWCalendarHelper.swift */; };
+		44B858E727F5D42200436B55 /* XWClockWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E627F5D42200436B55 /* XWClockWidgetView.swift */; };
+		44B858E827F5D42200436B55 /* XWClockWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E627F5D42200436B55 /* XWClockWidgetView.swift */; };
+		44B858EA27F5D44200436B55 /* XWGuideWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */; };
+		44B858EB27F5D44200436B55 /* XWGuideWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */; };
+		44B858ED27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */; };
+		44B858EE27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */; };
+		44B858F027F5D49F00436B55 /* XWAnyWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */; };
+		44B858F127F5D49F00436B55 /* XWAnyWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */; };
+		44B858F327F5D4DF00436B55 /* XWWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F227F5D4DF00436B55 /* XWWidgetView.swift */; };
+		44B858F427F5D4DF00436B55 /* XWWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F227F5D4DF00436B55 /* XWWidgetView.swift */; };
+		44B858F627F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F527F5D50B00436B55 /* XWAnalogClockHelper.swift */; };
+		44B858F727F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F527F5D50B00436B55 /* XWAnalogClockHelper.swift */; };
+		44B858F927F5D53000436B55 /* XWCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F827F5D53000436B55 /* XWCalendarView.swift */; };
+		44B858FA27F5D53000436B55 /* XWCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F827F5D53000436B55 /* XWCalendarView.swift */; };
+		44B858FC27F5D5B000436B55 /* XWWidgetHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */; };
+		44B858FD27F5D5B000436B55 /* XWWidgetHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */; };
+		44B858FF27F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858FE27F5D5CF00436B55 /* XWMyWidgetVeiw.swift */; };
+		44B8590027F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858FE27F5D5CF00436B55 /* XWMyWidgetVeiw.swift */; };
+		44B8590327F5D61300436B55 /* XWWidgetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590227F5D61300436B55 /* XWWidgetEditView.swift */; };
+		44B8590427F5D61300436B55 /* XWWidgetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590227F5D61300436B55 /* XWWidgetEditView.swift */; };
+		44B8590627F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590527F5D65300436B55 /* XWWidgetTransparentSettingView.swift */; };
+		44B8590727F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590527F5D65300436B55 /* XWWidgetTransparentSettingView.swift */; };
+		44B8590927F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590827F5D67600436B55 /* XWWidgetFamilyPicker.swift */; };
+		44B8590A27F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590827F5D67600436B55 /* XWWidgetFamilyPicker.swift */; };
+		44B8590C27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590B27F5D69500436B55 /* XWWidgetBackgroundPicker.swift */; };
+		44B8590D27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590B27F5D69500436B55 /* XWWidgetBackgroundPicker.swift */; };
+		44B8590F27F5D6B100436B55 /* XWWidgetPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590E27F5D6B100436B55 /* XWWidgetPhotoPicker.swift */; };
+		44B8591027F5D6B100436B55 /* XWWidgetPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8590E27F5D6B100436B55 /* XWWidgetPhotoPicker.swift */; };
+		44B8591227F5D6E100436B55 /* XWWidgetBorderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591127F5D6E100436B55 /* XWWidgetBorderPicker.swift */; };
+		44B8591327F5D6E100436B55 /* XWWidgetBorderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591127F5D6E100436B55 /* XWWidgetBorderPicker.swift */; };
+		44B8591527F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591427F5D6FF00436B55 /* XWWidgetFontColorPicker.swift */; };
+		44B8591627F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591427F5D6FF00436B55 /* XWWidgetFontColorPicker.swift */; };
+		44B8591827F5D7F200436B55 /* XWImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591727F5D7F200436B55 /* XWImagePicker.swift */; };
+		44B8591927F5D7F200436B55 /* XWImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591727F5D7F200436B55 /* XWImagePicker.swift */; };
+		44B8591B27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */; };
+		44B8591C27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */; };
+		44B8591E27F5D86300436B55 /* SHWidgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */; };
+		44B8591F27F5D86300436B55 /* SHWidgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */; };
+		44B8592327F5D92C00436B55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44B8592627F5D92C00436B55 /* Localizable.strings */; };
+		44B8592427F5D92C00436B55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44B8592627F5D92C00436B55 /* Localizable.strings */; };
+		44B8592A27F5DA2A00436B55 /* Color+XW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8592927F5DA2A00436B55 /* Color+XW.swift */; };
+		44B8592B27F5DA2A00436B55 /* Color+XW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8592927F5DA2A00436B55 /* Color+XW.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44B8588027F5CB5900436B55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44B8583827F5CAF200436B55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44B8587827F5CB5900436B55;
+			remoteInfo = Intent;
+		};
+		44B8589627F5CBB500436B55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44B8583827F5CAF200436B55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44B8588927F5CBB400436B55;
+			remoteInfo = XWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44B8587427F5CB3900436B55 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				44B8588227F5CB5900436B55 /* Intent.appex in Embed App Extensions */,
+				44B8589827F5CBB500436B55 /* XWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		44B8583D27F5CAF200436B55 /* XWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWidgetApp.swift; sourceTree = "<group>"; };
+		44B8583E27F5CAF200436B55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		44B8583F27F5CAF200436B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44B8584427F5CAF200436B55 /* XWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B8584A27F5CAF200436B55 /* XWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B8584C27F5CAF200436B55 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		44B8586127F5CB3900436B55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		44B8586327F5CB3900436B55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		44B8587927F5CB5900436B55 /* Intent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Intent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B8587A27F5CB5900436B55 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		44B8587D27F5CB5900436B55 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		44B8587F27F5CB5900436B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B8588A27F5CBB400436B55 /* XWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B8588E27F5CBB400436B55 /* XWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWidget.swift; sourceTree = "<group>"; };
+		44B8589027F5CBB400436B55 /* XWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = XWidget.intentdefinition; sourceTree = "<group>"; };
+		44B8589127F5CBB500436B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44B8589327F5CBB500436B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B8589D27F5CDAB00436B55 /* XWAppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAppAction.swift; sourceTree = "<group>"; };
+		44B858A027F5CDE900436B55 /* XWAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAppError.swift; sourceTree = "<group>"; };
+		44B858A327F5CE9300436B55 /* XWAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAppState.swift; sourceTree = "<group>"; };
+		44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWUserStoregeHelper.swift; sourceTree = "<group>"; };
+		44B858AA27F5CF4E00436B55 /* XWAppCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAppCommand.swift; sourceTree = "<group>"; };
+		44B858AD27F5CF5A00436B55 /* XWStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWStore.swift; sourceTree = "<group>"; };
+		44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetHelper.swift; sourceTree = "<group>"; };
+		44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWScreenHelper.swift; sourceTree = "<group>"; };
+		44B858B727F5D03600436B55 /* XWWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetEntry.swift; sourceTree = "<group>"; };
+		44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetStyle.swift; sourceTree = "<group>"; };
+		44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetTheme.swift; sourceTree = "<group>"; };
+		44B858C027F5D09900436B55 /* XWColorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWColorWrapper.swift; sourceTree = "<group>"; };
+		44B858C327F5D0C900436B55 /* XWImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImageHelper.swift; sourceTree = "<group>"; };
+		44B858C627F5D0ED00436B55 /* XWCrossHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCrossHelper.swift; sourceTree = "<group>"; };
+		44B858C927F5D11800436B55 /* XWFontWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWFontWrapper.swift; sourceTree = "<group>"; };
+		44B858CC27F5D19500436B55 /* XWFileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWFileManagerHelper.swift; sourceTree = "<group>"; };
+		44B858CF27F5D1C100436B55 /* XWBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWBundleHelper.swift; sourceTree = "<group>"; };
+		44B858D227F5D1F000436B55 /* XWWidgetKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetKind.swift; sourceTree = "<group>"; };
+		44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetTransparentConfiguration.swift; sourceTree = "<group>"; };
+		44B858D827F5D2BF00436B55 /* XWCryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCryptoHelper.swift; sourceTree = "<group>"; };
+		44B858DB27F5D30100436B55 /* XWidgetKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWidgetKind.swift; sourceTree = "<group>"; };
+		44B858E027F5D35D00436B55 /* XWCalendarWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCalendarWidgetView.swift; sourceTree = "<group>"; };
+		44B858E327F5D38600436B55 /* XWCalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCalendarHelper.swift; sourceTree = "<group>"; };
+		44B858E627F5D42200436B55 /* XWClockWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWClockWidgetView.swift; sourceTree = "<group>"; };
+		44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWGuideWidgetView.swift; sourceTree = "<group>"; };
+		44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWPhotoWidgetView.swift; sourceTree = "<group>"; };
+		44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAnyWidgetView.swift; sourceTree = "<group>"; };
+		44B858F227F5D4DF00436B55 /* XWWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetView.swift; sourceTree = "<group>"; };
+		44B858F527F5D50B00436B55 /* XWAnalogClockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAnalogClockHelper.swift; sourceTree = "<group>"; };
+		44B858F827F5D53000436B55 /* XWCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCalendarView.swift; sourceTree = "<group>"; };
+		44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetHomeView.swift; sourceTree = "<group>"; };
+		44B858FE27F5D5CF00436B55 /* XWMyWidgetVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMyWidgetVeiw.swift; sourceTree = "<group>"; };
+		44B8590227F5D61300436B55 /* XWWidgetEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetEditView.swift; sourceTree = "<group>"; };
+		44B8590527F5D65300436B55 /* XWWidgetTransparentSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetTransparentSettingView.swift; sourceTree = "<group>"; };
+		44B8590827F5D67600436B55 /* XWWidgetFamilyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetFamilyPicker.swift; sourceTree = "<group>"; };
+		44B8590B27F5D69500436B55 /* XWWidgetBackgroundPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetBackgroundPicker.swift; sourceTree = "<group>"; };
+		44B8590E27F5D6B100436B55 /* XWWidgetPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetPhotoPicker.swift; sourceTree = "<group>"; };
+		44B8591127F5D6E100436B55 /* XWWidgetBorderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetBorderPicker.swift; sourceTree = "<group>"; };
+		44B8591427F5D6FF00436B55 /* XWWidgetFontColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetFontColorPicker.swift; sourceTree = "<group>"; };
+		44B8591727F5D7F200436B55 /* XWImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImagePicker.swift; sourceTree = "<group>"; };
+		44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSwiftUIHelper.swift; sourceTree = "<group>"; };
+		44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHWidgetCategory.swift; sourceTree = "<group>"; };
+		44B8592527F5D92C00436B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		44B8592727F5D92C00436B55 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		44B8592927F5DA2A00436B55 /* Color+XW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+XW.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44B8584127F5CAF200436B55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8584727F5CAF200436B55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8587627F5CB5900436B55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B8587B27F5CB5900436B55 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8588727F5CBB400436B55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B8588C27F5CBB400436B55 /* SwiftUI.framework in Frameworks */,
+				44B8588B27F5CBB400436B55 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44B8583727F5CAF200436B55 = {
+			isa = PBXGroup;
+			children = (
+				44B8583C27F5CAF200436B55 /* Shared */,
+				44B8584B27F5CAF200436B55 /* macOS */,
+				44B8588D27F5CBB400436B55 /* XWidget */,
+				44B8587C27F5CB5900436B55 /* Intent */,
+				44B8586027F5CB3900436B55 /* Frameworks */,
+				44B8584527F5CAF200436B55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44B8583C27F5CAF200436B55 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				44B8592827F5DA1600436B55 /* Extension */,
+				44B8583E27F5CAF200436B55 /* ContentView.swift */,
+				44B8583D27F5CAF200436B55 /* XWidgetApp.swift */,
+				44B8583F27F5CAF200436B55 /* Assets.xcassets */,
+				44B858A627F5CECC00436B55 /* Helper */,
+				44B8592627F5D92C00436B55 /* Localizable.strings */,
+				44B858B027F5CFAB00436B55 /* Model */,
+				44B8589C27F5CCF300436B55 /* State */,
+				44B858DE27F5D33100436B55 /* View */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		44B8584527F5CAF200436B55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44B8584427F5CAF200436B55 /* XWidget.app */,
+				44B8584A27F5CAF200436B55 /* XWidget.app */,
+				44B8587927F5CB5900436B55 /* Intent.appex */,
+				44B8588A27F5CBB400436B55 /* XWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44B8584B27F5CAF200436B55 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				44B8584C27F5CAF200436B55 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		44B8586027F5CB3900436B55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44B8586127F5CB3900436B55 /* WidgetKit.framework */,
+				44B8586327F5CB3900436B55 /* SwiftUI.framework */,
+				44B8587A27F5CB5900436B55 /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44B8587C27F5CB5900436B55 /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				44B8587D27F5CB5900436B55 /* IntentHandler.swift */,
+				44B8587F27F5CB5900436B55 /* Info.plist */,
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		44B8588D27F5CBB400436B55 /* XWidget */ = {
+			isa = PBXGroup;
+			children = (
+				44B8588E27F5CBB400436B55 /* XWidget.swift */,
+				44B8589027F5CBB400436B55 /* XWidget.intentdefinition */,
+				44B8589127F5CBB500436B55 /* Assets.xcassets */,
+				44B8589327F5CBB500436B55 /* Info.plist */,
+			);
+			path = XWidget;
+			sourceTree = "<group>";
+		};
+		44B8589C27F5CCF300436B55 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				44B8589D27F5CDAB00436B55 /* XWAppAction.swift */,
+				44B858AA27F5CF4E00436B55 /* XWAppCommand.swift */,
+				44B858A027F5CDE900436B55 /* XWAppError.swift */,
+				44B858A327F5CE9300436B55 /* XWAppState.swift */,
+				44B858AD27F5CF5A00436B55 /* XWStore.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		44B858A627F5CECC00436B55 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				44B858C627F5D0ED00436B55 /* XWCrossHelper.swift */,
+				44B858CC27F5D19500436B55 /* XWFileManagerHelper.swift */,
+				44B858C327F5D0C900436B55 /* XWImageHelper.swift */,
+				44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */,
+				44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */,
+				44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */,
+				44B858CF27F5D1C100436B55 /* XWBundleHelper.swift */,
+				44B858D827F5D2BF00436B55 /* XWCryptoHelper.swift */,
+				44B858E327F5D38600436B55 /* XWCalendarHelper.swift */,
+				44B858F527F5D50B00436B55 /* XWAnalogClockHelper.swift */,
+				44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		44B858B027F5CFAB00436B55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44B858C027F5D09900436B55 /* XWColorWrapper.swift */,
+				44B858C927F5D11800436B55 /* XWFontWrapper.swift */,
+				44B858B727F5D03600436B55 /* XWWidgetEntry.swift */,
+				44B858D227F5D1F000436B55 /* XWWidgetKind.swift */,
+				44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */,
+				44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */,
+				44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */,
+				44B858DB27F5D30100436B55 /* XWidgetKind.swift */,
+				44B858F227F5D4DF00436B55 /* XWWidgetView.swift */,
+				44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44B858DE27F5D33100436B55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44B8590127F5D5F100436B55 /* Picker */,
+				44B858DF27F5D33A00436B55 /* Widget */,
+				44B858F827F5D53000436B55 /* XWCalendarView.swift */,
+				44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */,
+				44B858FE27F5D5CF00436B55 /* XWMyWidgetVeiw.swift */,
+				44B8590227F5D61300436B55 /* XWWidgetEditView.swift */,
+				44B8590527F5D65300436B55 /* XWWidgetTransparentSettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44B858DF27F5D33A00436B55 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				44B858E027F5D35D00436B55 /* XWCalendarWidgetView.swift */,
+				44B858E627F5D42200436B55 /* XWClockWidgetView.swift */,
+				44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */,
+				44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */,
+				44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		44B8590127F5D5F100436B55 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				44B8590827F5D67600436B55 /* XWWidgetFamilyPicker.swift */,
+				44B8590B27F5D69500436B55 /* XWWidgetBackgroundPicker.swift */,
+				44B8590E27F5D6B100436B55 /* XWWidgetPhotoPicker.swift */,
+				44B8591127F5D6E100436B55 /* XWWidgetBorderPicker.swift */,
+				44B8591427F5D6FF00436B55 /* XWWidgetFontColorPicker.swift */,
+				44B8591727F5D7F200436B55 /* XWImagePicker.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		44B8592827F5DA1600436B55 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				44B8592927F5DA2A00436B55 /* Color+XW.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44B8584327F5CAF200436B55 /* XWidget (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44B8585527F5CAF200436B55 /* Build configuration list for PBXNativeTarget "XWidget (iOS)" */;
+			buildPhases = (
+				44B8584027F5CAF200436B55 /* Sources */,
+				44B8584127F5CAF200436B55 /* Frameworks */,
+				44B8584227F5CAF200436B55 /* Resources */,
+				44B8587427F5CB3900436B55 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44B8588127F5CB5900436B55 /* PBXTargetDependency */,
+				44B8589727F5CBB500436B55 /* PBXTargetDependency */,
+			);
+			name = "XWidget (iOS)";
+			productName = "XWidget (iOS)";
+			productReference = 44B8584427F5CAF200436B55 /* XWidget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44B8584927F5CAF200436B55 /* XWidget (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44B8585827F5CAF200436B55 /* Build configuration list for PBXNativeTarget "XWidget (macOS)" */;
+			buildPhases = (
+				44B8584627F5CAF200436B55 /* Sources */,
+				44B8584727F5CAF200436B55 /* Frameworks */,
+				44B8584827F5CAF200436B55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XWidget (macOS)";
+			productName = "XWidget (macOS)";
+			productReference = 44B8584A27F5CAF200436B55 /* XWidget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44B8587827F5CB5900436B55 /* Intent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44B8588327F5CB5900436B55 /* Build configuration list for PBXNativeTarget "Intent" */;
+			buildPhases = (
+				44B8587527F5CB5900436B55 /* Sources */,
+				44B8587627F5CB5900436B55 /* Frameworks */,
+				44B8587727F5CB5900436B55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Intent;
+			productName = Intent;
+			productReference = 44B8587927F5CB5900436B55 /* Intent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		44B8588927F5CBB400436B55 /* XWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44B8589927F5CBB500436B55 /* Build configuration list for PBXNativeTarget "XWidgetExtension" */;
+			buildPhases = (
+				44B8588627F5CBB400436B55 /* Sources */,
+				44B8588727F5CBB400436B55 /* Frameworks */,
+				44B8588827F5CBB400436B55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XWidgetExtension;
+			productName = XWidgetExtension;
+			productReference = 44B8588A27F5CBB400436B55 /* XWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44B8583827F5CAF200436B55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				ORGANIZATIONNAME = com.teenloong.com;
+				TargetAttributes = {
+					44B8584327F5CAF200436B55 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					44B8584927F5CAF200436B55 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					44B8587827F5CB5900436B55 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					44B8588927F5CBB400436B55 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 44B8583B27F5CAF200436B55 /* Build configuration list for PBXProject "XWidget" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 44B8583727F5CAF200436B55;
+			productRefGroup = 44B8584527F5CAF200436B55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44B8584327F5CAF200436B55 /* XWidget (iOS) */,
+				44B8584927F5CAF200436B55 /* XWidget (macOS) */,
+				44B8588927F5CBB400436B55 /* XWidgetExtension */,
+				44B8587827F5CB5900436B55 /* Intent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44B8584227F5CAF200436B55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B8585127F5CAF200436B55 /* Assets.xcassets in Resources */,
+				44B8592327F5D92C00436B55 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8584827F5CAF200436B55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B8585227F5CAF200436B55 /* Assets.xcassets in Resources */,
+				44B8592427F5D92C00436B55 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8587727F5CB5900436B55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8588827F5CBB400436B55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B8589227F5CBB500436B55 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44B8584027F5CAF200436B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B858FF27F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */,
+				44B858C427F5D0C900436B55 /* XWImageHelper.swift in Sources */,
+				44B858F627F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */,
+				44B858B527F5CFFC00436B55 /* XWScreenHelper.swift in Sources */,
+				44B858EA27F5D44200436B55 /* XWGuideWidgetView.swift in Sources */,
+				44B858FC27F5D5B000436B55 /* XWWidgetHomeView.swift in Sources */,
+				44B858D927F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
+				44B858ED27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
+				44B858BB27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
+				44B858A427F5CE9300436B55 /* XWAppState.swift in Sources */,
+				44B858F027F5D49F00436B55 /* XWAnyWidgetView.swift in Sources */,
+				44B858C727F5D0ED00436B55 /* XWCrossHelper.swift in Sources */,
+				44B8590627F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */,
+				44B8591227F5D6E100436B55 /* XWWidgetBorderPicker.swift in Sources */,
+				44B858CA27F5D11800436B55 /* XWFontWrapper.swift in Sources */,
+				44B8589527F5CBB500436B55 /* XWidget.intentdefinition in Sources */,
+				44B858F927F5D53000436B55 /* XWCalendarView.swift in Sources */,
+				44B858B827F5D03600436B55 /* XWWidgetEntry.swift in Sources */,
+				44B858F327F5D4DF00436B55 /* XWWidgetView.swift in Sources */,
+				44B8590327F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
+				44B858E727F5D42200436B55 /* XWClockWidgetView.swift in Sources */,
+				44B8590C27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */,
+				44B8590927F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
+				44B858AE27F5CF5A00436B55 /* XWStore.swift in Sources */,
+				44B858CD27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */,
+				44B8591827F5D7F200436B55 /* XWImagePicker.swift in Sources */,
+				44B858BE27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */,
+				44B858A127F5CDE900436B55 /* XWAppError.swift in Sources */,
+				44B858D327F5D1F000436B55 /* XWWidgetKind.swift in Sources */,
+				44B858E127F5D35D00436B55 /* XWCalendarWidgetView.swift in Sources */,
+				44B8591E27F5D86300436B55 /* SHWidgetCategory.swift in Sources */,
+				44B858DC27F5D30100436B55 /* XWidgetKind.swift in Sources */,
+				44B8584F27F5CAF200436B55 /* ContentView.swift in Sources */,
+				44B858AB27F5CF4E00436B55 /* XWAppCommand.swift in Sources */,
+				44B8590F27F5D6B100436B55 /* XWWidgetPhotoPicker.swift in Sources */,
+				44B858E427F5D38600436B55 /* XWCalendarHelper.swift in Sources */,
+				44B858C127F5D09900436B55 /* XWColorWrapper.swift in Sources */,
+				44B8589E27F5CDAB00436B55 /* XWAppAction.swift in Sources */,
+				44B858D027F5D1C100436B55 /* XWBundleHelper.swift in Sources */,
+				44B858D627F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift in Sources */,
+				44B858A827F5CEDC00436B55 /* XWUserStoregeHelper.swift in Sources */,
+				44B8591527F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */,
+				44B8592A27F5DA2A00436B55 /* Color+XW.swift in Sources */,
+				44B858B227F5CFD400436B55 /* XWWidgetHelper.swift in Sources */,
+				44B8591B27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */,
+				44B8584D27F5CAF200436B55 /* XWidgetApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8584627F5CAF200436B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B858CE27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */,
+				44B858D127F5D1C100436B55 /* XWBundleHelper.swift in Sources */,
+				44B858D427F5D1F000436B55 /* XWWidgetKind.swift in Sources */,
+				44B858DA27F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
+				44B858C527F5D0C900436B55 /* XWImageHelper.swift in Sources */,
+				44B858A527F5CE9300436B55 /* XWAppState.swift in Sources */,
+				44B858A927F5CEDC00436B55 /* XWUserStoregeHelper.swift in Sources */,
+				44B858B927F5D03600436B55 /* XWWidgetEntry.swift in Sources */,
+				44B858E827F5D42200436B55 /* XWClockWidgetView.swift in Sources */,
+				44B8589F27F5CDAB00436B55 /* XWAppAction.swift in Sources */,
+				44B8591027F5D6B100436B55 /* XWWidgetPhotoPicker.swift in Sources */,
+				44B858F127F5D49F00436B55 /* XWAnyWidgetView.swift in Sources */,
+				44B858FD27F5D5B000436B55 /* XWWidgetHomeView.swift in Sources */,
+				44B858EE27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
+				44B858AC27F5CF4E00436B55 /* XWAppCommand.swift in Sources */,
+				44B8590427F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
+				44B858B627F5CFFC00436B55 /* XWScreenHelper.swift in Sources */,
+				44B858C827F5D0ED00436B55 /* XWCrossHelper.swift in Sources */,
+				44B8590A27F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
+				44B8590727F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */,
+				44B858F427F5D4DF00436B55 /* XWWidgetView.swift in Sources */,
+				44B8591C27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */,
+				44B8591F27F5D86300436B55 /* SHWidgetCategory.swift in Sources */,
+				44B858C227F5D09900436B55 /* XWColorWrapper.swift in Sources */,
+				44B858F727F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */,
+				44B8590027F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */,
+				44B858AF27F5CF5A00436B55 /* XWStore.swift in Sources */,
+				44B858FA27F5D53000436B55 /* XWCalendarView.swift in Sources */,
+				44B858E227F5D35D00436B55 /* XWCalendarWidgetView.swift in Sources */,
+				44B858B327F5CFD400436B55 /* XWWidgetHelper.swift in Sources */,
+				44B858EB27F5D44200436B55 /* XWGuideWidgetView.swift in Sources */,
+				44B858A227F5CDE900436B55 /* XWAppError.swift in Sources */,
+				44B858DD27F5D30100436B55 /* XWidgetKind.swift in Sources */,
+				44B858D727F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift in Sources */,
+				44B8591927F5D7F200436B55 /* XWImagePicker.swift in Sources */,
+				44B8585027F5CAF200436B55 /* ContentView.swift in Sources */,
+				44B8590D27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */,
+				44B858BF27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */,
+				44B858BC27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
+				44B8591627F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */,
+				44B8592B27F5DA2A00436B55 /* Color+XW.swift in Sources */,
+				44B8591327F5D6E100436B55 /* XWWidgetBorderPicker.swift in Sources */,
+				44B858CB27F5D11800436B55 /* XWFontWrapper.swift in Sources */,
+				44B8584E27F5CAF200436B55 /* XWidgetApp.swift in Sources */,
+				44B858E527F5D38600436B55 /* XWCalendarHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8587527F5CB5900436B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B8587E27F5CB5900436B55 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44B8588627F5CBB400436B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B8588F27F5CBB400436B55 /* XWidget.swift in Sources */,
+				44B8589427F5CBB500436B55 /* XWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44B8588127F5CB5900436B55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44B8587827F5CB5900436B55 /* Intent */;
+			targetProxy = 44B8588027F5CB5900436B55 /* PBXContainerItemProxy */;
+		};
+		44B8589727F5CBB500436B55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44B8588927F5CBB400436B55 /* XWidgetExtension */;
+			targetProxy = 44B8589627F5CBB500436B55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44B8592627F5D92C00436B55 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44B8592527F5D92C00436B55 /* en */,
+				44B8592727F5D92C00436B55 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44B8585327F5CAF200436B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		44B8585427F5CAF200436B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		44B8585627F5CAF200436B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget;
+				PRODUCT_NAME = XWidget;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44B8585727F5CAF200436B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget;
+				PRODUCT_NAME = XWidget;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44B8585927F5CAF200436B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget;
+				PRODUCT_NAME = XWidget;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		44B8585A27F5CAF200436B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget;
+				PRODUCT_NAME = XWidget;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		44B8588427F5CB5900436B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Intent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Intent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.Intent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44B8588527F5CB5900436B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Intent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Intent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.Intent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44B8589A27F5CBB500436B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.XWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44B8589B27F5CBB500436B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.XWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44B8583B27F5CAF200436B55 /* Build configuration list for PBXProject "XWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44B8585327F5CAF200436B55 /* Debug */,
+				44B8585427F5CAF200436B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44B8585527F5CAF200436B55 /* Build configuration list for PBXNativeTarget "XWidget (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44B8585627F5CAF200436B55 /* Debug */,
+				44B8585727F5CAF200436B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44B8585827F5CAF200436B55 /* Build configuration list for PBXNativeTarget "XWidget (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44B8585927F5CAF200436B55 /* Debug */,
+				44B8585A27F5CAF200436B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44B8588327F5CB5900436B55 /* Build configuration list for PBXNativeTarget "Intent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44B8588427F5CB5900436B55 /* Debug */,
+				44B8588527F5CB5900436B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44B8589927F5CBB500436B55 /* Build configuration list for PBXNativeTarget "XWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44B8589A27F5CBB500436B55 /* Debug */,
+				44B8589B27F5CBB500436B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44B8583827F5CAF200436B55 /* Project object */;
+}
