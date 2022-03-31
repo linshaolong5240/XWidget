@@ -337,17 +337,17 @@
 		44B858A627F5CECC00436B55 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				44B858F527F5D50B00436B55 /* XWAnalogClockHelper.swift */,
+				44B858CF27F5D1C100436B55 /* XWBundleHelper.swift */,
+				44B858E327F5D38600436B55 /* XWCalendarHelper.swift */,
 				44B858C627F5D0ED00436B55 /* XWCrossHelper.swift */,
+				44B858D827F5D2BF00436B55 /* XWCryptoHelper.swift */,
 				44B858CC27F5D19500436B55 /* XWFileManagerHelper.swift */,
 				44B858C327F5D0C900436B55 /* XWImageHelper.swift */,
 				44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */,
+				44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */,
 				44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */,
 				44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */,
-				44B858CF27F5D1C100436B55 /* XWBundleHelper.swift */,
-				44B858D827F5D2BF00436B55 /* XWCryptoHelper.swift */,
-				44B858E327F5D38600436B55 /* XWCalendarHelper.swift */,
-				44B858F527F5D50B00436B55 /* XWAnalogClockHelper.swift */,
-				44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -355,16 +355,16 @@
 		44B858B027F5CFAB00436B55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */,
 				44B858C027F5D09900436B55 /* XWColorWrapper.swift */,
 				44B858C927F5D11800436B55 /* XWFontWrapper.swift */,
+				44B858DB27F5D30100436B55 /* XWidgetKind.swift */,
 				44B858B727F5D03600436B55 /* XWWidgetEntry.swift */,
 				44B858D227F5D1F000436B55 /* XWWidgetKind.swift */,
 				44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */,
 				44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */,
 				44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */,
-				44B858DB27F5D30100436B55 /* XWidgetKind.swift */,
 				44B858F227F5D4DF00436B55 /* XWWidgetView.swift */,
-				44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,13 +372,13 @@
 		44B858DE27F5D33100436B55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				44B8590127F5D5F100436B55 /* Picker */,
-				44B858DF27F5D33A00436B55 /* Widget */,
 				44B858F827F5D53000436B55 /* XWCalendarView.swift */,
-				44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */,
 				44B858FE27F5D5CF00436B55 /* XWMyWidgetVeiw.swift */,
 				44B8590227F5D61300436B55 /* XWWidgetEditView.swift */,
+				44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */,
 				44B8590527F5D65300436B55 /* XWWidgetTransparentSettingView.swift */,
+				44B8590127F5D5F100436B55 /* Picker */,
+				44B858DF27F5D33A00436B55 /* Widget */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,11 +386,11 @@
 		44B858DF27F5D33A00436B55 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */,
 				44B858E027F5D35D00436B55 /* XWCalendarWidgetView.swift */,
 				44B858E627F5D42200436B55 /* XWClockWidgetView.swift */,
 				44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */,
 				44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */,
-				44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -398,12 +398,12 @@
 		44B8590127F5D5F100436B55 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
-				44B8590827F5D67600436B55 /* XWWidgetFamilyPicker.swift */,
-				44B8590B27F5D69500436B55 /* XWWidgetBackgroundPicker.swift */,
-				44B8590E27F5D6B100436B55 /* XWWidgetPhotoPicker.swift */,
-				44B8591127F5D6E100436B55 /* XWWidgetBorderPicker.swift */,
-				44B8591427F5D6FF00436B55 /* XWWidgetFontColorPicker.swift */,
 				44B8591727F5D7F200436B55 /* XWImagePicker.swift */,
+				44B8590B27F5D69500436B55 /* XWWidgetBackgroundPicker.swift */,
+				44B8591127F5D6E100436B55 /* XWWidgetBorderPicker.swift */,
+				44B8590827F5D67600436B55 /* XWWidgetFamilyPicker.swift */,
+				44B8591427F5D6FF00436B55 /* XWWidgetFontColorPicker.swift */,
+				44B8590E27F5D6B100436B55 /* XWWidgetPhotoPicker.swift */,
 			);
 			path = Picker;
 			sourceTree = "<group>";
