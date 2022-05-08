@@ -105,12 +105,35 @@
 		44B8591927F5D7F200436B55 /* XWImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591727F5D7F200436B55 /* XWImagePicker.swift */; };
 		44B8591B27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */; };
 		44B8591C27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */; };
-		44B8591E27F5D86300436B55 /* SHWidgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */; };
-		44B8591F27F5D86300436B55 /* SHWidgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */; };
+		44B8591E27F5D86300436B55 /* XWWidgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591D27F5D86300436B55 /* XWWidgetCategory.swift */; };
+		44B8591F27F5D86300436B55 /* XWWidgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8591D27F5D86300436B55 /* XWWidgetCategory.swift */; };
 		44B8592327F5D92C00436B55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44B8592627F5D92C00436B55 /* Localizable.strings */; };
 		44B8592427F5D92C00436B55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44B8592627F5D92C00436B55 /* Localizable.strings */; };
 		44B8592A27F5DA2A00436B55 /* Color+XW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8592927F5DA2A00436B55 /* Color+XW.swift */; };
 		44B8592B27F5DA2A00436B55 /* Color+XW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8592927F5DA2A00436B55 /* Color+XW.swift */; };
+		44BBD36F280D96F800204726 /* QWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36B280D96F800204726 /* QWeatherAPI.swift */; };
+		44BBD370280D96F800204726 /* QWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36B280D96F800204726 /* QWeatherAPI.swift */; };
+		44BBD371280D96F800204726 /* QWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36B280D96F800204726 /* QWeatherAPI.swift */; };
+		44BBD372280D96F800204726 /* QWAPIURLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36C280D96F800204726 /* QWAPIURLWrapper.swift */; };
+		44BBD373280D96F800204726 /* QWAPIURLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36C280D96F800204726 /* QWAPIURLWrapper.swift */; };
+		44BBD374280D96F800204726 /* QWAPIURLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36C280D96F800204726 /* QWAPIURLWrapper.swift */; };
+		44BBD375280D96F800204726 /* QWResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36D280D96F800204726 /* QWResponse.swift */; };
+		44BBD376280D96F800204726 /* QWResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36D280D96F800204726 /* QWResponse.swift */; };
+		44BBD377280D96F800204726 /* QWResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36D280D96F800204726 /* QWResponse.swift */; };
+		44BBD378280D96F800204726 /* QWAPIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36E280D96F800204726 /* QWAPIAction.swift */; };
+		44BBD379280D96F800204726 /* QWAPIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36E280D96F800204726 /* QWAPIAction.swift */; };
+		44BBD37A280D96F800204726 /* QWAPIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD36E280D96F800204726 /* QWAPIAction.swift */; };
+		44BBD37D280D970E00204726 /* QWTopCititesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD37C280D970E00204726 /* QWTopCititesAction.swift */; };
+		44BBD37E280D970E00204726 /* QWTopCititesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD37C280D970E00204726 /* QWTopCititesAction.swift */; };
+		44BBD37F280D970E00204726 /* QWTopCititesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD37C280D970E00204726 /* QWTopCititesAction.swift */; };
+		44BBD381280D975100204726 /* QWSearchCityAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD380280D975100204726 /* QWSearchCityAction.swift */; };
+		44BBD382280D975100204726 /* QWSearchCityAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD380280D975100204726 /* QWSearchCityAction.swift */; };
+		44BBD383280D975100204726 /* QWSearchCityAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD380280D975100204726 /* QWSearchCityAction.swift */; };
+		44BBD386280D98E000204726 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44BBD385280D98E000204726 /* Alamofire */; };
+		44BBD388280D995600204726 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44BBD387280D995600204726 /* Alamofire */; };
+		44BBD38A280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
+		44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
+		44BBD38C280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,10 +227,17 @@
 		44B8591427F5D6FF00436B55 /* XWWidgetFontColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetFontColorPicker.swift; sourceTree = "<group>"; };
 		44B8591727F5D7F200436B55 /* XWImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImagePicker.swift; sourceTree = "<group>"; };
 		44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSwiftUIHelper.swift; sourceTree = "<group>"; };
-		44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHWidgetCategory.swift; sourceTree = "<group>"; };
+		44B8591D27F5D86300436B55 /* XWWidgetCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetCategory.swift; sourceTree = "<group>"; };
 		44B8592527F5D92C00436B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		44B8592727F5D92C00436B55 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		44B8592927F5DA2A00436B55 /* Color+XW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+XW.swift"; sourceTree = "<group>"; };
+		44BBD36B280D96F800204726 /* QWeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QWeatherAPI.swift; sourceTree = "<group>"; };
+		44BBD36C280D96F800204726 /* QWAPIURLWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QWAPIURLWrapper.swift; sourceTree = "<group>"; };
+		44BBD36D280D96F800204726 /* QWResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QWResponse.swift; sourceTree = "<group>"; };
+		44BBD36E280D96F800204726 /* QWAPIAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QWAPIAction.swift; sourceTree = "<group>"; };
+		44BBD37C280D970E00204726 /* QWTopCititesAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QWTopCititesAction.swift; sourceTree = "<group>"; };
+		44BBD380280D975100204726 /* QWSearchCityAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QWSearchCityAction.swift; sourceTree = "<group>"; };
+		44BBD389280DA17500204726 /* QWWeatherNowAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QWWeatherNowAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BBD386280D98E000204726 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BBD388280D995600204726 /* Alamofire in Frameworks */,
 				44B8588C27F5CBB400436B55 /* SwiftUI.framework in Frameworks */,
 				44B8588B27F5CBB400436B55 /* WidgetKit.framework in Frameworks */,
 			);
@@ -355,16 +387,17 @@
 		44B858B027F5CFAB00436B55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				44B8591D27F5D86300436B55 /* SHWidgetCategory.swift */,
 				44B858C027F5D09900436B55 /* XWColorWrapper.swift */,
 				44B858C927F5D11800436B55 /* XWFontWrapper.swift */,
 				44B858DB27F5D30100436B55 /* XWidgetKind.swift */,
+				44B8591D27F5D86300436B55 /* XWWidgetCategory.swift */,
 				44B858B727F5D03600436B55 /* XWWidgetEntry.swift */,
 				44B858D227F5D1F000436B55 /* XWWidgetKind.swift */,
 				44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */,
 				44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */,
 				44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */,
 				44B858F227F5D4DF00436B55 /* XWWidgetView.swift */,
+				44BBD36A280D945200204726 /* QWeatherAPI */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +449,28 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		44BBD36A280D945200204726 /* QWeatherAPI */ = {
+			isa = PBXGroup;
+			children = (
+				44BBD37B280D96FD00204726 /* Action */,
+				44BBD36E280D96F800204726 /* QWAPIAction.swift */,
+				44BBD36C280D96F800204726 /* QWAPIURLWrapper.swift */,
+				44BBD36B280D96F800204726 /* QWeatherAPI.swift */,
+				44BBD36D280D96F800204726 /* QWResponse.swift */,
+			);
+			path = QWeatherAPI;
+			sourceTree = "<group>";
+		};
+		44BBD37B280D96FD00204726 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				44BBD380280D975100204726 /* QWSearchCityAction.swift */,
+				44BBD37C280D970E00204726 /* QWTopCititesAction.swift */,
+				44BBD389280DA17500204726 /* QWWeatherNowAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,6 +490,9 @@
 				44B8589727F5CBB500436B55 /* PBXTargetDependency */,
 			);
 			name = "XWidget (iOS)";
+			packageProductDependencies = (
+				44BBD385280D98E000204726 /* Alamofire */,
+			);
 			productName = "XWidget (iOS)";
 			productReference = 44B8584427F5CAF200436B55 /* XWidget.app */;
 			productType = "com.apple.product-type.application";
@@ -486,6 +544,9 @@
 			dependencies = (
 			);
 			name = XWidgetExtension;
+			packageProductDependencies = (
+				44BBD387280D995600204726 /* Alamofire */,
+			);
 			productName = XWidgetExtension;
 			productReference = 44B8588A27F5CBB400436B55 /* XWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -525,6 +586,9 @@
 				"zh-Hans",
 			);
 			mainGroup = 44B8583727F5CAF200436B55;
+			packageReferences = (
+				44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 44B8584527F5CAF200436B55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -584,6 +648,7 @@
 				44B858B527F5CFFC00436B55 /* XWScreenHelper.swift in Sources */,
 				44B858EA27F5D44200436B55 /* XWGuideWidgetView.swift in Sources */,
 				44B858FC27F5D5B000436B55 /* XWWidgetHomeView.swift in Sources */,
+				44BBD372280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
 				44B858D927F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
 				44B858ED27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
 				44B858BB27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
@@ -596,6 +661,7 @@
 				44B8589527F5CBB500436B55 /* XWidget.intentdefinition in Sources */,
 				44B858F927F5D53000436B55 /* XWCalendarView.swift in Sources */,
 				44B858B827F5D03600436B55 /* XWWidgetEntry.swift in Sources */,
+				44BBD38A280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
 				44B858F327F5D4DF00436B55 /* XWWidgetView.swift in Sources */,
 				44B8590327F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
 				44B858E727F5D42200436B55 /* XWClockWidgetView.swift in Sources */,
@@ -608,19 +674,24 @@
 				44B858A127F5CDE900436B55 /* XWAppError.swift in Sources */,
 				44B858D327F5D1F000436B55 /* XWWidgetKind.swift in Sources */,
 				44B858E127F5D35D00436B55 /* XWCalendarWidgetView.swift in Sources */,
-				44B8591E27F5D86300436B55 /* SHWidgetCategory.swift in Sources */,
+				44B8591E27F5D86300436B55 /* XWWidgetCategory.swift in Sources */,
 				44B858DC27F5D30100436B55 /* XWidgetKind.swift in Sources */,
 				44B8584F27F5CAF200436B55 /* ContentView.swift in Sources */,
 				44B858AB27F5CF4E00436B55 /* XWAppCommand.swift in Sources */,
+				44BBD37D280D970E00204726 /* QWTopCititesAction.swift in Sources */,
 				44B8590F27F5D6B100436B55 /* XWWidgetPhotoPicker.swift in Sources */,
 				44B858E427F5D38600436B55 /* XWCalendarHelper.swift in Sources */,
 				44B858C127F5D09900436B55 /* XWColorWrapper.swift in Sources */,
 				44B8589E27F5CDAB00436B55 /* XWAppAction.swift in Sources */,
+				44BBD375280D96F800204726 /* QWResponse.swift in Sources */,
+				44BBD378280D96F800204726 /* QWAPIAction.swift in Sources */,
 				44B858D027F5D1C100436B55 /* XWBundleHelper.swift in Sources */,
 				44B858D627F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift in Sources */,
 				44B858A827F5CEDC00436B55 /* XWUserStoregeHelper.swift in Sources */,
 				44B8591527F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */,
 				44B8592A27F5DA2A00436B55 /* Color+XW.swift in Sources */,
+				44BBD36F280D96F800204726 /* QWeatherAPI.swift in Sources */,
+				44BBD381280D975100204726 /* QWSearchCityAction.swift in Sources */,
 				44B858B227F5CFD400436B55 /* XWWidgetHelper.swift in Sources */,
 				44B8591B27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */,
 				44B8584D27F5CAF200436B55 /* XWidgetApp.swift in Sources */,
@@ -632,6 +703,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B858CE27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */,
+				44BBD37E280D970E00204726 /* QWTopCititesAction.swift in Sources */,
+				44BBD373280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
 				44B858D127F5D1C100436B55 /* XWBundleHelper.swift in Sources */,
 				44B858D427F5D1F000436B55 /* XWWidgetKind.swift in Sources */,
 				44B858DA27F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
@@ -646,16 +719,20 @@
 				44B858FD27F5D5B000436B55 /* XWWidgetHomeView.swift in Sources */,
 				44B858EE27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
 				44B858AC27F5CF4E00436B55 /* XWAppCommand.swift in Sources */,
+				44BBD382280D975100204726 /* QWSearchCityAction.swift in Sources */,
 				44B8590427F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
 				44B858B627F5CFFC00436B55 /* XWScreenHelper.swift in Sources */,
+				44BBD376280D96F800204726 /* QWResponse.swift in Sources */,
+				44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
 				44B858C827F5D0ED00436B55 /* XWCrossHelper.swift in Sources */,
 				44B8590A27F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
 				44B8590727F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */,
 				44B858F427F5D4DF00436B55 /* XWWidgetView.swift in Sources */,
 				44B8591C27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */,
-				44B8591F27F5D86300436B55 /* SHWidgetCategory.swift in Sources */,
+				44B8591F27F5D86300436B55 /* XWWidgetCategory.swift in Sources */,
 				44B858C227F5D09900436B55 /* XWColorWrapper.swift in Sources */,
 				44B858F727F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */,
+				44BBD370280D96F800204726 /* QWeatherAPI.swift in Sources */,
 				44B8590027F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */,
 				44B858AF27F5CF5A00436B55 /* XWStore.swift in Sources */,
 				44B858FA27F5D53000436B55 /* XWCalendarView.swift in Sources */,
@@ -673,6 +750,7 @@
 				44B8591627F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */,
 				44B8592B27F5DA2A00436B55 /* Color+XW.swift in Sources */,
 				44B8591327F5D6E100436B55 /* XWWidgetBorderPicker.swift in Sources */,
+				44BBD379280D96F800204726 /* QWAPIAction.swift in Sources */,
 				44B858CB27F5D11800436B55 /* XWFontWrapper.swift in Sources */,
 				44B8584E27F5CAF200436B55 /* XWidgetApp.swift in Sources */,
 				44B858E527F5D38600436B55 /* XWCalendarHelper.swift in Sources */,
@@ -691,8 +769,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BBD383280D975100204726 /* QWSearchCityAction.swift in Sources */,
 				44B8588F27F5CBB400436B55 /* XWidget.swift in Sources */,
+				44BBD371280D96F800204726 /* QWeatherAPI.swift in Sources */,
+				44BBD374280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
 				44B8589427F5CBB500436B55 /* XWidget.intentdefinition in Sources */,
+				44BBD37F280D970E00204726 /* QWTopCititesAction.swift in Sources */,
+				44BBD38C280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
+				44BBD37A280D96F800204726 /* QWAPIAction.swift in Sources */,
+				44BBD377280D96F800204726 /* QWResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1194,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44BBD385280D98E000204726 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		44BBD387280D995600204726 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44B8583827F5CAF200436B55 /* Project object */;
 }

@@ -10,6 +10,8 @@ import SwiftUI
 import WidgetKit
 
 struct WidgetHomeView: View {
+    let client = QWeatherAPI(key: "e2f0d3d36f50457785587c459a5843b4")
+
     @EnvironmentObject private var store: Store
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
@@ -66,6 +68,14 @@ struct WidgetHomeView: View {
                     }
                 }
             }
+            ZStack {
+                Color.pink
+                Button {
+                    request()
+                } label: {
+                    Text("Request")
+                }
+            }
         }
         .navigationBarHidden(true)
     }
@@ -80,6 +90,17 @@ struct WidgetHomeView: View {
             return .largeItems
         default:
             return []
+        }
+    }
+    
+    func request() {
+        client.request(action: QWTopCititesAction()) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }
