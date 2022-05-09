@@ -184,16 +184,15 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let now = Date()
-        let refreshDate = now + 60 * 5 + 2
-
-        for secondOffset in 0 ..< 60 * 5 {
+        
+        for secondOffset in 0 ..< 60 * 15 {
             let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: now)!
             var entry = widgetEntry
             entry.date = entryDate
             entries.append(entry)
         }
 
-        let timeline = Timeline(entries: entries, policy: .after(refreshDate))
+        let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
     

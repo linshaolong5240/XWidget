@@ -34,6 +34,40 @@ struct XWClockWidgetConfiguration: XWWidgetConfiguration {
     var theme: XWWidgetTheme
 }
 
+struct XWCountDaysWidgetConfiguration: XWWidgetConfiguration {
+    struct CountDaysModel: Codable {
+        enum CountMode: Codable {
+            case countdown
+            case countup
+        }
+        
+        enum CountDaysRepeat: Codable {
+            case year(month: Int, day: Int)
+            case month(day: Int)
+            case week(weekday: Int)
+        }
+        
+        var title: String
+        var countRepeat: CountDaysRepeat
+        var countMode: CountMode
+        
+        var targetDate: Date { Date() }
+        var betweenDays: Int { 0 }
+        
+        init(title: String, countRepeat: CountDaysRepeat, countMode: CountMode) {
+            self.title = title
+            self.countRepeat = countRepeat
+            self.countMode = countMode
+        }
+    }
+    
+    var date: Date = Date()
+    var style: XWWidgetStyle
+    var theme: XWWidgetTheme
+    var model: CountDaysModel
+}
+
+
 struct XWGifWidgetConfiguration: XWWidgetConfiguration {
     struct GifModel: Codable, Equatable {
         var imagesURL: [URL] = []

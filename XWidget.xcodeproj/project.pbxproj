@@ -186,6 +186,7 @@
 		EF8606ED2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */; };
 		EF8606EF2828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */; };
 		EF8606F02828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */; };
+		EFB87D0A28291D4900C65B1A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = EFB87D0928291D4900C65B1A /* SwiftDate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,6 +311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB87D0A28291D4900C65B1A /* SwiftDate in Frameworks */,
 				44BBD386280D98E000204726 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,18 +461,7 @@
 		44B858B027F5CFAB00436B55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				44B858C027F5D09900436B55 /* XWColorWrapper.swift */,
-				44B858C927F5D11800436B55 /* XWFontWrapper.swift */,
-				44B858DB27F5D30100436B55 /* XWidgetKind.swift */,
-				44B8591D27F5D86300436B55 /* XWWidgetCategory.swift */,
-				44B858B727F5D03600436B55 /* XWWidgetEntry.swift */,
-				44B858D227F5D1F000436B55 /* XWWidgetKind.swift */,
-				EF2D047E2828FA3200F517BB /* XWWidgetPosition.swift */,
-				EF2D048D2828FC0100F517BB /* XWWidgetPosition+Extension.swift */,
-				44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */,
-				44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */,
-				44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */,
-				44B858F227F5D4DF00436B55 /* XWWidgetView.swift */,
+				EFB87D042829081200C65B1A /* Widget */,
 				44BBD36A280D945200204726 /* QWeatherAPI */,
 			);
 			path = Model;
@@ -557,6 +548,25 @@
 			path = WidgetEditer;
 			sourceTree = "<group>";
 		};
+		EFB87D042829081200C65B1A /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				44B858C027F5D09900436B55 /* XWColorWrapper.swift */,
+				44B858C927F5D11800436B55 /* XWFontWrapper.swift */,
+				44B858DB27F5D30100436B55 /* XWidgetKind.swift */,
+				44B8591D27F5D86300436B55 /* XWWidgetCategory.swift */,
+				44B858B727F5D03600436B55 /* XWWidgetEntry.swift */,
+				44B858D227F5D1F000436B55 /* XWWidgetKind.swift */,
+				EF2D047E2828FA3200F517BB /* XWWidgetPosition.swift */,
+				EF2D048D2828FC0100F517BB /* XWWidgetPosition+Extension.swift */,
+				44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */,
+				44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */,
+				44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */,
+				44B858F227F5D4DF00436B55 /* XWWidgetView.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +588,7 @@
 			name = "XWidget (iOS)";
 			packageProductDependencies = (
 				44BBD385280D98E000204726 /* Alamofire */,
+				EFB87D0928291D4900C65B1A /* SwiftDate */,
 			);
 			productName = "XWidget (iOS)";
 			productReference = 44B8584427F5CAF200436B55 /* XWidget.app */;
@@ -674,6 +685,7 @@
 			mainGroup = 44B8583727F5CAF200436B55;
 			packageReferences = (
 				44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EFB87D0828291D4900C65B1A /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 44B8584527F5CAF200436B55 /* Products */;
 			projectDirPath = "";
@@ -1372,6 +1384,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		EFB87D0828291D4900C65B1A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1384,6 +1404,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		EFB87D0928291D4900C65B1A /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFB87D0828291D4900C65B1A /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

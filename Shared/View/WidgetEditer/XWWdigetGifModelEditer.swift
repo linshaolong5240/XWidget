@@ -52,7 +52,7 @@ struct XWWidgetGifModelEditer: View {
 #endif
         .onChange(of: uiImage) { newValue in
             guard let image = newValue else { return }
-            let resizeImage = image.crop(ratio: family.ratio).resize(CGSize(width: family.miniSize.width * 0.45, height: family.miniSize.height * 0.45))
+            let resizeImage = image.crop(ratio: family.ratio).resize(CGSize(width: family.miniSize.width * 0.25, height: family.miniSize.height * 0.25))
             do {
                 if let imageURL = try FileManager.save(image: resizeImage) {
                     gifModel.imagesURL.append(imageURL)
