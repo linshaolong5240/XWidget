@@ -35,12 +35,6 @@ public class Store: ObservableObject {
         var appCommand: AppCommand? = nil
         switch action {
         case .initAction:
-            if !appState.widget.isWidgetInit {
-                appState.widget.isWidgetInit = true
-                appState.widget.smallWidgetConfiguration = [.clock_analog_plain]
-                appState.widget.mediumWidgetConfiguration = [.clock_analog_plain]
-                appState.widget.largeWidgetConfiguration = [.clock_analog_plain]
-            }
             appCommand = InitActionCommand()
         case .error(let error):
             XWAppState.error = error
@@ -74,19 +68,19 @@ public class Store: ObservableObject {
                 if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.idForSave == configuration.idForSave } ) {
                     appState.widget.smallWidgetConfiguration[index] = configuration
                     appState.widget.smallWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
-                    appCommand = WidgetReloadCommand(kind: SwiftHelperWidgetKind.small.rawValue)
+                    appCommand = WidgetReloadCommand(kind: XWidgetKind.small.rawValue)
                 }
             case .systemMedium:
                 if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.idForSave == configuration.idForSave } ) {
                     appState.widget.mediumWidgetConfiguration[index] = configuration
                     appState.widget.mediumWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
-                    appCommand = WidgetReloadCommand(kind: SwiftHelperWidgetKind.medium.rawValue)
+                    appCommand = WidgetReloadCommand(kind: XWidgetKind.medium.rawValue)
                 }
             case .systemLarge:
                 if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.idForSave == configuration.idForSave } ) {
                     appState.widget.largeWidgetConfiguration[index] = configuration
                     appState.widget.largeWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
-                    appCommand = WidgetReloadCommand(kind: SwiftHelperWidgetKind.large.rawValue)
+                    appCommand = WidgetReloadCommand(kind: XWidgetKind.large.rawValue)
                 }
             default:
                 break
@@ -115,9 +109,9 @@ public class Store: ObservableObject {
         case .setWidgetPostionImageDict(let dict, let colorScheme):
             switch colorScheme {
             case .light:
-                appState.widget.transparentCondiguration.lightWidgetPostionImageURLDict = dict
+                appState.widget.widgetTransparentConfiguration.lightWidgetPostionImageURLDict = dict
             case .dark:
-                appState.widget.transparentCondiguration.darkWidgetPostionImageURLDict = dict
+                appState.widget.widgetTransparentConfiguration.darkWidgetPostionImageURLDict = dict
             @unknown default:
                 break
 //                fatalError()
@@ -125,9 +119,9 @@ public class Store: ObservableObject {
         case .setWidgetTransparentBackground(let imageURL, let colorScheme):
             switch colorScheme {
             case .light:
-                appState.widget.transparentCondiguration.lightImageURL = imageURL
+                appState.widget.widgetTransparentConfiguration.lightImageURL = imageURL
             case .dark:
-                appState.widget.transparentCondiguration.darkImageUrl = imageURL
+                appState.widget.widgetTransparentConfiguration.darkImageUrl = imageURL
             @unknown default:
                 break
 //                fatalError()
@@ -144,7 +138,7 @@ public class Store: ObservableObject {
 
 extension Store {
     func setWidgetThumbnail(configuration: inout XWWidgetEntry, family: WidgetFamily) {
-        guard let thumbnail = XWWidgetEntryParseView(entry: configuration, family: family)
+        guard let thumbnail = XWAnyWidgeView(entry: configuration, family: family)
             .modifier(WidgetPreviewModifier(family: family))
             .snapshot()?.resize(family.thumbnailSize) else {
             return

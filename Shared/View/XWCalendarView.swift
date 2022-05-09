@@ -9,7 +9,7 @@
 import SwiftUI
 
 @available(iOS 14.0, *)
-struct CalendarWeekView<DateView>: View where DateView: View {
+struct XWCalendarWeekView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
 
     let week: Date
@@ -48,7 +48,7 @@ struct CalendarWeekView<DateView>: View where DateView: View {
 }
 
 @available(iOS 14.0, *)
-struct CalendarMonthView<DateView>: View where DateView: View {
+struct XWCalendarMonthView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
 
     let month: Date
@@ -81,14 +81,14 @@ struct CalendarMonthView<DateView>: View where DateView: View {
     var body: some View {
         VStack(spacing: vSpacing) {
             ForEach(weeks, id: \.self) { week in
-                CalendarWeekView(week: week, hSpacing: hSpacing, content: self.content)
+                XWCalendarWeekView(week: week, hSpacing: hSpacing, content: self.content)
             }
         }
     }
 }
 
 @available(iOS 14.0, *)
-struct CalendarView<DateView>: View where DateView: View {
+struct XWCalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
 
     let interval: DateInterval
@@ -110,7 +110,7 @@ struct CalendarView<DateView>: View where DateView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 ForEach(months, id: \.self) { month in
-                    CalendarMonthView(month: month, content: self.content)
+                    XWCalendarMonthView(month: month, content: self.content)
                 }
             }
         }
@@ -119,9 +119,9 @@ struct CalendarView<DateView>: View where DateView: View {
 
 #if DEBUG
 @available(iOS 14.0, *)
-struct CalendarView_Previews: PreviewProvider {
+struct XWCalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarMonthView(month: Date()) { date in
+        XWCalendarMonthView(month: Date()) { date in
             Text(String(Calendar.current.component(.day, from: date)))
                 //            .frame(width: 40, height: 40, alignment: .center)
                 .frame(minWidth: 20, idealWidth: 40, maxWidth: 40, minHeight: 20, idealHeight: 40, maxHeight: 40, alignment: .center)
@@ -131,7 +131,7 @@ struct CalendarView_Previews: PreviewProvider {
                 )
                 .padding(.vertical, 4)
         }
-//        CalendarView(interval: Calendar.current.dateInterval(of: .year, for: Date())!) { date in
+//        XWCalendarView(interval: Calendar.current.dateInterval(of: .year, for: Date())!) { date in
 //          Text(String(Calendar.current.component(.day, from: date)))
 ////            .frame(width: 40, height: 40, alignment: .center)
 //            .frame(minWidth: 20, idealWidth: 40, maxWidth: 40, minHeight: 20, idealHeight: 40, maxHeight: 40, alignment: .center)

@@ -24,11 +24,11 @@ struct XWGuideWidgetView: XWWidgetView {
             configuration.theme.background.makeView(family, colorScheme: colorScheme)
             VStack(alignment: .leading, spacing: 10) {
                 let fontSize: CGFloat = getFontSize()
-                Image("app_icon_rounded")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 60, height: 60)
-                    .mask(RoundedRectangle(cornerRadius: 15))
+//                Image("app_icon_rounded")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 60, height: 60)
+//                    .mask(RoundedRectangle(cornerRadius: 15))
                 Group {
                     Text("DefaultWidget tip1")
                     Text("DefaultWidget tip2")

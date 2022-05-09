@@ -22,7 +22,13 @@ extension Array where Element == XWWidgetColor {
 }
 
 struct XWWidgetFontColorPicker: View {
-    @Binding var selection: Color
+    @Binding var selection: XWWidgetColor
+    @State private var color: Color
+    
+    init(selection: Binding<XWWidgetColor>) {
+        self._selection = selection
+        self._color = .init(initialValue: selection.wrappedValue.color)
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -30,12 +36,15 @@ struct XWWidgetFontColorPicker: View {
                 .padding(.horizontal)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ColorPicker("Color Picker", selection: $selection)
+                    ColorPicker("Color Picker", selection: $color)
                         .labelsHidden()
                         .frame(width: 44, height: 44)
+                        .onChange(of: color) { newValue in
+                            selection = .init(color)
+                        }
                     ForEach(Array(zip([XWWidgetColor].editItems.indices, [XWWidgetColor].editItems)), id: \.0) { index, item in
                         Button {
-                            selection = item.color
+                            selection = item
                         } label: {
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundColor(item.color)
@@ -45,7 +54,7 @@ struct XWWidgetFontColorPicker: View {
                                 )
                                 .overlay(
                                     VStack {
-                                        if item.color == selection {
+                                        if item == selection {
                                             Image(systemName: "checkmark")
                                         } else {
                                             EmptyView()
@@ -62,9 +71,17 @@ struct XWWidgetFontColorPicker: View {
 }
 
 #if DEBUG
+struct XWWidgetFontColorPickerDemo: View {
+    @State private var fontColor: XWColorWrapper = .item0
+    
+    var body: some View {
+        XWWidgetFontColorPicker(selection: $fontColor)
+    }
+}
+
 struct XWWidgetFontColorPicker_Previews: PreviewProvider {
     static var previews: some View {
-        XWWidgetFontColorPicker(selection: .constant(.orange))
+        XWWidgetFontColorPickerDemo()
     }
 }
 #endif

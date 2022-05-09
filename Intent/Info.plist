@@ -12,7 +12,9 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>ConfigurationIntent</string>
+				<string>XWSmallWidgetConfigurationIntent</string>
+				<string>XWMediumWidgetConfigurationIntent</string>
+				<string>XWLargeWidgetConfigurationIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

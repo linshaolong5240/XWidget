@@ -29,11 +29,8 @@ extension XWAppState {
     }
     
     struct Widget {
-        @CombineUserStorge(key: .isWidgetInit, container: .group)
-        var isWidgetInit: Bool = false
-
         @CombineUserStorge(key: .widgetTransparentConfiguration, container: .group)
-        var transparentCondiguration: XWWidgetTransparentConfiguration = XWWidgetTransparentConfiguration()
+        var widgetTransparentConfiguration: XWWidgetTransparentConfiguration = XWWidgetTransparentConfiguration()
 
         @CombineUserStorge(key: .smallWidgetConfiguration, container: .group)
         var smallWidgetConfiguration: [XWWidgetEntry] = []

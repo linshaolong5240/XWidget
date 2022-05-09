@@ -49,7 +49,7 @@ struct XWCalendarPlainWidgetStyle: XWWidgetViewStyle {
     func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
         ZStack {
             configuration.theme.background.makeView(family, colorScheme: colorScheme)
-            CalendarMonthView(month: configuration.date, hSpacing: 4, vSpacing: 10) { date in
+            XWCalendarMonthView(month: configuration.date, hSpacing: 4, vSpacing: 10) { date in
                 ZStack {
                     if Calendar.current.isDateInToday(date) {
                         Circle()

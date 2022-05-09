@@ -17,7 +17,7 @@ import RxRelay
 #endif
 
 extension UserDefaults {
-    public static let group: UserDefaults = UserDefaults(suiteName: "group.com.teenloong.SwiftHelper")!
+    public static let group: UserDefaults = UserDefaults(suiteName: "group.com.teenloong.XWidget")!
 }
 
 enum UserStorgeKey: String {
@@ -25,7 +25,6 @@ enum UserStorgeKey: String {
     case isFirstLaunch
     
     //Widget
-    case isWidgetInit
     case widgetTransparentConfiguration
     case smallWidgetConfiguration
     case mediumWidgetConfiguration

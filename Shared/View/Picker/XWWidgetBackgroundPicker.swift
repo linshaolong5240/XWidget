@@ -57,7 +57,7 @@ struct XWWidgetBackgroundPicker: View {
         ZStack {
 #if canImport(UIKit)
             NavigationLink(isActive: $showScreenShotSetting) {
-                WidgetTransparentBackgroundSettingView()
+                XWWidgetTransparentSettingView()
             } label: {
                 EmptyView()
             }
@@ -103,7 +103,7 @@ struct XWWidgetBackgroundPicker: View {
                         }
                         
                         Button {
-                            if Store.shared.appState.widget.transparentCondiguration.isEmpty {
+                            if Store.shared.appState.widget.widgetTransparentConfiguration.isEmpty {
                                 showScreenShotSetting.toggle()
                             } else {
                                 showTransparentBackgroundPicker.toggle()
@@ -144,7 +144,7 @@ struct XWWidgetBackgroundPicker: View {
                 #if false
                 ForEach(getPostionItems(family: family)) { item in
                     ZStack {
-                        if let imageName = Store.shared.appState.widget.transparentCondiguration.image(position: item, colorScheme: colorScheme) {
+                        if let imageName = Store.shared.appState.widget.widgetTransparentConfiguration.image(position: item, colorScheme: colorScheme) {
                             Image(uiImage: imageName)
                                 .resizable()
                         }
@@ -205,7 +205,7 @@ struct XWWidgetBackgroundPicker: View {
 
             ForEach(items) { item in
                 VStack(alignment: .leading) {
-                    if let lightImageURL = Store.shared.appState.widget.transparentCondiguration.lightWidgetPostionImageURLDict[item] {
+                    if let lightImageURL = Store.shared.appState.widget.widgetTransparentConfiguration.lightWidgetPostionImageURLDict[item] {
                         if let uiImage = UIImage(contentsOfFile: lightImageURL.path) {
                             Image(uiImage: uiImage)
                                 .resizable()
@@ -216,8 +216,8 @@ struct XWWidgetBackgroundPicker: View {
                     Text(item.name)
                 }
                 .onTapGesture {
-                    if let lightImageURL = Store.shared.appState.widget.transparentCondiguration.lightWidgetPostionImageURLDict[item] {
-                        let darkImageURL = Store.shared.appState.widget.transparentCondiguration.darkWidgetPostionImageURLDict[item]
+                    if let lightImageURL = Store.shared.appState.widget.widgetTransparentConfiguration.lightWidgetPostionImageURLDict[item] {
+                        let darkImageURL = Store.shared.appState.widget.widgetTransparentConfiguration.darkWidgetPostionImageURLDict[item]
                         selection = XWWidgetBackground(transparent: (lightImageURL: lightImageURL, darkImageURL: darkImageURL ?? lightImageURL))
                     }
                 }

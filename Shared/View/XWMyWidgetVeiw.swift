@@ -22,7 +22,7 @@ extension WidgetFamily {
     var scalerForList: CGFloat { sizeForList.height / size.height }
 }
 
-struct MyWidgetView: View {
+struct XWMyWidgetView: View {
     @EnvironmentObject private var store: Store
     
     @Binding var family: WidgetFamily
@@ -41,14 +41,14 @@ struct MyWidgetView: View {
             ScrollView {
                 let widgets = getWidgets(family: family)
                 ForEach(Array(widgets.enumerated()), id: \.offset) { index, item in
-                    NavigationLink(destination: WidgetEditView(configuration: item, family: family, saveMode: .update)) {
+                    NavigationLink(destination: XWWidgetEditView(widget: item, family: family, saveMode: .update)) {
                         RoundedRectangle(cornerRadius: 14)
                             .foregroundColor(.white)
                             .frame(height: family == .systemLarge ? 132 : 112)
                             .shadow(radius: 10)
                             .overlay(
                                 HStack(spacing: 16) {
-                                    XWWidgetEntryParseView(entry: item, family: family)
+                                    XWAnyWidgeView(entry: item, family: family)
                                         .modifier(WidgetPreviewModifier(family: family))
                                         .scaleEffect(family.scalerForList)
                                         .frame(width: family.sizeForList.width, height: family.sizeForList.height)
@@ -74,7 +74,7 @@ struct MyWidgetView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                WidgetFamilyPicker(selection: $family)
+                XWWidgetFamilyPicker(selection: $family)
             }
         }
     }
@@ -83,7 +83,7 @@ struct MyWidgetView: View {
 struct MyWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MyWidgetView(family: .constant(.systemSmall))
+            XWMyWidgetView(family: .constant(.systemSmall))
         }
         .environmentObject(Store.shared)
     }

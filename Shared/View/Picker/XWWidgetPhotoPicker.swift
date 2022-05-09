@@ -65,8 +65,10 @@ struct XWWidgetPhotoPicker: View {
     }
 }
 
+#if DEBUG
 struct XWWidgetPhotoPicker_Previews: PreviewProvider {
     static var previews: some View {
         XWWidgetPhotoPicker(selection: .constant(nil), family: .systemSmall)
     }
 }
+#endif

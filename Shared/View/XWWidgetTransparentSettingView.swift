@@ -10,9 +10,9 @@ import SwiftUI
 import Combine
 import PhotosUI
 
-struct WidgetTransparentBackgroundSettingView: View {
+struct XWWidgetTransparentSettingView: View {
     @EnvironmentObject private var store: Store
-    var screenshot: XWWidgetTransparentConfiguration { store.appState.widget.transparentCondiguration }
+    var screenshot: XWWidgetTransparentConfiguration { store.appState.widget.widgetTransparentConfiguration }
     var screenSize: CGSize {
         CGSize(width: UIScreen.main.bounds.size.width * 0.3, height: UIScreen.main.bounds.size.height * 0.3)
     }
@@ -110,7 +110,7 @@ struct WidgetTransparentBackgroundSettingView: View {
 
 struct WidgetTransparentbackgroundSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetTransparentBackgroundSettingView()
+        XWWidgetTransparentSettingView()
             .environmentObject(Store.shared)
     }
 }

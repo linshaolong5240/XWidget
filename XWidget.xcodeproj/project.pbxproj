@@ -38,7 +38,6 @@
 		44B858B227F5CFD400436B55 /* XWWidgetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */; };
 		44B858B327F5CFD400436B55 /* XWWidgetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */; };
 		44B858B527F5CFFC00436B55 /* XWScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */; };
-		44B858B627F5CFFC00436B55 /* XWScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */; };
 		44B858B827F5D03600436B55 /* XWWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B727F5D03600436B55 /* XWWidgetEntry.swift */; };
 		44B858B927F5D03600436B55 /* XWWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B727F5D03600436B55 /* XWWidgetEntry.swift */; };
 		44B858BB27F5D05900436B55 /* XWWidgetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */; };
@@ -134,12 +133,59 @@
 		44BBD38A280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
 		44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
 		44BBD38C280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
+		EF2D04632828EEB400F517BB /* XWWidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D04622828EEB400F517BB /* XWWidgetIntent.swift */; };
+		EF2D04642828F25900F517BB /* XWWidgetTransparentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */; };
+		EF2D04652828F26300F517BB /* XWUserStoregeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */; };
+		EF2D04662828F26E00F517BB /* XWWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B727F5D03600436B55 /* XWWidgetEntry.swift */; };
+		EF2D04672828F27000F517BB /* XWWidgetKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D227F5D1F000436B55 /* XWWidgetKind.swift */; };
+		EF2D04682828F27300F517BB /* XWWidgetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */; };
+		EF2D04692828F27500F517BB /* XWWidgetTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */; };
+		EF2D046A2828F27A00F517BB /* XWidgetKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858DB27F5D30100436B55 /* XWidgetKind.swift */; };
+		EF2D046B2828F27C00F517BB /* XWFontWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C927F5D11800436B55 /* XWFontWrapper.swift */; };
+		EF2D046C2828F27E00F517BB /* XWColorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C027F5D09900436B55 /* XWColorWrapper.swift */; };
+		EF2D046D2828F28600F517BB /* XWWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F227F5D4DF00436B55 /* XWWidgetView.swift */; };
+		EF2D046E2828F29200F517BB /* XWCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F827F5D53000436B55 /* XWCalendarView.swift */; };
+		EF2D046F2828F29A00F517BB /* XWAnyWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */; };
+		EF2D04702828F29D00F517BB /* XWCalendarWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E027F5D35D00436B55 /* XWCalendarWidgetView.swift */; };
+		EF2D04712828F2A000F517BB /* XWClockWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E627F5D42200436B55 /* XWClockWidgetView.swift */; };
+		EF2D04722828F2A300F517BB /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
+		EF2D04732828F2A500F517BB /* XWGuideWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */; };
+		EF2D04742828F2A700F517BB /* XWPhotoWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */; };
+		EF2D04752828F2BF00F517BB /* XWWidgetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */; };
+		EF2D04762828F2D200F517BB /* XWCrossHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C627F5D0ED00436B55 /* XWCrossHelper.swift */; };
+		EF2D04772828F2DD00F517BB /* XWURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E12828B8AB0038C47B /* XWURLHelper.swift */; };
+		EF2D04782828F30C00F517BB /* XWAnalogClockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858F527F5D50B00436B55 /* XWAnalogClockHelper.swift */; };
+		EF2D04792828F3C800F517BB /* XWScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */; };
+		EF2D047A2828F3D500F517BB /* XWCalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E327F5D38600436B55 /* XWCalendarHelper.swift */; };
+		EF2D047B2828F3E800F517BB /* XWWidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D04622828EEB400F517BB /* XWWidgetIntent.swift */; };
+		EF2D047C2828FA0100F517BB /* XWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 44B8589027F5CBB400436B55 /* XWidget.intentdefinition */; };
+		EF2D047D2828FA0200F517BB /* XWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 44B8589027F5CBB400436B55 /* XWidget.intentdefinition */; };
+		EF2D047F2828FA3200F517BB /* XWWidgetPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D047E2828FA3200F517BB /* XWWidgetPosition.swift */; };
+		EF2D04812828FA3200F517BB /* XWWidgetPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D047E2828FA3200F517BB /* XWWidgetPosition.swift */; };
+		EF2D04822828FA3200F517BB /* XWWidgetPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D047E2828FA3200F517BB /* XWWidgetPosition.swift */; };
+		EF2D04842828FACE00F517BB /* XWCrossHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C627F5D0ED00436B55 /* XWCrossHelper.swift */; };
+		EF2D04852828FBB200F517BB /* XWColorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C027F5D09900436B55 /* XWColorWrapper.swift */; };
+		EF2D04862828FBB400F517BB /* XWFontWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858C927F5D11800436B55 /* XWFontWrapper.swift */; };
+		EF2D04882828FBB900F517BB /* XWWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858B727F5D03600436B55 /* XWWidgetEntry.swift */; };
+		EF2D04892828FBC100F517BB /* XWWidgetKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D227F5D1F000436B55 /* XWWidgetKind.swift */; };
+		EF2D048A2828FBC900F517BB /* XWWidgetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */; };
+		EF2D048B2828FBCC00F517BB /* XWWidgetTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */; };
+		EF2D048C2828FBCF00F517BB /* XWWidgetTransparentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */; };
+		EF2D048E2828FC0100F517BB /* XWWidgetPosition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D048D2828FC0100F517BB /* XWWidgetPosition+Extension.swift */; };
+		EF2D048F2828FCA500F517BB /* XWUserStoregeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */; };
+		EF2D04902828FCB100F517BB /* XWWidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D04622828EEB400F517BB /* XWWidgetIntent.swift */; };
 		EF8606DF2828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
 		EF8606E02828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
 		EF8606E22828B8AB0038C47B /* XWURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E12828B8AB0038C47B /* XWURLHelper.swift */; };
 		EF8606E32828B8AB0038C47B /* XWURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E12828B8AB0038C47B /* XWURLHelper.swift */; };
 		EF8606E52828B9680038C47B /* XWSnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */; };
 		EF8606E62828B9680038C47B /* XWSnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */; };
+		EF8606E92828BDCB0038C47B /* XWWdigetGifModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E82828BDCB0038C47B /* XWWdigetGifModelEditer.swift */; };
+		EF8606EA2828BDCB0038C47B /* XWWdigetGifModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E82828BDCB0038C47B /* XWWdigetGifModelEditer.swift */; };
+		EF8606EC2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */; };
+		EF8606ED2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */; };
+		EF8606EF2828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */; };
+		EF8606F02828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,9 +290,19 @@
 		44BBD37C280D970E00204726 /* QWTopCititesAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QWTopCititesAction.swift; sourceTree = "<group>"; };
 		44BBD380280D975100204726 /* QWSearchCityAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QWSearchCityAction.swift; sourceTree = "<group>"; };
 		44BBD389280DA17500204726 /* QWWeatherNowAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QWWeatherNowAction.swift; sourceTree = "<group>"; };
+		EF2D04612828EC5600F517BB /* XWidget--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "XWidget--iOS--Info.plist"; sourceTree = "<group>"; };
+		EF2D04622828EEB400F517BB /* XWWidgetIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetIntent.swift; sourceTree = "<group>"; };
+		EF2D047E2828FA3200F517BB /* XWWidgetPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetPosition.swift; sourceTree = "<group>"; };
+		EF2D048D2828FC0100F517BB /* XWWidgetPosition+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XWWidgetPosition+Extension.swift"; sourceTree = "<group>"; };
+		EF2D04932828FD9600F517BB /* XWidget (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "XWidget (iOS).entitlements"; sourceTree = "<group>"; };
+		EF2D04942828FDCF00F517BB /* XWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XWidgetExtension.entitlements; sourceTree = "<group>"; };
+		EF2D04952828FDE000F517BB /* Intent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Intent.entitlements; sourceTree = "<group>"; };
 		EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWGifWidgetView.swift; sourceTree = "<group>"; };
 		EF8606E12828B8AB0038C47B /* XWURLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWURLHelper.swift; sourceTree = "<group>"; };
 		EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSnapshotHelper.swift; sourceTree = "<group>"; };
+		EF8606E82828BDCB0038C47B /* XWWdigetGifModelEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWdigetGifModelEditer.swift; sourceTree = "<group>"; };
+		EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetThemeEditer.swift; sourceTree = "<group>"; };
+		EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetModelEditer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +345,9 @@
 		44B8583727F5CAF200436B55 = {
 			isa = PBXGroup;
 			children = (
+				EF2D04942828FDCF00F517BB /* XWidgetExtension.entitlements */,
+				EF2D04932828FD9600F517BB /* XWidget (iOS).entitlements */,
+				EF2D04612828EC5600F517BB /* XWidget--iOS--Info.plist */,
 				44B8583C27F5CAF200436B55 /* Shared */,
 				44B8584B27F5CAF200436B55 /* macOS */,
 				44B8588D27F5CBB400436B55 /* XWidget */,
@@ -346,6 +405,7 @@
 		44B8587C27F5CB5900436B55 /* Intent */ = {
 			isa = PBXGroup;
 			children = (
+				EF2D04952828FDE000F517BB /* Intent.entitlements */,
 				44B8587D27F5CB5900436B55 /* IntentHandler.swift */,
 				44B8587F27F5CB5900436B55 /* Info.plist */,
 			);
@@ -355,10 +415,11 @@
 		44B8588D27F5CBB400436B55 /* XWidget */ = {
 			isa = PBXGroup;
 			children = (
-				44B8588E27F5CBB400436B55 /* XWidget.swift */,
 				44B8589027F5CBB400436B55 /* XWidget.intentdefinition */,
-				44B8589127F5CBB500436B55 /* Assets.xcassets */,
 				44B8589327F5CBB500436B55 /* Info.plist */,
+				44B8588E27F5CBB400436B55 /* XWidget.swift */,
+				EF2D04622828EEB400F517BB /* XWWidgetIntent.swift */,
+				44B8589127F5CBB500436B55 /* Assets.xcassets */,
 			);
 			path = XWidget;
 			sourceTree = "<group>";
@@ -404,6 +465,8 @@
 				44B8591D27F5D86300436B55 /* XWWidgetCategory.swift */,
 				44B858B727F5D03600436B55 /* XWWidgetEntry.swift */,
 				44B858D227F5D1F000436B55 /* XWWidgetKind.swift */,
+				EF2D047E2828FA3200F517BB /* XWWidgetPosition.swift */,
+				EF2D048D2828FC0100F517BB /* XWWidgetPosition+Extension.swift */,
 				44B858BA27F5D05900436B55 /* XWWidgetStyle.swift */,
 				44B858BD27F5D07C00436B55 /* XWWidgetTheme.swift */,
 				44B858D527F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift */,
@@ -423,6 +486,7 @@
 				44B8590527F5D65300436B55 /* XWWidgetTransparentSettingView.swift */,
 				44B8590127F5D5F100436B55 /* Picker */,
 				44B858DF27F5D33A00436B55 /* Widget */,
+				EF8606E72828BDB30038C47B /* WidgetEditer */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +545,16 @@
 				44BBD389280DA17500204726 /* QWWeatherNowAction.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		EF8606E72828BDB30038C47B /* WidgetEditer */ = {
+			isa = PBXGroup;
+			children = (
+				EF8606E82828BDCB0038C47B /* XWWdigetGifModelEditer.swift */,
+				EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */,
+				EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */,
+			);
+			path = WidgetEditer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,7 +730,9 @@
 			files = (
 				EF8606E52828B9680038C47B /* XWSnapshotHelper.swift in Sources */,
 				44B858FF27F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */,
+				EF8606EF2828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */,
 				44B858C427F5D0C900436B55 /* XWImageHelper.swift in Sources */,
+				EF8606EC2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */,
 				44B858F627F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */,
 				44B858B527F5CFFC00436B55 /* XWScreenHelper.swift in Sources */,
 				44B858EA27F5D44200436B55 /* XWGuideWidgetView.swift in Sources */,
@@ -664,6 +740,7 @@
 				44BBD372280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
 				44B858D927F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
 				44B858ED27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
+				EF2D048E2828FC0100F517BB /* XWWidgetPosition+Extension.swift in Sources */,
 				44B858BB27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
 				44B858A427F5CE9300436B55 /* XWAppState.swift in Sources */,
 				44B858F027F5D49F00436B55 /* XWAnyWidgetView.swift in Sources */,
@@ -679,10 +756,12 @@
 				44B8590327F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
 				EF8606DF2828B18D0038C47B /* XWGifWidgetView.swift in Sources */,
 				44B858E727F5D42200436B55 /* XWClockWidgetView.swift in Sources */,
+				EF8606E92828BDCB0038C47B /* XWWdigetGifModelEditer.swift in Sources */,
 				44B8590C27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */,
 				44B8590927F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
 				44B858AE27F5CF5A00436B55 /* XWStore.swift in Sources */,
 				44B858CD27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */,
+				EF2D04632828EEB400F517BB /* XWWidgetIntent.swift in Sources */,
 				44B8591827F5D7F200436B55 /* XWImagePicker.swift in Sources */,
 				44B858BE27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */,
 				44B858A127F5CDE900436B55 /* XWAppError.swift in Sources */,
@@ -693,6 +772,7 @@
 				44B858DC27F5D30100436B55 /* XWidgetKind.swift in Sources */,
 				44B8584F27F5CAF200436B55 /* ContentView.swift in Sources */,
 				44B858AB27F5CF4E00436B55 /* XWAppCommand.swift in Sources */,
+				EF2D047F2828FA3200F517BB /* XWWidgetPosition.swift in Sources */,
 				44BBD37D280D970E00204726 /* QWTopCititesAction.swift in Sources */,
 				44B8590F27F5D6B100436B55 /* XWWidgetPhotoPicker.swift in Sources */,
 				44B858E427F5D38600436B55 /* XWCalendarHelper.swift in Sources */,
@@ -738,10 +818,11 @@
 				44B858EE27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
 				44B858AC27F5CF4E00436B55 /* XWAppCommand.swift in Sources */,
 				44BBD382280D975100204726 /* QWSearchCityAction.swift in Sources */,
+				EF8606F02828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */,
 				44B8590427F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
-				44B858B627F5CFFC00436B55 /* XWScreenHelper.swift in Sources */,
 				44BBD376280D96F800204726 /* QWResponse.swift in Sources */,
 				44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
+				EF8606ED2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */,
 				44B858C827F5D0ED00436B55 /* XWCrossHelper.swift in Sources */,
 				44B8590A27F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
 				44B8590727F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */,
@@ -756,6 +837,7 @@
 				44B858FA27F5D53000436B55 /* XWCalendarView.swift in Sources */,
 				44B858E227F5D35D00436B55 /* XWCalendarWidgetView.swift in Sources */,
 				44B858B327F5CFD400436B55 /* XWWidgetHelper.swift in Sources */,
+				EF2D047D2828FA0200F517BB /* XWidget.intentdefinition in Sources */,
 				44B858EB27F5D44200436B55 /* XWGuideWidgetView.swift in Sources */,
 				44B858A227F5CDE900436B55 /* XWAppError.swift in Sources */,
 				44B858DD27F5D30100436B55 /* XWidgetKind.swift in Sources */,
@@ -763,6 +845,7 @@
 				44B8591927F5D7F200436B55 /* XWImagePicker.swift in Sources */,
 				44B8585027F5CAF200436B55 /* ContentView.swift in Sources */,
 				44B8590D27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */,
+				EF8606EA2828BDCB0038C47B /* XWWdigetGifModelEditer.swift in Sources */,
 				44B858BF27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */,
 				44B858BC27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
 				44B8591627F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */,
@@ -779,7 +862,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2D04902828FCB100F517BB /* XWWidgetIntent.swift in Sources */,
+				EF2D048A2828FBC900F517BB /* XWWidgetStyle.swift in Sources */,
+				EF2D04842828FACE00F517BB /* XWCrossHelper.swift in Sources */,
 				44B8587E27F5CB5900436B55 /* IntentHandler.swift in Sources */,
+				EF2D04822828FA3200F517BB /* XWWidgetPosition.swift in Sources */,
+				EF2D04892828FBC100F517BB /* XWWidgetKind.swift in Sources */,
+				EF2D04882828FBB900F517BB /* XWWidgetEntry.swift in Sources */,
+				EF2D048C2828FBCF00F517BB /* XWWidgetTransparentConfiguration.swift in Sources */,
+				EF2D048F2828FCA500F517BB /* XWUserStoregeHelper.swift in Sources */,
+				EF2D04852828FBB200F517BB /* XWColorWrapper.swift in Sources */,
+				EF2D047C2828FA0100F517BB /* XWidget.intentdefinition in Sources */,
+				EF2D04862828FBB400F517BB /* XWFontWrapper.swift in Sources */,
+				EF2D048B2828FBCC00F517BB /* XWWidgetTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,15 +882,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2D04742828F2A700F517BB /* XWPhotoWidgetView.swift in Sources */,
+				EF2D04672828F27000F517BB /* XWWidgetKind.swift in Sources */,
+				EF2D04652828F26300F517BB /* XWUserStoregeHelper.swift in Sources */,
+				EF2D04812828FA3200F517BB /* XWWidgetPosition.swift in Sources */,
+				EF2D04762828F2D200F517BB /* XWCrossHelper.swift in Sources */,
+				EF2D04642828F25900F517BB /* XWWidgetTransparentConfiguration.swift in Sources */,
 				44BBD383280D975100204726 /* QWSearchCityAction.swift in Sources */,
+				EF2D04752828F2BF00F517BB /* XWWidgetHelper.swift in Sources */,
+				EF2D04792828F3C800F517BB /* XWScreenHelper.swift in Sources */,
+				EF2D04722828F2A300F517BB /* XWGifWidgetView.swift in Sources */,
+				EF2D04662828F26E00F517BB /* XWWidgetEntry.swift in Sources */,
+				EF2D04772828F2DD00F517BB /* XWURLHelper.swift in Sources */,
+				EF2D046F2828F29A00F517BB /* XWAnyWidgetView.swift in Sources */,
 				44B8588F27F5CBB400436B55 /* XWidget.swift in Sources */,
 				44BBD371280D96F800204726 /* QWeatherAPI.swift in Sources */,
 				44BBD374280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
+				EF2D04732828F2A500F517BB /* XWGuideWidgetView.swift in Sources */,
 				44B8589427F5CBB500436B55 /* XWidget.intentdefinition in Sources */,
 				44BBD37F280D970E00204726 /* QWTopCititesAction.swift in Sources */,
+				EF2D04782828F30C00F517BB /* XWAnalogClockHelper.swift in Sources */,
+				EF2D04692828F27500F517BB /* XWWidgetTheme.swift in Sources */,
+				EF2D04712828F2A000F517BB /* XWClockWidgetView.swift in Sources */,
+				EF2D046E2828F29200F517BB /* XWCalendarView.swift in Sources */,
+				EF2D04682828F27300F517BB /* XWWidgetStyle.swift in Sources */,
 				44BBD38C280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
 				44BBD37A280D96F800204726 /* QWAPIAction.swift in Sources */,
+				EF2D046A2828F27A00F517BB /* XWidgetKind.swift in Sources */,
+				EF2D047A2828F3D500F517BB /* XWCalendarHelper.swift in Sources */,
+				EF2D046B2828F27C00F517BB /* XWFontWrapper.swift in Sources */,
+				EF2D046D2828F28600F517BB /* XWWidgetView.swift in Sources */,
+				EF2D04702828F29D00F517BB /* XWCalendarWidgetView.swift in Sources */,
+				EF2D046C2828F27E00F517BB /* XWColorWrapper.swift in Sources */,
 				44BBD377280D96F800204726 /* QWResponse.swift in Sources */,
+				EF2D047B2828F3E800F517BB /* XWWidgetIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,16 +1066,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "XWidget (iOS).entitlements";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "XWidget--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -963,6 +1086,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget;
 				PRODUCT_NAME = XWidget;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -976,16 +1100,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "XWidget (iOS).entitlements";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "XWidget--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -993,6 +1120,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget;
 				PRODUCT_NAME = XWidget;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1007,9 +1135,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6NGHAR2FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1033,9 +1163,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6NGHAR2FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1056,13 +1188,15 @@
 		44B8588427F5CB5900436B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Intent/Intent.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Intent/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Intent;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1071,6 +1205,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.Intent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1082,13 +1217,15 @@
 		44B8588527F5CB5900436B55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Intent/Intent.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Intent/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Intent;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1097,6 +1234,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.Intent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1111,13 +1249,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = XWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = XWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1126,6 +1266,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.XWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1139,13 +1280,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = XWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = XWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1154,6 +1297,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.XWidget.XWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

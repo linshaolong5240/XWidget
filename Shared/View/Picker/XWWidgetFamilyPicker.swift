@@ -9,7 +9,7 @@
 import SwiftUI
 import WidgetKit
 
-struct WidgetFamilyPicker: View {
+struct XWWidgetFamilyPicker: View {
     @Binding var selection: WidgetFamily
     
     var body: some View {
@@ -35,9 +35,9 @@ struct WidgetFamilyPicker: View {
 }
 
 #if DEBUG
-struct WidgetFamilyPicker_Previews: PreviewProvider {
+struct XWWidgetFamilyPicker_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetFamilyPicker(selection: .constant(.systemSmall))
+        XWWidgetFamilyPicker(selection: .constant(.systemSmall))
     }
 }
 #endif

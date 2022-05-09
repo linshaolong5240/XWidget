@@ -72,11 +72,11 @@ extension XWWidgetEntry {
     }
     
     func asGifWidgetConfiguration() -> XWGifWidgetConfiguration {
-        XWGifWidgetConfiguration(date: date, style: style, theme: theme, model: reslovedGifModel)
+        XWGifWidgetConfiguration(date: date, style: style, theme: theme, model: gifModel)
     }
     
     func asPhotoWidgetConfiguration() -> XWPhotoWidgetConfiguration {
-        XWPhotoWidgetConfiguration(date: date, style: style, theme: theme, model: reslovedPhotoModel)
+        XWPhotoWidgetConfiguration(date: date, style: style, theme: theme, model: photoModel)
     }
 }
 
@@ -91,10 +91,8 @@ struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiabl
     var theme: XWWidgetTheme
     var orderID: Int = 0
             
-    var gifModel: XWGifWidgetConfiguration.GifModel?
-    var reslovedGifModel: XWGifWidgetConfiguration.GifModel { gifModel ?? .init() }
-    var photoModel: XWPhotoWidgetConfiguration.PhotoModel?
-    var reslovedPhotoModel: XWPhotoWidgetConfiguration.PhotoModel { photoModel ?? .init() }
+    var gifModel: XWGifWidgetConfiguration.GifModel = .init()
+    var photoModel: XWPhotoWidgetConfiguration.PhotoModel = .init()
 
     mutating func setTransparentBackground(lightWidgetPostionImageURLDict: [WidgetPosition: URL], darkWidgetPostionImageURLDict: [WidgetPosition: URL], postion: WidgetPosition) {
         if let lightImageURL = lightWidgetPostionImageURLDict[postion] {
@@ -126,7 +124,7 @@ extension XWWidgetEntry {
     static let guide = XWWidgetEntry(kind: .guide, style: .guide, theme: .guide)
     static let calendar_plain = XWWidgetEntry(kind: .calendar, style: .calendar_plain, theme: .calendar_plain)
     static let clock_analog_plain = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
-    static let gif = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
+    static let gif = XWWidgetEntry(kind: .gif, style: .gif, theme: .gif)
     static let photo_plain = XWWidgetEntry(kind: .photo , style: .photo_plain, theme: .photo_plain)
     static let allItems: [XWWidgetEntry] = .allItems
 }

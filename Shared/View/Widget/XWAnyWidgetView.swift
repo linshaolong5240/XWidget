@@ -9,7 +9,7 @@
 import SwiftUI
 import WidgetKit
 
-struct XWWidgetEntryParseView: View {
+struct XWAnyWidgeView: View {
     let entry: XWWidgetEntry
     let family: WidgetFamily
     @Environment(\.colorScheme) var colorScheme: ColorScheme
@@ -29,18 +29,20 @@ struct XWWidgetEntryParseView: View {
             case .photo:
                 XWPhotoWidgetView(configuration: entry.asPhotoWidgetConfiguration(), family: family)
             }
-            entry.theme.boarder?.makeView(family: family)
+            entry.theme.border?.makeView(family: family, cornerRadius: family.cornerRadius)
         }
     }
 }
 
+#if DEBUG
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        XWWidgetEntryParseView(entry: .guide, family: .systemSmall)
+        XWAnyWidgeView(entry: .guide, family: .systemSmall)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-        XWWidgetEntryParseView(entry: .guide, family: .systemMedium)
+        XWAnyWidgeView(entry: .guide, family: .systemMedium)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
-        XWWidgetEntryParseView(entry: .guide, family: .systemLarge)
+        XWAnyWidgeView(entry: .guide, family: .systemLarge)
             .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
+#endif

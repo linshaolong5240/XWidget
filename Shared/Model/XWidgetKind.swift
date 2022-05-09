@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SwiftHelperWidgetKind: String {
+enum XWidgetKind: String {
     case small
     case medium
     case large

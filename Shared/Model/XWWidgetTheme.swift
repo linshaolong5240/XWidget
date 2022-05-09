@@ -131,7 +131,7 @@ struct XWWidgetBorder: Codable, Hashable, Equatable {
         self.type = .image(imageName)
     }
     
-    @ViewBuilder func makeView(family: WidgetFamily? = nil) -> some View {
+    @ViewBuilder func makeView(family: WidgetFamily? = nil, cornerRadius: CGFloat) -> some View {
         Group {
             switch type {
             case .color(let colorWrapper):
@@ -142,7 +142,7 @@ struct XWWidgetBorder: Codable, Hashable, Equatable {
                 Image(imageName)
             }
         }
-        .mask(RoundedRectangle(cornerRadius: family?.cornerRadius ?? CGFloat(10)).strokeBorder(Color.black, lineWidth: family == nil ? 5 : 15))
+        .mask(RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(Color.black, lineWidth: family == nil ? 5 : 15))
     }
 }
 
@@ -195,11 +195,11 @@ struct XWWidgetTheme: Codable, Identifiable, Equatable {
     var font: XWFontWrapper? = nil
     var fontColor: XWColorWrapper
     var background: XWWidgetBackground
-    var boarder: XWWidgetBorder? = nil
+    var border: XWWidgetBorder? = nil
 }
 
 extension XWWidgetTheme {
-    static let guide = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))), background: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))))
+    static let guide = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
     static let calendar_plain = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
     static let clock_analog_plain = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
     static let gif = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))

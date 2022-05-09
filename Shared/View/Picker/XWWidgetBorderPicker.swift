@@ -41,7 +41,7 @@ struct XWWidgetBorderPicker: View {
                         Button {
                             selection = item
                         } label: {
-                            item.makeView()
+                            item.makeView(cornerRadius: 10)
                                 .frame(width: 44, height: 44)
                                 .overlay(
                                     VStack {

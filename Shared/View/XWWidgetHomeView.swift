@@ -9,7 +9,7 @@
 import SwiftUI
 import WidgetKit
 
-struct WidgetHomeView: View {
+struct XWWidgetHomeView: View {
     let client = QWeatherAPI(key: "e2f0d3d36f50457785587c459a5843b4")
 
     @EnvironmentObject private var store: Store
@@ -23,18 +23,18 @@ struct WidgetHomeView: View {
     var body: some View {
         ZStack {
             NavigationLink(isActive: $showMyWidget) {
-                MyWidgetView(family: $family)
+                XWMyWidgetView(family: $family)
             } label: {
                 EmptyView()
             }
             NavigationLink(isActive: $showWidgetEdit) {
-                WidgetEditView(configuration: selectedWidget, family: family, saveMode: .save)
+                XWWidgetEditView(widget: selectedWidget, family: family, saveMode: .save)
             } label: {
                 EmptyView()
             }
             Color.background.ignoresSafeArea()
             VStack {
-                WidgetFamilyPicker(selection: $family)
+                XWWidgetFamilyPicker(selection: $family)
                     .overlay(
                         HStack {
                             Spacer()
@@ -54,7 +54,7 @@ struct WidgetHomeView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 20) {
                                     ForEach(item.getWidget(family: family)) { widget in
-                                        XWWidgetEntryParseView(entry: widget, family: family)
+                                        XWAnyWidgeView(entry: widget, family: family)
                                             .modifier(WidgetPreviewModifier(family: family))
                                             .onTapGesture {
                                                 selectedWidget = widget
@@ -101,7 +101,7 @@ struct WidgetHomeView: View {
 struct WidgetHomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            WidgetHomeView()
+            XWWidgetHomeView()
                 .environmentObject(Store.shared)
         }
     }

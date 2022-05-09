@@ -24,11 +24,11 @@ struct XWPhotoWidgetView: XWWidgetView {
 struct XWPhotoWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         let entry: XWWidgetEntry = .photo_plain
-        XWWidgetEntryParseView(entry: entry, family: .systemSmall)
+        XWAnyWidgeView(entry: entry, family: .systemSmall)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-        XWWidgetEntryParseView(entry: entry, family: .systemMedium)
+        XWAnyWidgeView(entry: entry, family: .systemMedium)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
-        XWWidgetEntryParseView(entry: entry, family: .systemLarge)
+        XWAnyWidgeView(entry: entry, family: .systemLarge)
             .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
