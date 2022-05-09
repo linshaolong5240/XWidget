@@ -10,6 +10,7 @@ import SwiftUI
 #if canImport(AppKit)
 import AppKit
 public typealias CrossColor = NSColor
+public typealias CrossHostingController = NSHostingController
 public typealias CrossImage = NSImage
 public typealias CrossFont = NSFont
 public typealias CrossScreen = NSScreen
@@ -27,6 +28,17 @@ public typealias CrossView = UIView
 public typealias CrossViewRepresent = UIViewRepresent
 public typealias CrossViewControllerRepresent = UIViewControllerRepresent
 #endif
+
+extension Image {
+    public init(crossImage: CrossImage) {
+        #if canImport(AppKit)
+        self.init(nsImage: crossImage)
+        #endif
+        #if canImport(UIKit)
+        self.init(uiImage: crossImage)
+        #endif
+    }
+}
 
 #if canImport(AppKit)
 @available(macOS 10.15, *)

@@ -8,20 +8,110 @@
 
 import SwiftUI
 
-extension URL {
-    var image: CrossImage? { CrossImage(contentsOfFile: path) }
-}
+import SwiftUI
 
+//Basic Extension
 #if canImport(AppKit)
 extension NSImage {
+    func pngData() -> Data? {
+        guard let cgImage = cgImage(forProposedRect: nil, context: nil, hints: nil) else {
+            return nil
+        }
+        let bitmapRep = NSBitmapImageRep(cgImage: cgImage)
+        let jpegData = bitmapRep.representation(using: NSBitmapImageRep.FileType.png, properties: [:])!
+        return jpegData
+    }
+    
     func jpegData(compressionQuality: Double = 1.0) -> Data? {
-        let cgImage = cgImage(forProposedRect: nil, context: nil, hints: nil)!
+        guard let cgImage = cgImage(forProposedRect: nil, context: nil, hints: nil) else {
+            return nil
+        }
         let bitmapRep = NSBitmapImageRep(cgImage: cgImage)
         let jpegData = bitmapRep.representation(using: NSBitmapImageRep.FileType.jpeg, properties: [:])!
         return jpegData
     }
 }
+
+extension NSView {
+    var nsImage: NSImage? {
+        guard let rep = bitmapImageRepForCachingDisplay(in: bounds) else {
+            return nil
+        }
+        cacheDisplay(in: bounds, to: rep)
+        guard let cgImage = rep.cgImage else {
+            return nil
+        }
+        return NSImage(cgImage: cgImage, size: bounds.size)
+    }
+}
 #endif
+
+//resize
+extension CrossImage {
+    #if canImport(AppKit)
+    var cgImage: CGImage? {
+        cgImage(forProposedRect: nil, context: nil, hints: nil)
+    }
+    #endif
+    
+    func crop(ratio: CGFloat) -> CrossImage? {
+        var newSize: CGSize = .zero
+        if size.width / size.height > ratio {
+            newSize = CGSize(width: size.height * ratio, height: size.height)
+        }else {
+            newSize = CGSize(width: size.width, height: size.width / ratio)
+        }
+     
+        var rect: CGRect = .zero
+        rect.size.width  = size.width
+        rect.size.height = size.height
+        rect.origin.x    = (newSize.width - size.width ) / 2.0
+        rect.origin.y    = (newSize.height - size.height ) / 2.0
+         
+        return crop(rect: rect)
+    }
+    
+    func crop(rect: CGRect) -> CrossImage? {
+        guard let cropedCGImage = cgImage?.cropping(to: rect) else {
+            return nil
+        }
+        #if canImport(AppKit)
+        return CrossImage(cgImage: cropedCGImage, size: .init(width: cropedCGImage.width, height: cropedCGImage.height))
+        #endif
+        #if canImport(UIKit)
+        return CrossImage(cgImage: cropedCGImage)
+        #endif
+    }
+    
+    func resize(to size: CGSize) -> CrossImage? {
+        guard let cgImage = cgImage else {
+            return nil
+        }
+        let width: Int = Int(size.width)
+        let height: Int = Int(size.height)
+
+        let bytesPerPixel = cgImage.bitsPerPixel / cgImage.bitsPerComponent
+        let destBytesPerRow = width * bytesPerPixel
+
+
+        guard let colorSpace = cgImage.colorSpace else { return nil }
+        guard let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: cgImage.bitsPerComponent, bytesPerRow: destBytesPerRow, space: colorSpace, bitmapInfo: cgImage.alphaInfo.rawValue) else { return nil }
+
+        context.interpolationQuality = .high
+        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+        
+        guard let resizedCGImage = context.makeImage() else {
+            return nil
+        }
+
+        #if canImport(AppKit)
+        return context.makeImage().flatMap { CrossImage(cgImage: $0, size: size) }
+        #endif
+        #if canImport(UIKit)
+        return CrossImage(cgImage: resizedCGImage)
+        #endif
+    }
+}
 
 #if canImport(UIKit)
 import UIKit
@@ -168,84 +258,6 @@ extension UIImage {
         else {
             return light()
         }
-    }
-}
-
-extension View {
-    func asImageOffScreen(size: CGSize) -> UIImage {
-        let controller = UIHostingController(rootView: self)
-
-        // locate far out of screen
-        controller.view.frame = CGRect(x: 0, y: CGFloat(Int.max), width: 1, height: 1)
-        UIApplication.shared.windows.first!.rootViewController?.view.addSubview(controller.view)
-
-        let size = controller.sizeThatFits(in: size)
-        controller.view.backgroundColor = .clear
-        controller.view.bounds = CGRect(origin: .zero, size: size)
-        controller.view.sizeToFit()
-
-        let image = controller.view.snapshotWithTransparent()
-        controller.view.removeFromSuperview()
-        return image
-    }
-    
-    func snapshot() -> UIImage {
-        let controller = UIHostingController(rootView: self.edgesIgnoringSafeArea(.all))
-        let view = controller.view
-
-        let targetSize = controller.view.intrinsicContentSize
-        #if DEBUG
-        print("\(#function)targetSize: \(targetSize)")
-        #endif
-        view?.bounds = CGRect(origin: .zero, size: targetSize)
-        view?.backgroundColor = .clear
-
-        let renderer = UIGraphicsImageRenderer(size: targetSize)
-        let imageData = renderer.pngData { _ in
-            view?.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
-        }
-        
-        return UIImage(data: imageData)!
-    }
-}
-
-@available(iOS 13.0, *)
-extension UIView {
-    func snapshot() -> UIImage {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-
-        return  renderer.image { rendererContext in
-            // [!!] Uncomment to clip resulting image
-            //             rendererContext.cgContext.addPath(
-            //                UIBezierPath(roundedRect: bounds, cornerRadius: 20).cgPath)
-            //            rendererContext.cgContext.clip()
-            
-            // As commented by @MaxIsom below in some cases might be needed
-            // to make this asynchronously, so uncomment below DispatchQueue
-            // if you'd same met crash
-            //            DispatchQueue.main.async {
-            layer.render(in: rendererContext.cgContext)
-            //            }
-        }
-    }
-    
-    func snapshotWithTransparent() -> UIImage {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        // renderer.pngData convert to Image will display not correct when image convert to UIColor(patternImage:)
-        let imageData = renderer.pngData { rendererContext in
-            // [!!] Uncomment to clip resulting image
-            //             rendererContext.cgContext.addPath(
-            //                UIBezierPath(roundedRect: bounds, cornerRadius: 20).cgPath)
-            //            rendererContext.cgContext.clip()
-            
-            // As commented by @MaxIsom below in some cases might be needed
-            // to make this asynchronously, so uncomment below DispatchQueue
-            // if you'd same met crash
-            //            DispatchQueue.main.async {
-            layer.render(in: rendererContext.cgContext)
-            //            }
-        }
-        return  UIImage(data: imageData)!
     }
 }
 #endif

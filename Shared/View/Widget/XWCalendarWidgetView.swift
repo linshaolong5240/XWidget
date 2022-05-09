@@ -46,7 +46,7 @@ struct XWCalendarWidgetView_Previews: PreviewProvider {
 struct XWCalendarPlainWidgetStyle: XWWidgetViewStyle {
     typealias Configuration = XWCalendarWidgetConfiguration
     
-    func makeBody(_ configuration: XWCalendarWidgetConfiguration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
+    func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
         ZStack {
             configuration.theme.background.makeView(family, colorScheme: colorScheme)
             CalendarMonthView(month: configuration.date, hSpacing: 4, vSpacing: 10) { date in

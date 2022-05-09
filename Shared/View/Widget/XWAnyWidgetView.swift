@@ -24,6 +24,8 @@ struct XWWidgetEntryParseView: View {
                 XWCalendarWidgetView(configuration: entry.asCalendarWidgetConfiguraiton(), family: family)
             case .clock:
                 XWClockWidgetView(configuration: entry.asClockWidgetConfiguraiton(), family: family)
+            case .gif:
+                XWGifWidgetView(configuration: entry.asGifWidgetConfiguration(), family: family)
             case .photo:
                 XWPhotoWidgetView(configuration: entry.asPhotoWidgetConfiguration(), family: family)
             }

@@ -68,14 +68,6 @@ struct WidgetHomeView: View {
                     }
                 }
             }
-            ZStack {
-                Color.pink
-                Button {
-                    request()
-                } label: {
-                    Text("Request")
-                }
-            }
         }
         .navigationBarHidden(true)
     }

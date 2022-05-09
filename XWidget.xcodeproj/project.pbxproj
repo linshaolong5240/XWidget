@@ -134,6 +134,12 @@
 		44BBD38A280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
 		44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
 		44BBD38C280DA17500204726 /* QWWeatherNowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBD389280DA17500204726 /* QWWeatherNowAction.swift */; };
+		EF8606DF2828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
+		EF8606E02828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
+		EF8606E22828B8AB0038C47B /* XWURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E12828B8AB0038C47B /* XWURLHelper.swift */; };
+		EF8606E32828B8AB0038C47B /* XWURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E12828B8AB0038C47B /* XWURLHelper.swift */; };
+		EF8606E52828B9680038C47B /* XWSnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */; };
+		EF8606E62828B9680038C47B /* XWSnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +244,9 @@
 		44BBD37C280D970E00204726 /* QWTopCititesAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QWTopCititesAction.swift; sourceTree = "<group>"; };
 		44BBD380280D975100204726 /* QWSearchCityAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QWSearchCityAction.swift; sourceTree = "<group>"; };
 		44BBD389280DA17500204726 /* QWWeatherNowAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QWWeatherNowAction.swift; sourceTree = "<group>"; };
+		EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWGifWidgetView.swift; sourceTree = "<group>"; };
+		EF8606E12828B8AB0038C47B /* XWURLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWURLHelper.swift; sourceTree = "<group>"; };
+		EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSnapshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,7 +386,9 @@
 				44B858CC27F5D19500436B55 /* XWFileManagerHelper.swift */,
 				44B858C327F5D0C900436B55 /* XWImageHelper.swift */,
 				44B858B427F5CFFC00436B55 /* XWScreenHelper.swift */,
+				EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */,
 				44B8591A27F5D82900436B55 /* XWSwiftUIHelper.swift */,
+				EF8606E12828B8AB0038C47B /* XWURLHelper.swift */,
 				44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */,
 				44B858B127F5CFD400436B55 /* XWWidgetHelper.swift */,
 			);
@@ -422,6 +433,7 @@
 				44B858EF27F5D49F00436B55 /* XWAnyWidgetView.swift */,
 				44B858E027F5D35D00436B55 /* XWCalendarWidgetView.swift */,
 				44B858E627F5D42200436B55 /* XWClockWidgetView.swift */,
+				EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */,
 				44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */,
 				44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */,
 			);
@@ -642,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8606E52828B9680038C47B /* XWSnapshotHelper.swift in Sources */,
 				44B858FF27F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */,
 				44B858C427F5D0C900436B55 /* XWImageHelper.swift in Sources */,
 				44B858F627F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */,
@@ -664,6 +677,7 @@
 				44BBD38A280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
 				44B858F327F5D4DF00436B55 /* XWWidgetView.swift in Sources */,
 				44B8590327F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
+				EF8606DF2828B18D0038C47B /* XWGifWidgetView.swift in Sources */,
 				44B858E727F5D42200436B55 /* XWClockWidgetView.swift in Sources */,
 				44B8590C27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */,
 				44B8590927F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
@@ -675,6 +689,7 @@
 				44B858D327F5D1F000436B55 /* XWWidgetKind.swift in Sources */,
 				44B858E127F5D35D00436B55 /* XWCalendarWidgetView.swift in Sources */,
 				44B8591E27F5D86300436B55 /* XWWidgetCategory.swift in Sources */,
+				EF8606E22828B8AB0038C47B /* XWURLHelper.swift in Sources */,
 				44B858DC27F5D30100436B55 /* XWidgetKind.swift in Sources */,
 				44B8584F27F5CAF200436B55 /* ContentView.swift in Sources */,
 				44B858AB27F5CF4E00436B55 /* XWAppCommand.swift in Sources */,
@@ -702,6 +717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8606E32828B8AB0038C47B /* XWURLHelper.swift in Sources */,
 				44B858CE27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */,
 				44BBD37E280D970E00204726 /* QWTopCititesAction.swift in Sources */,
 				44BBD373280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
@@ -709,8 +725,10 @@
 				44B858D427F5D1F000436B55 /* XWWidgetKind.swift in Sources */,
 				44B858DA27F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
 				44B858C527F5D0C900436B55 /* XWImageHelper.swift in Sources */,
+				EF8606E02828B18D0038C47B /* XWGifWidgetView.swift in Sources */,
 				44B858A527F5CE9300436B55 /* XWAppState.swift in Sources */,
 				44B858A927F5CEDC00436B55 /* XWUserStoregeHelper.swift in Sources */,
+				EF8606E62828B9680038C47B /* XWSnapshotHelper.swift in Sources */,
 				44B858B927F5D03600436B55 /* XWWidgetEntry.swift in Sources */,
 				44B858E827F5D42200436B55 /* XWClockWidgetView.swift in Sources */,
 				44B8589F27F5CDAB00436B55 /* XWAppAction.swift in Sources */,

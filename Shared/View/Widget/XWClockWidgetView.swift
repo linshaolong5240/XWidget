@@ -46,7 +46,7 @@ struct XWClockWidgetView_Previews: PreviewProvider {
 struct XWAnalogPlainClockWidgetStyle: XWWidgetViewStyle {
     typealias Configuration = XWClockWidgetConfiguration
     
-    func makeBody(_ configuration: XWClockWidgetConfiguration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
+    func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
         GeometryReader { geometry in
             let length: CGFloat = min(geometry.size.width, geometry.size.height)
             ZStack {

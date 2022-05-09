@@ -144,10 +144,11 @@ public class Store: ObservableObject {
 
 extension Store {
     func setWidgetThumbnail(configuration: inout XWWidgetEntry, family: WidgetFamily) {
-        let thumbnail = XWWidgetEntryParseView(entry: configuration, family: family)
+        guard let thumbnail = XWWidgetEntryParseView(entry: configuration, family: family)
             .modifier(WidgetPreviewModifier(family: family))
-                            .snapshot()
-                            .resize(family.thumbnailSize)
+            .snapshot()?.resize(family.thumbnailSize) else {
+            return
+        }
         configuration.intentThumbnailURL = try? FileManager.save(image: thumbnail)
     }
 }

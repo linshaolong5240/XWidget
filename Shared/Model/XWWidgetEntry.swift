@@ -22,20 +22,31 @@ struct XWGuideWidgetConfiguration: XWWidgetConfiguration {
     var theme: XWWidgetTheme
 }
 
-struct XWClockWidgetConfiguration: XWWidgetConfiguration {
-    var date: Date = Date()
-    var style: XWWidgetStyle
-    var theme: XWWidgetTheme
-}
-
 struct XWCalendarWidgetConfiguration: XWWidgetConfiguration {
     var date: Date = Date()
     var style: XWWidgetStyle
     var theme: XWWidgetTheme
 }
 
-struct XWPhotoWidgetConfigurtion: XWWidgetConfiguration {
+struct XWClockWidgetConfiguration: XWWidgetConfiguration {
+    var date: Date = Date()
+    var style: XWWidgetStyle
+    var theme: XWWidgetTheme
+}
+
+struct XWGifWidgetConfiguration: XWWidgetConfiguration {
+    struct GifModel: Codable, Equatable {
+        var imagesURL: [URL] = []
+        var timeInterval: TimeInterval = 1
+    }
     
+    var date: Date
+    var style: XWWidgetStyle
+    var theme: XWWidgetTheme
+    var model: GifModel
+}
+
+struct XWPhotoWidgetConfiguration: XWWidgetConfiguration {
     struct PhotoModel: Codable {
         var photoImageURL: URL?
         var photoFrameImageURL: URL?
@@ -60,8 +71,12 @@ extension XWWidgetEntry {
         XWClockWidgetConfiguration(date: date, style: style, theme: theme)
     }
     
-    func asPhotoWidgetConfiguration() -> XWPhotoWidgetConfigurtion {
-        XWPhotoWidgetConfigurtion(date: date, style: style, theme: theme, model: photoModel ?? .init())
+    func asGifWidgetConfiguration() -> XWGifWidgetConfiguration {
+        XWGifWidgetConfiguration(date: date, style: style, theme: theme, model: reslovedGifModel)
+    }
+    
+    func asPhotoWidgetConfiguration() -> XWPhotoWidgetConfiguration {
+        XWPhotoWidgetConfiguration(date: date, style: style, theme: theme, model: reslovedPhotoModel)
     }
 }
 
@@ -76,8 +91,11 @@ struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiabl
     var theme: XWWidgetTheme
     var orderID: Int = 0
             
-    var photoModel: XWPhotoWidgetConfigurtion.PhotoModel?
-    
+    var gifModel: XWGifWidgetConfiguration.GifModel?
+    var reslovedGifModel: XWGifWidgetConfiguration.GifModel { gifModel ?? .init() }
+    var photoModel: XWPhotoWidgetConfiguration.PhotoModel?
+    var reslovedPhotoModel: XWPhotoWidgetConfiguration.PhotoModel { photoModel ?? .init() }
+
     mutating func setTransparentBackground(lightWidgetPostionImageURLDict: [WidgetPosition: URL], darkWidgetPostionImageURLDict: [WidgetPosition: URL], postion: WidgetPosition) {
         if let lightImageURL = lightWidgetPostionImageURLDict[postion] {
             let darkImageURL = darkWidgetPostionImageURLDict[postion]
@@ -108,6 +126,7 @@ extension XWWidgetEntry {
     static let guide = XWWidgetEntry(kind: .guide, style: .guide, theme: .guide)
     static let calendar_plain = XWWidgetEntry(kind: .calendar, style: .calendar_plain, theme: .calendar_plain)
     static let clock_analog_plain = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
+    static let gif = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
     static let photo_plain = XWWidgetEntry(kind: .photo , style: .photo_plain, theme: .photo_plain)
     static let allItems: [XWWidgetEntry] = .allItems
 }
@@ -115,6 +134,7 @@ extension XWWidgetEntry {
 extension Array where Element == XWWidgetEntry {
     static let calendars: [XWWidgetEntry] = [.calendar_plain]
     static let clocks: [XWWidgetEntry] = [.clock_analog_plain]
+    static let gifs: [XWWidgetEntry] = [.gif]
     static let photos: [XWWidgetEntry] = [.photo_plain]
     static let allItems: [XWWidgetEntry] = [.calendar_plain, .clock_analog_plain, .photo_plain]
 }

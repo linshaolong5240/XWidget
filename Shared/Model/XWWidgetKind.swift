@@ -12,6 +12,7 @@ enum XWWidgetKind: String, Codable {
     case guide = "Guide"
     case calendar = "Calendar"
     case clock = "Clock"
+    case gif = "Gif"
     case photo = "Photo"
     
     var name: String { rawValue }
