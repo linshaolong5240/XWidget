@@ -98,7 +98,7 @@ struct CircleColckMarkStyle<Mark: View>: ColckMarkStyle {
             let minLength = min(geometry.size.width, geometry.size.height)
             let maxLength = max(geometry.size.width, geometry.size.height)
             let yOffset: CGFloat = (maxLength - minLength) / 2.0
-            ForEach(0..<marks) { n in
+            ForEach(0..<marks, id: \.self) { n in
                 VStack {
                     if configuration.origin {
                         configuration.content(n)

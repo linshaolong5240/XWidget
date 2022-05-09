@@ -4,9 +4,9 @@
 <dict>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>ConfigurationIntent</string>
-		<string>XWLargeWidgetConfiguration2Intent</string>
-		<string>XWMediumWidgetConfiguration1Intent</string>
+		<string>XWSmallWidgetConfigurationIntent</string>
+		<string>XWMediumWidgetConfigurationIntent</string>
+		<string>XWLargeWidgetConfigurationIntent</string>
 	</array>
 </dict>
 </plist>
