@@ -201,6 +201,8 @@
 		EFB87D1C2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
 		EFB87D1D2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
 		EFB87D1E2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
+		EFEA44AD2839C901006A3478 /* CWWidgetCountdownModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA44AC2839C901006A3478 /* CWWidgetCountdownModelEditer.swift */; };
+		EFEA44AE2839C901006A3478 /* CWWidgetCountdownModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA44AC2839C901006A3478 /* CWWidgetCountdownModelEditer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +324,7 @@
 		EFB87D12282A080D00C65B1A /* XWCountdownDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountdownDaysView.swift; sourceTree = "<group>"; };
 		EFB87D16282A12B100C65B1A /* XWWidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetManager.swift; sourceTree = "<group>"; };
 		EFB87D1B2838B67500C65B1A /* XWAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAboutView.swift; sourceTree = "<group>"; };
+		EFEA44AC2839C901006A3478 /* CWWidgetCountdownModelEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWWidgetCountdownModelEditer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +569,7 @@
 				EF8606E82828BDCB0038C47B /* XWWdigetGifModelEditer.swift */,
 				EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */,
 				EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */,
+				EFEA44AC2839C901006A3478 /* CWWidgetCountdownModelEditer.swift */,
 			);
 			path = WidgetEditer;
 			sourceTree = "<group>";
@@ -798,6 +802,7 @@
 				44B8590927F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
 				44B858AE27F5CF5A00436B55 /* XWStore.swift in Sources */,
 				44B858CD27F5D19500436B55 /* XWFileManagerHelper.swift in Sources */,
+				EFEA44AD2839C901006A3478 /* CWWidgetCountdownModelEditer.swift in Sources */,
 				EF2D04632828EEB400F517BB /* XWWidgetIntent.swift in Sources */,
 				44B8591827F5D7F200436B55 /* XWImagePicker.swift in Sources */,
 				44B858BE27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */,
@@ -869,6 +874,7 @@
 				EFB87D15282A081500C65B1A /* XWCountdownDaysView.swift in Sources */,
 				44B8590727F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */,
 				44B858F427F5D4DF00436B55 /* XWWidgetView.swift in Sources */,
+				EFEA44AE2839C901006A3478 /* CWWidgetCountdownModelEditer.swift in Sources */,
 				44B8591C27F5D82900436B55 /* XWSwiftUIHelper.swift in Sources */,
 				44B8591F27F5D86300436B55 /* XWWidgetCategory.swift in Sources */,
 				44B858C227F5D09900436B55 /* XWColorWrapper.swift in Sources */,
