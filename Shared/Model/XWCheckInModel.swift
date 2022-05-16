@@ -42,12 +42,12 @@ struct XWCheckInModel {
 
     init(createDate: Date, tilte: String, currentNumber: Int, targetNumber: Int, checkInRepeat: XWCheckInRepeat, kind: String) {
         self.createDate = createDate
+        self.dateInterval = checkInRepeat.dateInterval(from: createDate)
         self.title = tilte
         self.currentNumber = currentNumber
         self.targetNumber = targetNumber
         self.checkInRepeat = checkInRepeat
         self.kind = kind
-        self.dateInterval = checkInRepeat.dateInterval(from: createDate)
     }
     
     mutating func resetCheckIn() {
