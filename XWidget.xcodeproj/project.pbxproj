@@ -174,6 +174,7 @@
 		EF2D048E2828FC0100F517BB /* XWWidgetPosition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D048D2828FC0100F517BB /* XWWidgetPosition+Extension.swift */; };
 		EF2D048F2828FCA500F517BB /* XWUserStoregeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858A727F5CEDC00436B55 /* XWUserStoregeHelper.swift */; };
 		EF2D04902828FCB100F517BB /* XWWidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D04622828EEB400F517BB /* XWWidgetIntent.swift */; };
+		EF69CD8B283222C100D2E003 /* XWCheckInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69CD8A283222C100D2E003 /* XWCheckInModel.swift */; };
 		EF8606DF2828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
 		EF8606E02828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
 		EF8606E22828B8AB0038C47B /* XWURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E12828B8AB0038C47B /* XWURLHelper.swift */; };
@@ -314,6 +315,7 @@
 		EF2D04932828FD9600F517BB /* XWidget (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "XWidget (iOS).entitlements"; sourceTree = "<group>"; };
 		EF2D04942828FDCF00F517BB /* XWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XWidgetExtension.entitlements; sourceTree = "<group>"; };
 		EF2D04952828FDE000F517BB /* Intent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Intent.entitlements; sourceTree = "<group>"; };
+		EF69CD8A283222C100D2E003 /* XWCheckInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCheckInModel.swift; sourceTree = "<group>"; };
 		EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWGifWidgetView.swift; sourceTree = "<group>"; };
 		EF8606E12828B8AB0038C47B /* XWURLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWURLHelper.swift; sourceTree = "<group>"; };
 		EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSnapshotHelper.swift; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 		44B858B027F5CFAB00436B55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF69CD8A283222C100D2E003 /* XWCheckInModel.swift */,
 				EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */,
 				EFB87D16282A12B100C65B1A /* XWWidgetManager.swift */,
 				44BBD36A280D945200204726 /* QWeatherAPI */,
@@ -783,6 +786,7 @@
 				44B858BB27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
 				44B858A427F5CE9300436B55 /* XWAppState.swift in Sources */,
 				44B858F027F5D49F00436B55 /* XWAnyWidgetView.swift in Sources */,
+				EF69CD8B283222C100D2E003 /* XWCheckInModel.swift in Sources */,
 				EFB87D13282A080D00C65B1A /* XWCountdownDaysView.swift in Sources */,
 				44B858C727F5D0ED00436B55 /* XWCrossHelper.swift in Sources */,
 				44B8590627F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */,
