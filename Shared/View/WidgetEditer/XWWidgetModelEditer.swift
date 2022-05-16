@@ -15,6 +15,8 @@ struct XWWidgetModelEditer: View {
 
     var body: some View {
         switch widget.kind {
+        case .countdonw_days:
+            XWWidgetCountdownDaysModelEditer(countdownDaysModel: $widget.countdownDaysModel)
         case .gif:
             XWWidgetGifModelEditer(gifModel: $widget.gifModel, family: family)
         default: EmptyView()
