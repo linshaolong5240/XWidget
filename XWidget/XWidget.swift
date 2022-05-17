@@ -38,15 +38,15 @@ struct XWWidgetManager {
     static func updateWidget(widget: XWWidgetEntry, family: WidgetFamily) {
         switch family {
         case .systemSmall:
-            if let index = smallWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+            if let index = smallWidgetConfiguration.firstIndex(where: { $0.idForSave == widget.idForSave } ) {
                 smallWidgetConfiguration[index] = widget
             }
         case .systemMedium:
-            if let index = mediumWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+            if let index = mediumWidgetConfiguration.firstIndex(where: { $0.idForSave == widget.idForSave } ) {
                 mediumWidgetConfiguration[index] = widget
             }
         case .systemLarge:
-            if let index = largeWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+            if let index = largeWidgetConfiguration.firstIndex(where: { $0.idForSave == widget.idForSave } ) {
                 largeWidgetConfiguration[index] = widget
             }
         default:

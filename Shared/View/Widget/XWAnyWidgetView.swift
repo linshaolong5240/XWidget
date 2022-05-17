@@ -12,6 +12,7 @@ import WidgetKit
 struct XWAnyWidgeView: View {
     @Binding var entry: XWWidgetEntry
     let family: WidgetFamily
+    
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
     var body: some View {

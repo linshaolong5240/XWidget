@@ -193,6 +193,8 @@
 		EF8606ED2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */; };
 		EF8606EF2828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */; };
 		EF8606F02828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */; };
+		EFB1308028334810006ADADF /* XWWidgetInAppPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1307F28334810006ADADF /* XWWidgetInAppPreview.swift */; };
+		EFB1308128334810006ADADF /* XWWidgetInAppPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1307F28334810006ADADF /* XWWidgetInAppPreview.swift */; };
 		EFB87D0A28291D4900C65B1A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = EFB87D0928291D4900C65B1A /* SwiftDate */; };
 		EFB87D0D282A060000C65B1A /* XWCountdownDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */; };
 		EFB87D0E282A060000C65B1A /* XWCountdownDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */; };
@@ -326,6 +328,7 @@
 		EF8606E82828BDCB0038C47B /* XWWdigetGifModelEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWdigetGifModelEditer.swift; sourceTree = "<group>"; };
 		EF8606EB2828C0140038C47B /* XWWidgetThemeEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetThemeEditer.swift; sourceTree = "<group>"; };
 		EF8606EE2828C33D0038C47B /* XWWidgetModelEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetModelEditer.swift; sourceTree = "<group>"; };
+		EFB1307F28334810006ADADF /* XWWidgetInAppPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetInAppPreview.swift; sourceTree = "<group>"; };
 		EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountdownDaysModel.swift; sourceTree = "<group>"; };
 		EFB87D12282A080D00C65B1A /* XWCountdownDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountdownDaysView.swift; sourceTree = "<group>"; };
 		EFB87D1B2838B67500C65B1A /* XWAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAboutView.swift; sourceTree = "<group>"; };
@@ -522,6 +525,7 @@
 				EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */,
 				44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */,
 				44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */,
+				EFB1307F28334810006ADADF /* XWWidgetInAppPreview.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -776,6 +780,7 @@
 				EF8606E52828B9680038C47B /* XWSnapshotHelper.swift in Sources */,
 				44B858FF27F5D5CF00436B55 /* XWMyWidgetVeiw.swift in Sources */,
 				EF8606EF2828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */,
+				EFB1308028334810006ADADF /* XWWidgetInAppPreview.swift in Sources */,
 				44B858C427F5D0C900436B55 /* XWImageHelper.swift in Sources */,
 				EF8606EC2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */,
 				44B858F627F5D50B00436B55 /* XWAnalogClockHelper.swift in Sources */,
@@ -877,6 +882,7 @@
 				44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
 				EF8606ED2828C0140038C47B /* XWWidgetThemeEditer.swift in Sources */,
 				44B858C827F5D0ED00436B55 /* XWCrossHelper.swift in Sources */,
+				EFB1308128334810006ADADF /* XWWidgetInAppPreview.swift in Sources */,
 				44B8590A27F5D67600436B55 /* XWWidgetFamilyPicker.swift in Sources */,
 				EFB87D15282A081500C65B1A /* XWCountdownDaysView.swift in Sources */,
 				44B8590727F5D65300436B55 /* XWWidgetTransparentSettingView.swift in Sources */,
