@@ -16,11 +16,11 @@ struct XWCheckInWidgetView: View {
     
     var body: some View {
         ZStack {
-//            Button {
-//                entry.checkInModel.checkIn()
-//            } label: {
-//            }
-            Text("\(entry.checkInModel.currentNumber) / \(entry.checkInModel.targetNumber)")
+            Button {
+                entry.checkInModel.checkIn()
+            } label: {
+                Text("\(entry.checkInModel.currentNumber) / \(entry.checkInModel.targetNumber)")
+            }
         }
         .widgetURL(URL(string: "MyApp:///CheckIn?id=\(entry.id)&family=\(family.rawValue)")!)
     }

@@ -49,9 +49,6 @@ UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
                 return
             }
             Store.shared.dispatch(.widgetCheckin(widgetID: id, family: family))
-#if canImport(UIKit)
-UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
-#endif
 //        case "/DailyMood":
 //            let query = url.queryDictionary
 //            guard let id = query["id"], let familyValue = query["family"], let family = WidgetFamily(rawValue: Int(familyValue) ?? 0), let indexString = query["index"], let index = Int(indexString) else {

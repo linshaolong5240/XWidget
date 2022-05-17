@@ -136,23 +136,34 @@ public class Store: ObservableObject {
                 if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.id == widgetID } ) {
                     if !appState.widget.smallWidgetConfiguration[index].checkInModel.isCompleted {
                         appState.widget.smallWidgetConfiguration[index].checkInModel.checkIn()
+                        #if canImport(UIKit)
+                        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                        #endif
+                        appCommand = WidgetReloadCommand()
                     }
                 }
             case .systemMedium:
                 if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.id == widgetID } ) {
                     if !appState.widget.mediumWidgetConfiguration[index].checkInModel.isCompleted {
                         appState.widget.mediumWidgetConfiguration[index].checkInModel.checkIn()
+                        #if canImport(UIKit)
+                        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                        #endif
+                        appCommand = WidgetReloadCommand()
                     }
                 }
             case .systemLarge, .systemExtraLarge:
                 if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.id == widgetID } ) {
                     if !appState.widget.largeWidgetConfiguration[index].checkInModel.isCompleted {
                         appState.widget.largeWidgetConfiguration[index].checkInModel.checkIn()
+                        #if canImport(UIKit)
+                        UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                        #endif
+                        appCommand = WidgetReloadCommand()
                     }
                 }
             default: break
             }
-            appCommand = WidgetReloadCommand()
         }
         
         return (XWAppState, appCommand)
