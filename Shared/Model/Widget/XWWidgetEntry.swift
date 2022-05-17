@@ -68,8 +68,8 @@ struct XWPhotoWidgetConfiguration: XWWidgetConfiguration {
 struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiable {
     var date = Date()
     var editedTime: Date = Date()
-    var id: String { "\(kind.name)#\(style)#\(theme.id)#\(orderID)" }
-    var idForSave: String { "\(kind.name)#\(style)#\(orderID)" }
+    var id: String { "\(kind)_\(style)_\(theme.id)_\(orderID)" }
+    var idForSave: String { "\(kind)_\(style)_\(orderID)" }
     var intentThumbnailURL: URL?
     var kind: XWWidgetKind
     var style: XWWidgetStyle

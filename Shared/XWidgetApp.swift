@@ -6,18 +6,67 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 @main
 struct XWidgetApp: App {
     @StateObject private var store = Store.shared
-#if canImport(UIKit)
-@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate: AppDelegate
-#endif
+//#if canImport(UIKit)
+//@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate: AppDelegate
+//#endif
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    store.dispatch(.initAction)
+                }
+                .onOpenURL { url in
+                    //                    guard url.scheme == "MyApp" else { return }
+                    print(url) // parse the url to get someAction to determine what the app needs do
+                    handleURL(url: url)
+                }
                 .environmentObject(store)
+        }
+    }
+    
+    func handleURL(url: URL) {
+        let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+
+        guard let scheme = components?.scheme, scheme.contains("MyApp") else {
+            return
+        }
+        
+//        let queryItems = components?.queryItems
+        
+        switch url.path {
+        case "/CheckIn":
+            let query = url.queryDictionary
+            guard let id = query["id"], let familyValue = query["family"], let family = WidgetFamily(rawValue: Int(familyValue) ?? 0) else {
+#if canImport(UIKit)
+UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+#endif
+                return
+            }
+            Store.shared.dispatch(.widgetCheckin(widgetID: id, family: family))
+#if canImport(UIKit)
+UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+#endif
+//        case "/DailyMood":
+//            let query = url.queryDictionary
+//            guard let id = query["id"], let familyValue = query["family"], let family = WidgetFamily(rawValue: Int(familyValue) ?? 0), let indexString = query["index"], let index = Int(indexString) else {
+//#if canImport(UIKit)
+//UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+//#endif
+//                return
+//            }
+//            Store.shared.dispatch(.updateDailyMoodModel(widgetID: id, family: family, moodIndex: index))
+//            Store.shared.dispatch(.reloadWidget())
+//#if canImport(UIKit)
+//UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+//#endif
+            break
+        default: break
         }
     }
 }
@@ -31,10 +80,10 @@ class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
 //        return sceneConfig
 //    }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        Store.shared.dispatch(.initAction)
-        return true
-    }
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+//        Store.shared.dispatch(.initAction)
+//        return true
+//    }
     
 //    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
 //        orientationSupport
@@ -43,12 +92,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
 
 //class SceneDelegate: NSObject, UIWindowSceneDelegate {
 //    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-//        if userActivity.activityType == NSUserActivity.chargingAnimationActivityType {
-//            let vc = ChargingAnimationViewController()
-////            vc.modalPresentationStyle = .fullScreen
-//            UIApplication.rootViewController?.dismiss(animated: false, completion: nil)
-//            UIApplication.rootViewController?.present(vc, animated: false, completion: nil)
-//        }
+//
 //    }
 //
 //}

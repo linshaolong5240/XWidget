@@ -15,11 +15,14 @@ struct XWCheckInWidgetView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
-        Button {
-            entry.checkInModel.checkIn()
-        } label: {
+        ZStack {
+//            Button {
+//                entry.checkInModel.checkIn()
+//            } label: {
+//            }
             Text("\(entry.checkInModel.currentNumber) / \(entry.checkInModel.targetNumber)")
         }
+        .widgetURL(URL(string: "MyApp:///CheckIn?id=\(entry.id)&family=\(family.rawValue)")!)
     }
 }
 
