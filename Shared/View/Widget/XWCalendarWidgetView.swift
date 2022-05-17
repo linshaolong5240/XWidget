@@ -62,6 +62,5 @@ struct XWCalendarPlainWidgetStyle: XWWidgetViewStyle {
             }
             .padding()
         }
-        .foregroundColor(configuration.theme.fontColor.color)
     }
 }

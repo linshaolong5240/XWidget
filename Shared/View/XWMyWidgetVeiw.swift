@@ -41,7 +41,7 @@ struct XWMyWidgetView: View {
             ScrollView {
                 let widgets = getWidgets(family: family)
                 ForEach(Array(widgets.enumerated()), id: \.offset) { index, item in
-                    NavigationLink(destination: XWWidgetEditView(widget: item, family: family, saveMode: .update)) {
+                    NavigationLink(destination: XWWidgetEditView(widget: .constant(item), family: family, saveMode: .update)) {
                         RoundedRectangle(cornerRadius: 14)
                             .foregroundColor(.white)
                             .frame(height: family == .systemLarge ? 132 : 112)

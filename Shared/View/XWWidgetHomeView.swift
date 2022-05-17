@@ -28,7 +28,7 @@ struct XWWidgetHomeView: View {
                 EmptyView()
             }
             NavigationLink(isActive: $showWidgetEdit) {
-                XWWidgetEditView(widget: selectedWidget, family: family, saveMode: .save)
+                XWWidgetEditView(widget: $selectedWidget, family: family, saveMode: .save)
             } label: {
                 EmptyView()
             }

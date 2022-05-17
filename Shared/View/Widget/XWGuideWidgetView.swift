@@ -34,7 +34,6 @@ struct XWGuideWidgetView: XWWidgetView {
             }
             .padding(family.padding)
         }
-        .foregroundColor(configuration.theme.fontColor.color)
     }
     
     func getFontSize() -> CGFloat {

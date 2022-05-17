@@ -12,12 +12,14 @@ import WidgetKit
 struct XWAnyWidgeView: View {
     @Binding var entry: XWWidgetEntry
     let family: WidgetFamily
+    let isEditing: Bool
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
-    init(entry: Binding<XWWidgetEntry>, family: WidgetFamily) {
+    init(entry: Binding<XWWidgetEntry>, family: WidgetFamily, isEditing: Bool = false) {
         self._entry = entry
         self.family = family
+        self.isEditing = isEditing
     }
 
     var body: some View {
@@ -31,7 +33,7 @@ struct XWAnyWidgeView: View {
             case .clock:
                 XWClockWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme), family: family)
             case .checkin:
-                XWCheckInWidgetView(entry: $entry, family: family)
+                XWCheckInWidgetView(entry: $entry, family: family, isEditing: isEditing)
             case .countdonw_days:
                 XWCountdownDaysView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.countdownDaysModel), family: family)
             case .gif:
@@ -41,6 +43,7 @@ struct XWAnyWidgeView: View {
             }
             entry.theme.border?.makeView(family: family, cornerRadius: family.cornerRadius)
         }
+        .foregroundColor(entry.theme.fontColor.color)
     }
 }
 

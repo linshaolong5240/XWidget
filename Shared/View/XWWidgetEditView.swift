@@ -48,13 +48,13 @@ struct XWWidgetEditView: View {
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     @ObservedObject private var viewModel: XWWidgetEditViewModel
     
-    init(widget: XWWidgetEntry, family: WidgetFamily, saveMode: XWWidgetEditSaveMode) {
-        self.viewModel = XWWidgetEditViewModel(entry: widget, family: family, saveMode: saveMode)
+    init(widget: Binding<XWWidgetEntry>, family: WidgetFamily, saveMode: XWWidgetEditSaveMode) {
+        self.viewModel = XWWidgetEditViewModel(entry: widget.wrappedValue, family: family, saveMode: saveMode)
     }
 
     var body: some View {
         VStack {
-            XWAnyWidgeView(entry: $viewModel.widget, family: viewModel.family)
+            XWAnyWidgeView(entry: $viewModel.widget, family: viewModel.family, isEditing: true)
                 .modifier(WidgetPreviewModifier(family: viewModel.family))
             ScrollView {
                 XWWidgetModelEditer(widget: $viewModel.widget, family: viewModel.family)
@@ -80,8 +80,9 @@ struct XWWidgetEditView: View {
 
 #if DEBUG
 struct XWWidgetEditViewDemo: View {
+    @State private var widget: XWWidgetEntry = .checkin_plain
     var body: some View {
-        XWWidgetEditView(widget: .checkin_plain, family: .systemSmall, saveMode: .save)
+        XWWidgetEditView(widget: $widget, family: .systemSmall, saveMode: .save)
     }
 }
 

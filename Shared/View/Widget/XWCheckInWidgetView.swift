@@ -12,17 +12,19 @@ import WidgetKit
 struct XWCheckInWidgetView: View {
     @Binding var entry: XWWidgetEntry
     let family: WidgetFamily
+    let isEditing: Bool
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
-        ZStack {
-            Button {
-                entry.checkInModel.checkIn()
-            } label: {
-                Text("\(entry.checkInModel.currentNumber) / \(entry.checkInModel.targetNumber)")
-            }
+        VStack {
+            Text(entry.checkInModel.title)
+            Text("\(entry.checkInModel.currentNumber) / \(entry.checkInModel.targetNumber)")
+                .onTapGesture {
+                    entry.checkInModel.checkIn()
+                }
+                .disabled(!isEditing)
+                .widgetURL(URL(string: "MyApp:///CheckIn?id=\(entry.id)&family=\(family.rawValue)")!)
         }
-        .widgetURL(URL(string: "MyApp:///CheckIn?id=\(entry.id)&family=\(family.rawValue)")!)
     }
 }
 

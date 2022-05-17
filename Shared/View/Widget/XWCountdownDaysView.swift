@@ -47,6 +47,5 @@ struct XWCountdownDaysPlainWidgetStyle: XWWidgetViewStyle {
             Text(configuration.model.title)
             Text("\(configuration.model.remainingDays(from: configuration.date)) days")
         }
-        .foregroundColor(configuration.theme.fontColor.color)
     }
 }

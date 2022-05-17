@@ -75,6 +75,5 @@ struct XWAnalogPlainClockWidgetStyle: XWWidgetViewStyle {
             }
             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
         }
-        .foregroundColor(configuration.theme.fontColor.color)
     }
 }
