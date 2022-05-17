@@ -22,7 +22,38 @@ struct MainWidgets: WidgetBundle {
     }
 }
 
-fileprivate let widgetManager = XWWidgetManager()
+struct XWWidgetManager {
+    @CombineUserStorge(key: .widgetTransparentConfiguration, container: .group)
+    static var transparentConfiguration: XWWidgetTransparentConfiguration = XWWidgetTransparentConfiguration()
+
+    @CombineUserStorge(key: .smallWidgetConfiguration, container: .group)
+    static var smallWidgetConfiguration: [XWWidgetEntry] = []
+
+    @CombineUserStorge(key: .mediumWidgetConfiguration, container: .group)
+    static var mediumWidgetConfiguration: [XWWidgetEntry] = []
+
+    @CombineUserStorge(key: .largeWidgetConfiguration, container: .group)
+    static var largeWidgetConfiguration: [XWWidgetEntry] = []
+    
+    static func updateWidget(widget: XWWidgetEntry, family: WidgetFamily) {
+        switch family {
+        case .systemSmall:
+            if let index = smallWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                smallWidgetConfiguration[index] = widget
+            }
+        case .systemMedium:
+            if let index = mediumWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                mediumWidgetConfiguration[index] = widget
+            }
+        case .systemLarge:
+            if let index = largeWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                largeWidgetConfiguration[index] = widget
+            }
+        default:
+            break
+        }
+    }
+}
 
 extension IntentTimelineProvider where Entry == XWWidgetEntry {
     
@@ -38,18 +69,18 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         
         func setTransparentBackground(widgetConfiguration: inout XWWidgetEntry) {
             if let identifier = configuration.transparentBackground?.identifier, let rawValue = Int(identifier), let widgetPosition = WidgetPosition(rawValue: rawValue) {
-                widgetConfiguration.setTransparentBackground(lightWidgetPostionImageURLDict: widgetManager.transparentConfiguration.lightWidgetPostionImageURLDict, darkWidgetPostionImageURLDict: widgetManager.transparentConfiguration.darkWidgetPostionImageURLDict, postion: widgetPosition)
+                widgetConfiguration.setTransparentBackground(lightWidgetPostionImageURLDict: XWWidgetManager.transparentConfiguration.lightWidgetPostionImageURLDict, darkWidgetPostionImageURLDict: XWWidgetManager.transparentConfiguration.darkWidgetPostionImageURLDict, postion: widgetPosition)
             }
         }
         
         var widgetEntries = [XWWidgetEntry]()
         switch context.family {
         case .systemSmall:
-            widgetEntries = widgetManager.smallWidgetConfiguration
+            widgetEntries = XWWidgetManager.smallWidgetConfiguration
         case .systemMedium:
-            widgetEntries = widgetManager.mediumWidgetConfiguration
+            widgetEntries = XWWidgetManager.mediumWidgetConfiguration
         case .systemLarge:
-            widgetEntries = widgetManager.largeWidgetConfiguration
+            widgetEntries = XWWidgetManager.largeWidgetConfiguration
         default: break
         }
         
@@ -67,9 +98,11 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         switch widgetEntry.kind {
         case .guide:
             getStaticTimeline(for: widgetEntry, in: context, completion: completion)
+        case .calendar:
+            getNextDayTimeline(for: widgetEntry, in: context, completion: completion)
         case .clock:
             getMinutesTimeline(for: widgetEntry, in: context, completion: completion)
-        case .calendar:
+        case .checkin:
             getNextDayTimeline(for: widgetEntry, in: context, completion: completion)
         case .countdonw_days:
             getCountdownDaysTimeline(for: widgetEntry, in: context, completion: completion)
@@ -133,6 +166,22 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         let now = Date()
         var entry = widgetEntry
         entry.date = now
+        entries.append(entry)
+        let refleshDate: Date = Calendar.current.nextDay(for: now)
+        
+        let timeline = Timeline(entries: entries, policy: .after(refleshDate))
+        completion(timeline)
+    }
+    
+    func getCheckInTimeline(for widgetEntry: XWWidgetEntry, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        var entries: [XWWidgetEntry] = []
+        
+        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        let now = Date()
+        var entry = widgetEntry
+        entry.date = now
+        entry.checkInModel.checkValidWithReset()
+
         entries.append(entry)
         let refleshDate: Date = Calendar.current.nextDay(for: now)
         
@@ -305,7 +354,7 @@ struct XWWidgetEntryView : View {
     var entry: XWWidgetEntry
 
     var body: some View {
-        XWAnyWidgeView(entry: entry, family: family)
+        XWAnyWidgeView(entry: .constant(entry), family: family)
     }
 }
 
@@ -351,7 +400,7 @@ struct XWLargeWidget: Widget {
 #if DEBUG
 struct XWidget_Previews: PreviewProvider {
     static var previews: some View {
-        let config = XWWidgetEntry.calendar_plain
+        let config = XWWidgetEntry.checkin_plain
         XWWidgetEntryView(entry: config)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
         XWWidgetEntryView(entry: config)

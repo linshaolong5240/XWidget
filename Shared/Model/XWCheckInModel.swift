@@ -27,7 +27,7 @@ enum XWCheckInRepeat: Codable, Equatable {
     }
 }
 
-struct XWCheckInModel {
+struct XWCheckInModel: Codable, Equatable {
     var createDate: Date = Date()
     var dateInterval: DateInterval
     
@@ -38,7 +38,7 @@ struct XWCheckInModel {
     var kind: String
     
     var isCheckInValid: Bool { dateInterval.contains(Date()) }
-    var isComplete: Bool { currentNumber == targetNumber }
+    var isCompleted: Bool { currentNumber == targetNumber }
 
     init(createDate: Date, tilte: String, currentNumber: Int, targetNumber: Int, checkInRepeat: XWCheckInRepeat, kind: String) {
         self.createDate = createDate
@@ -48,11 +48,6 @@ struct XWCheckInModel {
         self.targetNumber = targetNumber
         self.checkInRepeat = checkInRepeat
         self.kind = kind
-    }
-    
-    mutating func resetCheckIn() {
-        createDate = Date()
-        currentNumber = 0
     }
     
     mutating func checkIn() {
@@ -69,4 +64,18 @@ struct XWCheckInModel {
         currentNumber += 1
     }
     
+    mutating func checkValidWithReset() {
+        if !isCheckInValid {
+            resetCheckIn()
+        }
+    }
+    
+    mutating func resetCheckIn() {
+        createDate = Date()
+        currentNumber = 0
+    }
+}
+
+extension XWCheckInModel {
+    static let drinkWater: XWCheckInModel = .init(createDate: Date(), tilte: "Drink Water", currentNumber: 0, targetNumber: 8, checkInRepeat: .day, kind: "Drink Water")
 }

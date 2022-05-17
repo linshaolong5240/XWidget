@@ -10,21 +10,40 @@ import Foundation
 import WidgetKit
 
 enum XWWidgetCategory: String, CaseIterable, Identifiable {
-    case calendar = "Calendar"
-    case clock = "Clock"
-    case countdown_days = "Countdown Days"
-    case gif = "Gif"
-    case photo = "Photo"
+    case calendar
+    case clock
+    case checkin
+    case countdown_days
+    case gif
+    case photo
     
     var id: String { rawValue }
-    var name: String { rawValue }
 }
 
 extension XWWidgetCategory {
+    var name: String {
+        switch self {
+        case .calendar:
+            return "Calendar"
+        case .checkin:
+            return "Check In"
+        case .clock:
+            return "Clock"
+        case .countdown_days:
+            return "Countdown Days"
+        case .gif:
+            return "Gif"
+        case .photo:
+            return "Photo"
+        }
+    }
+
     func getWidget(family: WidgetFamily) -> [XWWidgetEntry] {
         switch self {
         case .calendar:
             return .calendars
+        case .checkin:
+            return .checins
         case .clock:
             return .clocks
         case .countdown_days:

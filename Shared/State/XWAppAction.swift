@@ -14,9 +14,9 @@ enum XWAppAction {
     case error(XWAppError)
     
     //Widget
-    case saveWidget(configuration: XWWidgetEntry, family: WidgetFamily)
-    case updateWidget(configuration: XWWidgetEntry, family: WidgetFamily)
-    case deleteWidget(configuration: XWWidgetEntry, family: WidgetFamily)
+    case saveWidget(widget: XWWidgetEntry, family: WidgetFamily)
+    case updateWidget(widget: XWWidgetEntry, family: WidgetFamily)
+    case deleteWidget(widget: XWWidgetEntry, family: WidgetFamily)
     case reloadWidget(kind: String? = nil)
     case setWidgetPostionImageDict(dict: [WidgetPosition : URL], colorScheme: ColorScheme)
     case setWidgetTransparentBackground(imageURL: URL, colorScheme: ColorScheme)

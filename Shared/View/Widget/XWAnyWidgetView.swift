@@ -10,7 +10,7 @@ import SwiftUI
 import WidgetKit
 
 struct XWAnyWidgeView: View {
-    let entry: XWWidgetEntry
+    @Binding var entry: XWWidgetEntry
     let family: WidgetFamily
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
@@ -24,6 +24,8 @@ struct XWAnyWidgeView: View {
                 XWCalendarWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme), family: family)
             case .clock:
                 XWClockWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme), family: family)
+            case .checkin:
+                XWCheckInWidgetView(entry: $entry, family: family)
             case .countdonw_days:
                 XWCountdownDaysView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.countdownDaysModel), family: family)
             case .gif:
@@ -36,15 +38,15 @@ struct XWAnyWidgeView: View {
     }
 }
 
-#if DEBUG
-struct WidgetView_Previews: PreviewProvider {
-    static var previews: some View {
-        XWAnyWidgeView(entry: .guide, family: .systemSmall)
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-        XWAnyWidgeView(entry: .guide, family: .systemMedium)
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-        XWAnyWidgeView(entry: .guide, family: .systemLarge)
-            .previewContext(WidgetPreviewContext(family: .systemLarge))
-    }
-}
-#endif
+//#if DEBUG
+//struct WidgetView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        XWAnyWidgeView(entry: .guide, family: .systemSmall)
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//        XWAnyWidgeView(entry: .guide, family: .systemMedium)
+//            .previewContext(WidgetPreviewContext(family: .systemMedium))
+//        XWAnyWidgeView(entry: .guide, family: .systemLarge)
+//            .previewContext(WidgetPreviewContext(family: .systemLarge))
+//    }
+//}
+//#endif

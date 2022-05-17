@@ -7,65 +7,67 @@
 */
 
 //Common
-"Default" = "默认";
-"Unknown" = "未知";
+"Default" = "Default";
+"Unknown" = "Unknown";
 
 //Common Action
-"Cancel" = "取消";
-"Close" = "关闭";
-"Delete" = "删除";
-"Done" = "完成";
-"Get" = "获取";
-"Next" = "下一步";
-"OK" = "好的";
-"Save" = "保存";
-"Select All" = "全选";
-"Select Photo" = "选择照片";
-"Skip" = "跳过";
-"Sure" = "确定";
+"Cancel" = "Cancel";
+"Close" = "Close";
+"Delete" = "Delete";
+"Done" = "Done";
+"Get" = "Get";
+"Next" = "Next";
+"OK" = "OK";
+"Save" = "Save";
+"Select All" = "Select All";
+"Select Photo" = "Select Photo";
+"Skip" = "Skip";
+"Sure" = "Sure";
 
 //Widget
-"Small" = "小号";
-"Medium" = "中号";
-"Large" = "大号";
+"Small" = "Small";
+"Medium" = "Medium";
+"Large" = "Large";
 
-"DefaultWidget tip1" = "1.长按进入编辑模式";
-"DefaultWidget tip2" = "2.点击编辑小组件";
-"DefaultWidget tip3" = "3.选择所需小组件";
+"DefaultWidget tip1" = "1. Long press to enter edit mode";
+"DefaultWidget tip2" = "2. Click to edit the widget";
+"DefaultWidget tip3" = "3. Select the required widget";
 
-"Calendar" = "日历";
-"Clock" = "时钟";
-"Photo" = "照片";
+"Calendar" = "Calendar";
+"Check In" = "Check In";
+"Clock" = "Clock";
+"Countdown Days" = "Countdown Days";
+"Photo" = "Photo";
 
 //Widegt Position
-"None" = "无";
-"Top Left" = "左上";
-"Top Right" = "右上";
-"Middle Left" = "左中";
-"Middle Right" = "右中";
-"Bottom Left" = "左下";
-"Bottom Right" = "右下";
-"Top" = "上";
-"Middle" = "中";
-"Bottom" = "下";
+"None" = "None";
+"Top Left" = "Top Left";
+"Top Right" = "Top Right";
+"Middle Left" = "Middle Left";
+"Middle Right" = "Middle Right";
+"Bottom Left" = "Bottom Left";
+"Bottom Right" = "Bottom Right";
+"Top" = "Top";
+"Middle" = "Middle";
+"Bottom" = "Bottom";
 
 //Widget Edit Item
-"Font Color" = "字体颜色";
-"Background" = "背景";
-"Border" = "边框";
-"Transparent Background" = "透明背景";
+"Font Color" = "Font Color";
+"Background" = "Background";
+"Border" = "Border";
+"Transparent Background" = "Transparent Background";
 
-"My Widget" = "我的组件";
+"My Widget" = "My Widget";
 
 //Time
-"AM" = "上午";
-"PM" = "下午";
+"AM" = "AM";
+"PM" = "PM";
 
 //Authorization
-"Go to Authorization" = "转到授权";
-"Location Permissions" = "定位权限";
-"Location Authorization Desc" = "需要打开位置权限以使用当前位置";
-"PhotoLibrary Permissions" = "相册权限";
-"PhotoLibrary Authorization Desc" = "需要打开相册权限来查看和保存图片";
-"Camera Permissions" = "相机权限";
-"Camera Authorization Desc" = "要打开相机权限才能使用相关功能";
+"Go to Authorization" = "Go to Authorization";
+"Location Permissions" = "Location Permissions";
+"Location Authorization Desc" = "Location permissions need to be turned on to use the current location";
+"PhotoLibrary Permissions" = "PhotoLibrary Permissions";
+"PhotoLibrary Authorization Desc" = "Need to open album permissions to view and save images";
+"Camera Permissions" = "Camera Permissions";
+"Camera Authorization Desc" = "Need to open camera permission to use related functions";

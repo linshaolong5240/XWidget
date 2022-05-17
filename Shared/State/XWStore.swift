@@ -38,7 +38,7 @@ public class Store: ObservableObject {
             appCommand = InitActionCommand()
         case .error(let error):
             XWAppState.error = error
-        case .saveWidget(var configuration, let family):
+        case .saveWidget(var widget, let family):
             func getValidConfiguration(configurations: [XWWidgetEntry], configuration: XWWidgetEntry) -> Int {
                 let id = configurations.filter({ item in
                     item.kind == configuration.kind
@@ -46,39 +46,39 @@ public class Store: ObservableObject {
                 return id + 1
             }
             
-            setWidgetThumbnail(configuration: &configuration, family: family)
+            setWidgetThumbnail(widget: &widget, family: family)
             
             switch family {
             case .systemSmall:
-                configuration.orderID = getValidConfiguration(configurations: appState.widget.smallWidgetConfiguration, configuration: configuration)
-                appState.widget.smallWidgetConfiguration.insert(configuration, at: 0)
+                widget.orderID = getValidConfiguration(configurations: appState.widget.smallWidgetConfiguration, configuration: widget)
+                appState.widget.smallWidgetConfiguration.insert(widget, at: 0)
             case .systemMedium:
-                configuration.orderID = getValidConfiguration(configurations: appState.widget.mediumWidgetConfiguration, configuration: configuration)
-                appState.widget.mediumWidgetConfiguration.insert(configuration, at: 0)
+                widget.orderID = getValidConfiguration(configurations: appState.widget.mediumWidgetConfiguration, configuration: widget)
+                appState.widget.mediumWidgetConfiguration.insert(widget, at: 0)
             case .systemLarge:
-                configuration.orderID = getValidConfiguration(configurations: appState.widget.largeWidgetConfiguration, configuration: configuration)
-                appState.widget.largeWidgetConfiguration.insert(configuration, at: 0)
+                widget.orderID = getValidConfiguration(configurations: appState.widget.largeWidgetConfiguration, configuration: widget)
+                appState.widget.largeWidgetConfiguration.insert(widget, at: 0)
             default:
                 break
             }
-        case .updateWidget(var configuration, let family):
-            setWidgetThumbnail(configuration: &configuration, family: family)
+        case .updateWidget(var widget, let family):
+            setWidgetThumbnail(widget: &widget, family: family)
             switch family {
             case .systemSmall:
-                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.idForSave == configuration.idForSave } ) {
-                    appState.widget.smallWidgetConfiguration[index] = configuration
+                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                    appState.widget.smallWidgetConfiguration[index] = widget
                     appState.widget.smallWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
                     appCommand = WidgetReloadCommand(kind: XWidgetKind.small.rawValue)
                 }
             case .systemMedium:
-                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.idForSave == configuration.idForSave } ) {
-                    appState.widget.mediumWidgetConfiguration[index] = configuration
+                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                    appState.widget.mediumWidgetConfiguration[index] = widget
                     appState.widget.mediumWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
                     appCommand = WidgetReloadCommand(kind: XWidgetKind.medium.rawValue)
                 }
             case .systemLarge:
-                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.idForSave == configuration.idForSave } ) {
-                    appState.widget.largeWidgetConfiguration[index] = configuration
+                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                    appState.widget.largeWidgetConfiguration[index] = widget
                     appState.widget.largeWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
                     appCommand = WidgetReloadCommand(kind: XWidgetKind.large.rawValue)
                 }
@@ -137,12 +137,12 @@ public class Store: ObservableObject {
 }
 
 extension Store {
-    func setWidgetThumbnail(configuration: inout XWWidgetEntry, family: WidgetFamily) {
-        guard let thumbnail = XWAnyWidgeView(entry: configuration, family: family)
+    func setWidgetThumbnail(widget: inout XWWidgetEntry, family: WidgetFamily) {
+        guard let thumbnail = XWAnyWidgeView(entry: .constant(widget), family: family)
             .modifier(WidgetPreviewModifier(family: family))
             .snapshot()?.resize(family.thumbnailSize) else {
             return
         }
-        configuration.intentThumbnailURL = try? FileManager.save(image: thumbnail)
+        widget.intentThumbnailURL = try? FileManager.save(image: thumbnail)
     }
 }

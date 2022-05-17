@@ -48,7 +48,7 @@ struct XWMyWidgetView: View {
                             .shadow(radius: 10)
                             .overlay(
                                 HStack(spacing: 16) {
-                                    XWAnyWidgeView(entry: item, family: family)
+                                    XWAnyWidgeView(entry: .constant(item), family: family)
                                         .modifier(WidgetPreviewModifier(family: family))
                                         .scaleEffect(family.scalerForList)
                                         .frame(width: family.sizeForList.width, height: family.sizeForList.height)
@@ -58,7 +58,7 @@ struct XWMyWidgetView: View {
                                         HStack {
                                             Spacer()
                                             Button(action: {
-                                                store.dispatch(.deleteWidget(configuration: item, family: family))
+                                                store.dispatch(.deleteWidget(widget: item, family: family))
                                             }) {
                                                 Image(systemName: "trash")
                                             }

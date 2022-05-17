@@ -9,13 +9,34 @@
 import Foundation
 
 enum XWWidgetKind: String, Codable {
-    case guide = "Guide"
-    case calendar = "Calendar"
-    case clock = "Clock"
-    case countdonw_days = "Countdown Days"
-    case gif = "Gif"
-    case photo = "Photo"
+    case guide
+    case calendar
+    case clock
+    case checkin
+    case countdonw_days
+    case gif
+    case photo
+}
+
+extension XWWidgetKind {
+    var name: String {
+        switch self {
+        case .guide:
+            return "Guide"
+        case .calendar:
+            return "Calendar"
+        case .clock:
+            return "Clock"
+        case .checkin:
+            return "Check In"
+        case .countdonw_days:
+            return "Countdown Days"
+        case .gif:
+            return "Gif"
+        case .photo:
+            return "Photo"
+        }
+    }
     
-    var name: String { rawValue }
     var localizedName: String { NSLocalizedString(name, comment: "")}
 }

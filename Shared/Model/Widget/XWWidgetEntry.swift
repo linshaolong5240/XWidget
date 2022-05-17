@@ -34,13 +34,12 @@ struct XWClockWidgetConfiguration: XWWidgetConfiguration {
     var theme: XWWidgetTheme
 }
 
-struct XWCountDaysWidgetConfiguration: XWWidgetConfiguration {
+struct XWCountdownDaysWidgetConfiguration: XWWidgetConfiguration {
     var date: Date = Date()
     var style: XWWidgetStyle
     var theme: XWWidgetTheme
     var model: XWCountdownDaysModel
 }
-
 
 struct XWGifWidgetConfiguration: XWWidgetConfiguration {
     struct GifModel: Codable, Equatable {
@@ -76,7 +75,8 @@ struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiabl
     var style: XWWidgetStyle
     var theme: XWWidgetTheme
     var orderID: Int = 0
-            
+        
+    var checkInModel: XWCheckInModel = .drinkWater
     var countdownDaysModel: XWCountdownDaysModel = .memorialDay
     var gifModel: XWGifWidgetConfiguration.GifModel = .init()
     var photoModel: XWPhotoWidgetConfiguration.PhotoModel = .init()
@@ -110,6 +110,7 @@ extension XWWidgetEntry {
 extension XWWidgetEntry {
     static let guide = XWWidgetEntry(kind: .guide, style: .guide, theme: .guide)
     static let calendar_plain = XWWidgetEntry(kind: .calendar, style: .calendar_plain, theme: .calendar_plain)
+    static let checkin_plain = XWWidgetEntry(kind: .checkin, style: .checkin_plain, theme: .checkin_plain)
     static let clock_analog_plain = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
     static let countdown_days_plain = XWWidgetEntry(kind: .countdonw_days, style: .countdown_days_plain, theme: .countdown_days_plain)
     static let gif = XWWidgetEntry(kind: .gif, style: .gif, theme: .gif)
@@ -119,6 +120,7 @@ extension XWWidgetEntry {
 
 extension Array where Element == XWWidgetEntry {
     static let calendars: [XWWidgetEntry] = [.calendar_plain]
+    static let checins: [XWWidgetEntry] = [.checkin_plain]
     static let clocks: [XWWidgetEntry] = [.clock_analog_plain]
     static let countdownDays: [XWWidgetEntry] = [.countdown_days_plain]
     static let gifs: [XWWidgetEntry] = [.gif]

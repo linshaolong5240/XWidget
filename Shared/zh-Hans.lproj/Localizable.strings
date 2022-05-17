@@ -33,7 +33,9 @@
 "DefaultWidget tip3" = "3.选择所需小组件";
 
 "Calendar" = "日历";
+"Check In" = "打卡";
 "Clock" = "时钟";
+"Countdown Days" = "倒数日";
 "Photo" = "照片";
 
 //Widegt Position

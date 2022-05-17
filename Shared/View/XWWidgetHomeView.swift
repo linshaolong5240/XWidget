@@ -54,7 +54,7 @@ struct XWWidgetHomeView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 20) {
                                     ForEach(item.getWidget(family: family)) { widget in
-                                        XWAnyWidgeView(entry: widget, family: family)
+                                        XWAnyWidgeView(entry: .constant(widget), family: family)
                                             .modifier(WidgetPreviewModifier(family: family))
                                             .onTapGesture {
                                                 selectedWidget = widget
@@ -86,14 +86,14 @@ struct XWWidgetHomeView: View {
     }
     
     func request() {
-        client.request(action: QWTopCititesAction()) { result in
-            switch result {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        client.request(action: QWTopCititesAction()) { result in
+//            switch result {
+//            case .success(let response):
+//                print(response)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 }
 

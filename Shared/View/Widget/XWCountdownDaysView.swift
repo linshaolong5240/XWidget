@@ -9,12 +9,12 @@
 import SwiftUI
 import WidgetKit
 
-extension XWCountDaysWidgetConfiguration {
-    static let countdown_days_plain = XWCountDaysWidgetConfiguration(style: .countdown_days_plain, theme: .countdown_days_plain, model: .memorialDay)
+extension XWCountdownDaysWidgetConfiguration {
+    static let countdown_days_plain = XWCountdownDaysWidgetConfiguration(style: .countdown_days_plain, theme: .countdown_days_plain, model: .memorialDay)
 }
 
 struct XWCountdownDaysView: XWWidgetView {
-    typealias Configuration = XWCountDaysWidgetConfiguration
+    typealias Configuration = XWCountdownDaysWidgetConfiguration
     let configuration: Configuration
     let family: WidgetFamily
     @Environment(\.colorScheme) var colorScheme: ColorScheme
@@ -32,7 +32,7 @@ struct XWCountdownDaysView: XWWidgetView {
 #if DEBUG
 struct XWCountdownDaysView_Previews: PreviewProvider {
     static var previews: some View {
-        let config = XWCountDaysWidgetConfiguration.countdown_days_plain
+        let config = XWCountdownDaysWidgetConfiguration.countdown_days_plain
         XWCountdownDaysView(configuration: config, family: .systemSmall)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
@@ -40,7 +40,7 @@ struct XWCountdownDaysView_Previews: PreviewProvider {
 #endif
 
 struct XWCountdownDaysPlainWidgetStyle: XWWidgetViewStyle {
-    typealias Configuration = XWCountDaysWidgetConfiguration
+    typealias Configuration = XWCountdownDaysWidgetConfiguration
     
     func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
         VStack {

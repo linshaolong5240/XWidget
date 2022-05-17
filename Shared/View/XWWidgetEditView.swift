@@ -16,7 +16,6 @@ enum XWWidgetEditSaveMode {
 }
 
 class XWWidgetEditViewModel: ObservableObject {
-    
     @Published var widget: XWWidgetEntry
     @Published var family: WidgetFamily
     private let saveMode: XWWidgetEditSaveMode
@@ -37,17 +36,16 @@ class XWWidgetEditViewModel: ObservableObject {
     }
     
     func saveWidget() {
-        Store.shared.dispatch(.saveWidget(configuration: widget, family: family))
+        Store.shared.dispatch(.saveWidget(widget: widget, family: family))
     }
     
     func updateWidget() {
-        Store.shared.dispatch(.updateWidget(configuration: widget, family: family))
+        Store.shared.dispatch(.updateWidget(widget: widget, family: family))
     }
 }
 
 struct XWWidgetEditView: View {
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-
     @ObservedObject private var viewModel: XWWidgetEditViewModel
     
     init(widget: XWWidgetEntry, family: WidgetFamily, saveMode: XWWidgetEditSaveMode) {
@@ -56,7 +54,7 @@ struct XWWidgetEditView: View {
 
     var body: some View {
         VStack {
-            XWAnyWidgeView(entry: viewModel.widget, family: viewModel.family)
+            XWAnyWidgeView(entry: $viewModel.widget, family: viewModel.family)
                 .modifier(WidgetPreviewModifier(family: viewModel.family))
             ScrollView {
                 XWWidgetModelEditer(widget: $viewModel.widget, family: viewModel.family)
@@ -83,7 +81,7 @@ struct XWWidgetEditView: View {
 #if DEBUG
 struct XWWidgetEditViewDemo: View {
     var body: some View {
-        XWWidgetEditView(widget: .gif, family: .systemSmall, saveMode: .save)
+        XWWidgetEditView(widget: .checkin_plain, family: .systemSmall, saveMode: .save)
     }
 }
 
