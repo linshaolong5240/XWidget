@@ -12,17 +12,19 @@ import WidgetKit
 struct XWWidgetInAppPreview: View {
     let widget: XWWidgetEntry
     let family: WidgetFamily
+    let scale: CGFloat
     let isEditing: Bool
     
-    init(widget: XWWidgetEntry, family: WidgetFamily, isEditing: Bool = false) {
+    init(widget: XWWidgetEntry, family: WidgetFamily, scale: CGFloat = 1.0, isEditing: Bool = false) {
         self.widget = widget
         self.family = family
+        self.scale = scale
         self.isEditing = isEditing
     }
     
     var body: some View {
         XWAnyWidgeView(entry: .constant(widget), family: family)
-            .modifier(WidgetPreviewModifier(family: family))
+            .modifier(WidgetPreviewModifier(family: family, scale: scale))
     }
 }
 

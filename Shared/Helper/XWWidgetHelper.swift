@@ -10,13 +10,20 @@ import SwiftUI
 import WidgetKit
 
 public struct WidgetPreviewModifier: ViewModifier {
-
     let family: WidgetFamily
+    let scale: CGFloat
+    
+    init(family: WidgetFamily, scale: CGFloat = 1.0) {
+        self.family = family
+        self.scale = scale
+    }
 
     public func body(content: Content) -> some View {
         content
             .frame(width: family.size.width, height: family.size.height)
             .cornerRadius(family.cornerRadius)
+            .scaleEffect(scale)
+            .frame(width: family.size.width * scale, height: family.size.height * scale)
             .shadow(radius: 10)
     }
 }

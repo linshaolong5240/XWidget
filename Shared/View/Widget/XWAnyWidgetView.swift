@@ -15,6 +15,11 @@ struct XWAnyWidgeView: View {
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
+    init(entry: Binding<XWWidgetEntry>, family: WidgetFamily) {
+        self._entry = entry
+        self.family = family
+    }
+
     var body: some View {
         ZStack {
             entry.theme.background.makeView(family, colorScheme: colorScheme)
