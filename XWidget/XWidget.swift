@@ -164,10 +164,12 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let now = Date()
+        let refleshDate: Date = Calendar.current.nextDay(for: now)
+
         var entry = widgetEntry
         entry.date = now
         entries.append(entry)
-        let refleshDate: Date = Calendar.current.nextDay(for: now)
+        XWWidgetManager.updateWidget(widget: widgetEntry, family: context.family)
         
         let timeline = Timeline(entries: entries, policy: .after(refleshDate))
         completion(timeline)
@@ -178,12 +180,13 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let now = Date()
+        let refleshDate: Date = Calendar.current.nextDay(for: now)
+
         var entry = widgetEntry
         entry.date = now
         entry.checkInModel.checkValidWithReset()
-
         entries.append(entry)
-        let refleshDate: Date = Calendar.current.nextDay(for: now)
+        XWWidgetManager.updateWidget(widget: widgetEntry, family: context.family)
         
         let timeline = Timeline(entries: entries, policy: .after(refleshDate))
         completion(timeline)
@@ -194,12 +197,14 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let now = Date()
+        let refleshDate: Date = Calendar.current.nextDay(for: now)
+
         var entry = widgetEntry
         entry.date = now
         entry.countdownDaysModel.checkAndSetRepeat(from: now)
         entries.append(entry)
-        let refleshDate: Date = Calendar.current.nextDay(for: now)
-        
+        XWWidgetManager.updateWidget(widget: widgetEntry, family: context.family)
+
         let timeline = Timeline(entries: entries, policy: .after(refleshDate))
         completion(timeline)
     }

@@ -27,7 +27,6 @@ struct XWWidgetBorderPicker: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Border")
-                .padding(.horizontal)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     Button(action: {
@@ -67,7 +66,6 @@ struct XWWidgetBorderPicker: View {
                         }
                     }
                 }
-                .padding(.horizontal)
             }
         }
     }

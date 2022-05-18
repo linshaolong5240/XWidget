@@ -12,7 +12,7 @@ struct XWWidgetCheckInModelEditer: View {
     @Binding var checkInModel: XWCheckInModel
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading) {
             let grayColor: Color = .uicontrolGray
             let tintColor: Color = .secondaryTint
             Text("Check In Name")

@@ -33,7 +33,6 @@ struct XWWidgetFontColorPicker: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Font Color")
-                .padding(.horizontal)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ColorPicker("Color Picker", selection: $color)
@@ -64,7 +63,6 @@ struct XWWidgetFontColorPicker: View {
                         }
                     }
                 }
-                .padding(.horizontal)
             }
         }
     }

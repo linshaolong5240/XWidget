@@ -64,7 +64,6 @@ struct XWWidgetBackgroundPicker: View {
 #endif
             VStack(alignment: .leading) {
                 Text("Background")
-                    .padding(.horizontal)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         Button(action: {
@@ -133,7 +132,6 @@ struct XWWidgetBackgroundPicker: View {
                             }
                         }
                     }
-                    .padding(.horizontal)
                 }
 #if canImport(UIKit)
                 if showTransparentBackgroundPicker {
