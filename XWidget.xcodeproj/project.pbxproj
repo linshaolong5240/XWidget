@@ -213,6 +213,10 @@
 		EFB87D1E2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
 		EFEA44AD2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA44AC2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift */; };
 		EFEA44AE2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA44AC2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift */; };
+		EFFB2EC4283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */; };
+		EFFB2EC5283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */; };
+		EFFB2EC6283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */; };
+		EFFB2EC7283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +342,7 @@
 		EFB87D12282A080D00C65B1A /* XWCountdownDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountdownDaysView.swift; sourceTree = "<group>"; };
 		EFB87D1B2838B67500C65B1A /* XWAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAboutView.swift; sourceTree = "<group>"; };
 		EFEA44AC2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetCountdownDaysModelEditer.swift; sourceTree = "<group>"; };
+		EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountupDaysModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,6 +502,7 @@
 			children = (
 				EF69CD8A283222C100D2E003 /* XWCheckInModel.swift */,
 				EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */,
+				EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */,
 				44BBD36A280D945200204726 /* QWeatherAPI */,
 				EFB87D042829081200C65B1A /* Widget */,
 			);
@@ -506,15 +512,16 @@
 		44B858DE27F5D33100436B55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFB87D1B2838B67500C65B1A /* XWAboutView.swift */,
 				44B858F827F5D53000436B55 /* XWCalendarView.swift */,
 				44B858FE27F5D5CF00436B55 /* XWMyWidgetVeiw.swift */,
 				44B8590227F5D61300436B55 /* XWWidgetEditView.swift */,
 				44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */,
+				EFB1307F28334810006ADADF /* XWWidgetInAppPreview.swift */,
 				44B8590527F5D65300436B55 /* XWWidgetTransparentSettingView.swift */,
 				44B8590127F5D5F100436B55 /* Picker */,
 				44B858DF27F5D33A00436B55 /* Widget */,
 				EF8606E72828BDB30038C47B /* WidgetEditer */,
-				EFB87D1B2838B67500C65B1A /* XWAboutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -530,7 +537,6 @@
 				EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */,
 				44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */,
 				44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */,
-				EFB1307F28334810006ADADF /* XWWidgetInAppPreview.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -800,6 +806,7 @@
 				44B858D927F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
 				44B858ED27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
 				EF2D048E2828FC0100F517BB /* XWWidgetPosition+Extension.swift in Sources */,
+				EFFB2EC4283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */,
 				44B858BB27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
 				44B858A427F5CE9300436B55 /* XWAppState.swift in Sources */,
 				44B858F027F5D49F00436B55 /* XWAnyWidgetView.swift in Sources */,
@@ -887,6 +894,7 @@
 				44BBD382280D975100204726 /* QWSearchCityAction.swift in Sources */,
 				EF8606F02828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */,
 				44B8590427F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
+				EFFB2EC5283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */,
 				EFB87D1D2838B67500C65B1A /* XWAboutView.swift in Sources */,
 				44BBD376280D96F800204726 /* QWResponse.swift in Sources */,
 				44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
@@ -937,6 +945,7 @@
 			files = (
 				EF2D04902828FCB100F517BB /* XWWidgetIntent.swift in Sources */,
 				EF2D048A2828FBC900F517BB /* XWWidgetStyle.swift in Sources */,
+				EFFB2EC7283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */,
 				EF2D04842828FACE00F517BB /* XWCrossHelper.swift in Sources */,
 				44B8587E27F5CB5900436B55 /* IntentHandler.swift in Sources */,
 				EF2D04822828FA3200F517BB /* XWWidgetPosition.swift in Sources */,
@@ -975,6 +984,7 @@
 				EF2D046F2828F29A00F517BB /* XWAnyWidgetView.swift in Sources */,
 				EFB87D1E2838B67500C65B1A /* XWAboutView.swift in Sources */,
 				44B8588F27F5CBB400436B55 /* XWidget.swift in Sources */,
+				EFFB2EC6283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */,
 				44BBD371280D96F800204726 /* QWeatherAPI.swift in Sources */,
 				44BBD374280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
 				EF2D04732828F2A500F517BB /* XWGuideWidgetView.swift in Sources */,

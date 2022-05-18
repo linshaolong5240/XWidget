@@ -36,6 +36,7 @@ struct XWCheckInWidgetViewDemo: View {
 
     }
 }
+
 struct XWCheckInWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         XWCheckInWidgetViewDemo()
