@@ -14,6 +14,7 @@ enum XWWidgetKind: String, Codable {
     case clock
     case checkin
     case countdonw_days
+    case countup_days
     case gif
     case photo
 }
@@ -31,6 +32,8 @@ extension XWWidgetKind {
             return "Check In"
         case .countdonw_days:
             return "Countdown Days"
+        case .countup_days:
+            return "Countup Days"
         case .gif:
             return "Gif"
         case .photo:

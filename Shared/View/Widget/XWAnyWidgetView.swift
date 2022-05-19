@@ -36,6 +36,8 @@ struct XWAnyWidgeView: View {
                 XWCheckInWidgetView(entry: $entry, family: family, isEditing: isEditing)
             case .countdonw_days:
                 XWCountdownDaysView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.countdownDaysModel), family: family)
+            case .countup_days:
+                XWCountupDaysWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.countupDaysModel), family: family)
             case .gif:
                 XWGifWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.gifModel), family: family)
             case .photo:

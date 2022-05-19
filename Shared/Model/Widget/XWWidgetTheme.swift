@@ -204,6 +204,7 @@ extension XWWidgetTheme {
     static let checkin_plain = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
     static let clock_analog_plain = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
     static let countdown_days_plain = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
+    static let countup_days_plain = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
     static let gif = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
     static let photo_plain = XWWidgetTheme(fontColor: .init(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))), background: .init(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
 }

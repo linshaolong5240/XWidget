@@ -67,4 +67,12 @@ extension Calendar {
 
         return generateDates(inside: interval , matching: DateComponents(hour: 0, minute: 0, second: 0))
     }
+    
+    func numberOfDaysBetween(_ from: Date, and to: Date) -> Int {
+        let fromDate = startOfDay(for: from)
+        let toDate = startOfDay(for: to)
+        let numberOfDays = dateComponents([.day], from: fromDate, to: toDate)
+        
+        return numberOfDays.day!
+    }
 }

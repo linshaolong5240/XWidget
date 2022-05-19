@@ -41,6 +41,13 @@ struct XWCountdownDaysWidgetConfiguration: XWWidgetConfiguration {
     var model: XWCountdownDaysModel
 }
 
+struct XWCountupDaysWidgetConfiguration: XWWidgetConfiguration {
+    var date: Date = Date()
+    var style: XWWidgetStyle
+    var theme: XWWidgetTheme
+    var model: XWCountupDaysModel
+}
+
 struct XWGifWidgetConfiguration: XWWidgetConfiguration {
     struct GifModel: Codable, Equatable {
         var imagesURL: [URL] = []
@@ -78,6 +85,7 @@ struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiabl
         
     var checkInModel: XWCheckInModel = .drinkWater
     var countdownDaysModel: XWCountdownDaysModel = .memorialDay
+    var countupDaysModel: XWCountupDaysModel = .memorialDay
     var gifModel: XWGifWidgetConfiguration.GifModel = .init()
     var photoModel: XWPhotoWidgetConfiguration.PhotoModel = .init()
 
@@ -113,6 +121,7 @@ extension XWWidgetEntry {
     static let checkin_plain = XWWidgetEntry(kind: .checkin, style: .checkin_plain, theme: .checkin_plain)
     static let clock_analog_plain = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
     static let countdown_days_plain = XWWidgetEntry(kind: .countdonw_days, style: .countdown_days_plain, theme: .countdown_days_plain)
+    static let countup_days_plain = XWWidgetEntry(kind: .countup_days, style: .countup_days_plain, theme: .countup_days_plain)
     static let gif = XWWidgetEntry(kind: .gif, style: .gif, theme: .gif)
     static let photo_plain = XWWidgetEntry(kind: .photo , style: .photo_plain, theme: .photo_plain)
     static let allItems: [XWWidgetEntry] = .allItems
@@ -122,7 +131,7 @@ extension Array where Element == XWWidgetEntry {
     static let calendars: [XWWidgetEntry] = [.calendar_plain]
     static let checins: [XWWidgetEntry] = [.checkin_plain]
     static let clocks: [XWWidgetEntry] = [.clock_analog_plain]
-    static let countdownDays: [XWWidgetEntry] = [.countdown_days_plain]
+    static let countDays: [XWWidgetEntry] = [.countdown_days_plain, .countup_days_plain]
     static let gifs: [XWWidgetEntry] = [.gif]
     static let photos: [XWWidgetEntry] = [.photo_plain]
     static let allItems: [XWWidgetEntry] = [.calendar_plain, .clock_analog_plain, .photo_plain]

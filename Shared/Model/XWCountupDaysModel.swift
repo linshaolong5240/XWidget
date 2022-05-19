@@ -17,7 +17,11 @@ struct XWCountupDaysModel: Codable {
         self.targetDate = targetDate
     }
     
-    func betweenDays(from date: Date) {
-        let date = Calendar.current.startOfDay(for: <#T##Date#>)
+    func betweenDays(from date: Date) -> Int {
+        Calendar.current.numberOfDaysBetween(targetDate, and: date)
     }
+}
+
+extension XWCountupDaysModel {
+    static let memorialDay = XWCountupDaysModel(title: "Memorial Day", targetDate: Calendar.current.date(from: DateComponents(year: 2022, month: 5, day: 1)) ?? Date())
 }

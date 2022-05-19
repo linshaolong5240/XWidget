@@ -106,6 +106,8 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
             getCheckInTimeline(for: widgetEntry, in: context, completion: completion)
         case .countdonw_days:
             getCountdownDaysTimeline(for: widgetEntry, in: context, completion: completion)
+        case .countup_days:
+            getCountdownDaysTimeline(for: widgetEntry, in: context, completion: completion)
         case .gif:
             getGifTimeline(for: widgetEntry, in: context, completion: completion)
         case .photo:
@@ -114,7 +116,7 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
 //            getMinutesTimeline(for: widgetType, in: context, completion: completion)
 //        case .clock_digital:
 //            getMinutesTimeline(for: widgetType, in: context, completion: completion)
-//        case .countdown_days:
+//        case .count_days:
 //            getNextDayTimeline(for: widgetType, in: context, completion: completion)
 //        case .notepad:
 //            getStaticTimeline(for: widgetType, in: context, completion: completion)

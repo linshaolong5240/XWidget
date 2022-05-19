@@ -13,7 +13,7 @@ enum XWWidgetCategory: String, CaseIterable, Identifiable {
     case calendar
     case clock
     case checkin
-    case countdown_days
+    case count_days
     case gif
     case photo
     
@@ -29,8 +29,8 @@ extension XWWidgetCategory {
             return "Check In"
         case .clock:
             return "Clock"
-        case .countdown_days:
-            return "Countdown Days"
+        case .count_days:
+            return "Count Days"
         case .gif:
             return "Gif"
         case .photo:
@@ -46,8 +46,8 @@ extension XWWidgetCategory {
             return .checins
         case .clock:
             return .clocks
-        case .countdown_days:
-            return .countdownDays
+        case .count_days:
+            return .countDays
         case .gif:
             return .gifs
         case .photo:

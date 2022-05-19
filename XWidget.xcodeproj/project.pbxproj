@@ -199,7 +199,6 @@
 		EFB1308328339D11006ADADF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44B8592627F5D92C00436B55 /* Localizable.strings */; };
 		EFB130852833A248006ADADF /* XWWidgetCheckInModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB130842833A248006ADADF /* XWWidgetCheckInModelEditer.swift */; };
 		EFB130862833A248006ADADF /* XWWidgetCheckInModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB130842833A248006ADADF /* XWWidgetCheckInModelEditer.swift */; };
-		EFB87D0A28291D4900C65B1A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = EFB87D0928291D4900C65B1A /* SwiftDate */; };
 		EFB87D0D282A060000C65B1A /* XWCountdownDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */; };
 		EFB87D0E282A060000C65B1A /* XWCountdownDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */; };
 		EFB87D0F282A060000C65B1A /* XWCountdownDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */; };
@@ -213,6 +212,10 @@
 		EFB87D1E2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
 		EFEA44AD2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA44AC2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift */; };
 		EFEA44AE2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA44AC2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift */; };
+		EFF96ECB28364D3800A38D26 /* XWCountupDaysWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF96ECA28364D3800A38D26 /* XWCountupDaysWidgetView.swift */; };
+		EFF96ECC28364D3800A38D26 /* XWCountupDaysWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF96ECA28364D3800A38D26 /* XWCountupDaysWidgetView.swift */; };
+		EFF96ECD28364D3800A38D26 /* XWCountupDaysWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF96ECA28364D3800A38D26 /* XWCountupDaysWidgetView.swift */; };
+		EFF96ECE2836575000A38D26 /* XWCalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B858E327F5D38600436B55 /* XWCalendarHelper.swift */; };
 		EFFB2EC4283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */; };
 		EFFB2EC5283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */; };
 		EFFB2EC6283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */; };
@@ -342,6 +345,7 @@
 		EFB87D12282A080D00C65B1A /* XWCountdownDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountdownDaysView.swift; sourceTree = "<group>"; };
 		EFB87D1B2838B67500C65B1A /* XWAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAboutView.swift; sourceTree = "<group>"; };
 		EFEA44AC2839C901006A3478 /* XWWidgetCountdownDaysModelEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetCountdownDaysModelEditer.swift; sourceTree = "<group>"; };
+		EFF96ECA28364D3800A38D26 /* XWCountupDaysWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountupDaysWidgetView.swift; sourceTree = "<group>"; };
 		EFFB2EC3283B5D2B001A1CC2 /* XWCountupDaysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountupDaysModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -350,7 +354,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFB87D0A28291D4900C65B1A /* SwiftDate in Frameworks */,
 				44BBD386280D98E000204726 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +537,7 @@
 				EF4E570F2833270500919582 /* XWCheckInWidgetView.swift */,
 				44B858E627F5D42200436B55 /* XWClockWidgetView.swift */,
 				EFB87D12282A080D00C65B1A /* XWCountdownDaysView.swift */,
+				EFF96ECA28364D3800A38D26 /* XWCountupDaysWidgetView.swift */,
 				EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */,
 				44B858E927F5D44200436B55 /* XWGuideWidgetView.swift */,
 				44B858EC27F5D45700436B55 /* XWPhotoWidgetView.swift */,
@@ -636,7 +640,6 @@
 			name = "XWidget (iOS)";
 			packageProductDependencies = (
 				44BBD385280D98E000204726 /* Alamofire */,
-				EFB87D0928291D4900C65B1A /* SwiftDate */,
 			);
 			productName = "XWidget (iOS)";
 			productReference = 44B8584427F5CAF200436B55 /* XWidget.app */;
@@ -733,7 +736,6 @@
 			mainGroup = 44B8583727F5CAF200436B55;
 			packageReferences = (
 				44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				EFB87D0828291D4900C65B1A /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 44B8584527F5CAF200436B55 /* Products */;
 			projectDirPath = "";
@@ -804,6 +806,7 @@
 				44B858FC27F5D5B000436B55 /* XWWidgetHomeView.swift in Sources */,
 				44BBD372280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
 				44B858D927F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
+				EFF96ECB28364D3800A38D26 /* XWCountupDaysWidgetView.swift in Sources */,
 				44B858ED27F5D45700436B55 /* XWPhotoWidgetView.swift in Sources */,
 				EF2D048E2828FC0100F517BB /* XWWidgetPosition+Extension.swift in Sources */,
 				EFFB2EC4283B5D2B001A1CC2 /* XWCountupDaysModel.swift in Sources */,
@@ -926,6 +929,7 @@
 				44B8585027F5CAF200436B55 /* ContentView.swift in Sources */,
 				44B8590D27F5D69500436B55 /* XWWidgetBackgroundPicker.swift in Sources */,
 				EF8606EA2828BDCB0038C47B /* XWWdigetGifModelEditer.swift in Sources */,
+				EFF96ECC28364D3800A38D26 /* XWCountupDaysWidgetView.swift in Sources */,
 				44B858BF27F5D07C00436B55 /* XWWidgetTheme.swift in Sources */,
 				44B858BC27F5D05900436B55 /* XWWidgetStyle.swift in Sources */,
 				EFB87D0E282A060000C65B1A /* XWCountdownDaysModel.swift in Sources */,
@@ -959,6 +963,7 @@
 				EF2D047C2828FA0100F517BB /* XWidget.intentdefinition in Sources */,
 				EF2D04862828FBB400F517BB /* XWFontWrapper.swift in Sources */,
 				EF2D048B2828FBCC00F517BB /* XWWidgetTheme.swift in Sources */,
+				EFF96ECE2836575000A38D26 /* XWCalendarHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1003,7 @@
 				44BBD38C280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
 				44BBD37A280D96F800204726 /* QWAPIAction.swift in Sources */,
 				EF2D046A2828F27A00F517BB /* XWidgetKind.swift in Sources */,
+				EFF96ECD28364D3800A38D26 /* XWCountupDaysWidgetView.swift in Sources */,
 				EFB87D14282A080D00C65B1A /* XWCountdownDaysView.swift in Sources */,
 				EF2D047A2828F3D500F517BB /* XWCalendarHelper.swift in Sources */,
 				EF2D046B2828F27C00F517BB /* XWFontWrapper.swift in Sources */,
@@ -1462,14 +1468,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		EFB87D0828291D4900C65B1A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/malcommac/SwiftDate";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1482,11 +1480,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44BBD384280D98E000204726 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		EFB87D0928291D4900C65B1A /* SwiftDate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EFB87D0828291D4900C65B1A /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
