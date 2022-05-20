@@ -14,7 +14,6 @@ enum XWWidgetCategory: String, CaseIterable, Identifiable {
     case clock
     case checkin
     case count_days
-    case gif
     case photo
     
     var id: String { rawValue }
@@ -31,8 +30,6 @@ extension XWWidgetCategory {
             return "Clock"
         case .count_days:
             return "Count Days"
-        case .gif:
-            return "Gif"
         case .photo:
             return "Photo"
         }
@@ -48,8 +45,6 @@ extension XWWidgetCategory {
             return .clocks
         case .count_days:
             return .countDays
-        case .gif:
-            return .gifs
         case .photo:
             return .photos
         }

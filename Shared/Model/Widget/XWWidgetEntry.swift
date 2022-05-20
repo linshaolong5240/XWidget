@@ -132,7 +132,6 @@ extension Array where Element == XWWidgetEntry {
     static let checins: [XWWidgetEntry] = [.checkin_plain]
     static let clocks: [XWWidgetEntry] = [.clock_analog_plain]
     static let countDays: [XWWidgetEntry] = [.countdown_days_plain, .countup_days_plain]
-    static let gifs: [XWWidgetEntry] = [.gif]
-    static let photos: [XWWidgetEntry] = [.photo_plain]
+    static let photos: [XWWidgetEntry] = [.photo_plain, .gif]
     static let allItems: [XWWidgetEntry] = [.calendar_plain, .clock_analog_plain, .photo_plain]
 }
