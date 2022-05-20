@@ -54,7 +54,7 @@ struct XWWidgetHomeView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 20) {
                                     ForEach(item.getWidget(family: family)) { widget in
-                                        XWWidgetInAppPreview(widget: widget, family: family)
+                                        XWWidgetInAppPreview(widget: widget, family: family, showName: true)
                                             .onTapGesture {
                                                 selectedWidget = widget
                                                 showWidgetEdit.toggle()

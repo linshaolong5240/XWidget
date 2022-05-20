@@ -45,7 +45,9 @@ struct XWCountupDaysPlainWidgetStyle: XWWidgetViewStyle {
     func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
         VStack {
             Text(configuration.model.title)
-//            Text("\(configuration.model.remainingDays(from: configuration.date)) days")
+            Text("\(configuration.model.betweenDays(from: configuration.date)) days")
+            Text("target date: \(configuration.model.targetDate)")
         }
+        .padding()
     }
 }

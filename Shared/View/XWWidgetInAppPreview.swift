@@ -12,19 +12,26 @@ import WidgetKit
 struct XWWidgetInAppPreview: View {
     let widget: XWWidgetEntry
     let family: WidgetFamily
+    let showName: Bool
     let scale: CGFloat
     let isEditing: Bool
     
-    init(widget: XWWidgetEntry, family: WidgetFamily, scale: CGFloat = 1.0, isEditing: Bool = false) {
+    init(widget: XWWidgetEntry, family: WidgetFamily, showName: Bool, scale: CGFloat = 1.0, isEditing: Bool = false) {
         self.widget = widget
         self.family = family
+        self.showName = showName
         self.scale = scale
         self.isEditing = isEditing
     }
     
     var body: some View {
-        XWAnyWidgeView(entry: .constant(widget), family: family)
-            .modifier(WidgetPreviewModifier(family: family, scale: scale))
+        VStack {
+            XWAnyWidgeView(entry: .constant(widget), family: family)
+                .modifier(WidgetPreviewModifier(family: family, scale: scale))
+            if showName {
+                Text(widget.kind.name)
+            }
+        }
     }
 }
 
@@ -32,7 +39,7 @@ struct XWWidgetInAppPreview: View {
 struct XWWidgetInAppPreview_Previews: PreviewProvider {
     static var previews: some View {
         let widget: XWWidgetEntry = .checkin_plain
-        XWWidgetInAppPreview(widget: widget, family: .systemSmall)
+        XWWidgetInAppPreview(widget: widget, family: .systemSmall, showName: true)
     }
 }
 #endif

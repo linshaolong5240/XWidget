@@ -46,6 +46,8 @@ struct XWCountdownDaysPlainWidgetStyle: XWWidgetViewStyle {
         VStack {
             Text(configuration.model.title)
             Text("\(configuration.model.remainingDays(from: configuration.date)) days")
+            Text("target date: \(configuration.model.targetDate)")
         }
+        .padding()
     }
 }
