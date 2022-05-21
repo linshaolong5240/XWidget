@@ -22,19 +22,7 @@ struct MainWidgets: WidgetBundle {
     }
 }
 
-struct XWWidgetDataSource {
-    @CombineUserStorge(key: .widgetTransparentConfiguration, container: .group)
-    static var transparentConfiguration: XWWidgetTransparentConfiguration = XWWidgetTransparentConfiguration()
-
-    @CombineUserStorge(key: .smallWidgetConfiguration, container: .group)
-    static var smallWidgetConfiguration: [XWWidgetEntry] = []
-
-    @CombineUserStorge(key: .mediumWidgetConfiguration, container: .group)
-    static var mediumWidgetConfiguration: [XWWidgetEntry] = []
-
-    @CombineUserStorge(key: .largeWidgetConfiguration, container: .group)
-    static var largeWidgetConfiguration: [XWWidgetEntry] = []
-}
+fileprivate let widgetManager = XWWidgetManager()
 
 extension IntentTimelineProvider where Entry == XWWidgetEntry {
     
@@ -50,18 +38,18 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         
         func setTransparentBackground(widgetConfiguration: inout XWWidgetEntry) {
             if let identifier = configuration.transparentBackground?.identifier, let rawValue = Int(identifier), let widgetPosition = WidgetPosition(rawValue: rawValue) {
-                widgetConfiguration.setTransparentBackground(lightWidgetPostionImageURLDict: XWWidgetDataSource.transparentConfiguration.lightWidgetPostionImageURLDict, darkWidgetPostionImageURLDict: XWWidgetDataSource.transparentConfiguration.darkWidgetPostionImageURLDict, postion: widgetPosition)
+                widgetConfiguration.setTransparentBackground(lightWidgetPostionImageURLDict: widgetManager.transparentConfiguration.lightWidgetPostionImageURLDict, darkWidgetPostionImageURLDict: widgetManager.transparentConfiguration.darkWidgetPostionImageURLDict, postion: widgetPosition)
             }
         }
         
         var widgetEntries = [XWWidgetEntry]()
         switch context.family {
         case .systemSmall:
-            widgetEntries = XWWidgetDataSource.smallWidgetConfiguration
+            widgetEntries = widgetManager.smallWidgetConfiguration
         case .systemMedium:
-            widgetEntries = XWWidgetDataSource.mediumWidgetConfiguration
+            widgetEntries = widgetManager.mediumWidgetConfiguration
         case .systemLarge:
-            widgetEntries = XWWidgetDataSource.largeWidgetConfiguration
+            widgetEntries = widgetManager.largeWidgetConfiguration
         default: break
         }
         
@@ -83,6 +71,8 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
             getMinutesTimeline(for: widgetEntry, in: context, completion: completion)
         case .calendar:
             getNextDayTimeline(for: widgetEntry, in: context, completion: completion)
+        case .countdonw_days:
+            getCountdownDaysTimeline(for: widgetEntry, in: context, completion: completion)
         case .gif:
             getGifTimeline(for: widgetEntry, in: context, completion: completion)
         case .photo:
@@ -150,32 +140,18 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         completion(timeline)
     }
     
-    func getCountdownDayTimeline(for widgetEntry: XWWidgetEntry, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getCountdownDaysTimeline(for widgetEntry: XWWidgetEntry, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [XWWidgetEntry] = []
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let now = Date() + 2
-        var minutes = [Date]()
-        var interval = DateInterval()
-        interval = Calendar.current.dateInterval(of: .hour, for: now)!
-        interval.start = now
-        minutes.append(interval.start)
-        Calendar.current.enumerateDates(startingAfter: interval.start, matching: DateComponents(second: 0), matchingPolicy: .nextTime) { date, strict, stop in
-            if let date = date {
-                if date < interval.end {
-                    minutes.append(date)
-                }else {
-                    stop = true
-                }
-            }
-        }
-        entries = minutes.map({ date in
-            var entry = widgetEntry
-            entry.date = date
-            return entry
-        })
+        let now = Date()
+        var entry = widgetEntry
+        entry.date = now
+        entry.countdownDaysModel.checkAndSetRepeat(from: now)
+        entries.append(entry)
+        let refleshDate: Date = Calendar.current.nextDay(for: now)
         
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .after(refleshDate))
         completion(timeline)
     }
     

@@ -50,7 +50,6 @@ struct XWAnalogPlainClockWidgetStyle: XWWidgetViewStyle {
         GeometryReader { geometry in
             let length: CGFloat = min(geometry.size.width, geometry.size.height)
             ZStack {
-                configuration.theme.background.makeView(family, colorScheme: colorScheme)
                 ZStack {
                     ClockMarkView(12, origin: false) { index in
                         Rectangle().frame(width: 2, height: 5)

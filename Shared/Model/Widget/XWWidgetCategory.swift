@@ -12,6 +12,7 @@ import WidgetKit
 enum XWWidgetCategory: String, CaseIterable, Identifiable {
     case calendar = "Calendar"
     case clock = "Clock"
+    case countdown_days = "Countdown Days"
     case gif = "Gif"
     case photo = "Photo"
     
@@ -26,6 +27,8 @@ extension XWWidgetCategory {
             return .calendars
         case .clock:
             return .clocks
+        case .countdown_days:
+            return .countdownDays
         case .gif:
             return .gifs
         case .photo:

@@ -21,7 +21,6 @@ struct XWGuideWidgetView: XWWidgetView {
 
     var body: some View {
         ZStack {
-            configuration.theme.background.makeView(family, colorScheme: colorScheme)
             VStack(alignment: .leading, spacing: 10) {
                 let fontSize: CGFloat = getFontSize()
 //                Image("app_icon_rounded")

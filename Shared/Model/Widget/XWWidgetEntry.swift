@@ -35,36 +35,10 @@ struct XWClockWidgetConfiguration: XWWidgetConfiguration {
 }
 
 struct XWCountDaysWidgetConfiguration: XWWidgetConfiguration {
-    struct CountDaysModel: Codable {
-        enum CountMode: Codable {
-            case countdown
-            case countup
-        }
-        
-        enum CountDaysRepeat: Codable {
-            case year(month: Int, day: Int)
-            case month(day: Int)
-            case week(weekday: Int)
-        }
-        
-        var title: String
-        var countRepeat: CountDaysRepeat
-        var countMode: CountMode
-        
-        var targetDate: Date { Date() }
-        var betweenDays: Int { 0 }
-        
-        init(title: String, countRepeat: CountDaysRepeat, countMode: CountMode) {
-            self.title = title
-            self.countRepeat = countRepeat
-            self.countMode = countMode
-        }
-    }
-    
     var date: Date = Date()
     var style: XWWidgetStyle
     var theme: XWWidgetTheme
-    var model: CountDaysModel
+    var model: XWCountdownDaysModel
 }
 
 
@@ -92,28 +66,6 @@ struct XWPhotoWidgetConfiguration: XWWidgetConfiguration {
     var model: PhotoModel
 }
 
-extension XWWidgetEntry {
-    func asGuideWidgetConfiguraiton() -> XWGuideWidgetConfiguration {
-        XWGuideWidgetConfiguration(date: date, style: style, theme: theme)
-    }
-    
-    func asCalendarWidgetConfiguraiton() -> XWCalendarWidgetConfiguration {
-        XWCalendarWidgetConfiguration(date: date, style: style, theme: theme)
-    }
-    
-    func asClockWidgetConfiguraiton() -> XWClockWidgetConfiguration {
-        XWClockWidgetConfiguration(date: date, style: style, theme: theme)
-    }
-    
-    func asGifWidgetConfiguration() -> XWGifWidgetConfiguration {
-        XWGifWidgetConfiguration(date: date, style: style, theme: theme, model: gifModel)
-    }
-    
-    func asPhotoWidgetConfiguration() -> XWPhotoWidgetConfiguration {
-        XWPhotoWidgetConfiguration(date: date, style: style, theme: theme, model: photoModel)
-    }
-}
-
 struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiable {
     var date = Date()
     var editedTime: Date = Date()
@@ -125,6 +77,7 @@ struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiabl
     var theme: XWWidgetTheme
     var orderID: Int = 0
             
+    var countdownDaysModel: XWCountdownDaysModel = .memorialDay
     var gifModel: XWGifWidgetConfiguration.GifModel = .init()
     var photoModel: XWPhotoWidgetConfiguration.PhotoModel = .init()
 
@@ -158,6 +111,7 @@ extension XWWidgetEntry {
     static let guide = XWWidgetEntry(kind: .guide, style: .guide, theme: .guide)
     static let calendar_plain = XWWidgetEntry(kind: .calendar, style: .calendar_plain, theme: .calendar_plain)
     static let clock_analog_plain = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
+    static let countdown_days_plain = XWWidgetEntry(kind: .countdonw_days, style: .countdown_days_plain, theme: .countdown_days_plain)
     static let gif = XWWidgetEntry(kind: .gif, style: .gif, theme: .gif)
     static let photo_plain = XWWidgetEntry(kind: .photo , style: .photo_plain, theme: .photo_plain)
     static let allItems: [XWWidgetEntry] = .allItems
@@ -166,6 +120,7 @@ extension XWWidgetEntry {
 extension Array where Element == XWWidgetEntry {
     static let calendars: [XWWidgetEntry] = [.calendar_plain]
     static let clocks: [XWWidgetEntry] = [.clock_analog_plain]
+    static let countdownDays: [XWWidgetEntry] = [.countdown_days_plain]
     static let gifs: [XWWidgetEntry] = [.gif]
     static let photos: [XWWidgetEntry] = [.photo_plain]
     static let allItems: [XWWidgetEntry] = [.calendar_plain, .clock_analog_plain, .photo_plain]

@@ -19,15 +19,17 @@ struct XWAnyWidgeView: View {
             entry.theme.background.makeView(family, colorScheme: colorScheme)
             switch entry.kind {
             case .guide:
-                XWGuideWidgetView(configuration: entry.asGuideWidgetConfiguraiton(), family: family)
+                XWGuideWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme), family: family)
             case .calendar:
-                XWCalendarWidgetView(configuration: entry.asCalendarWidgetConfiguraiton(), family: family)
+                XWCalendarWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme), family: family)
             case .clock:
-                XWClockWidgetView(configuration: entry.asClockWidgetConfiguraiton(), family: family)
+                XWClockWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme), family: family)
+            case .countdonw_days:
+                XWCountdownDaysView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.countdownDaysModel), family: family)
             case .gif:
-                XWGifWidgetView(configuration: entry.asGifWidgetConfiguration(), family: family)
+                XWGifWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.gifModel), family: family)
             case .photo:
-                XWPhotoWidgetView(configuration: entry.asPhotoWidgetConfiguration(), family: family)
+                XWPhotoWidgetView(configuration: .init(date: entry.date, style: entry.style, theme: entry.theme, model: entry.photoModel), family: family)
             }
             entry.theme.border?.makeView(family: family, cornerRadius: family.cornerRadius)
         }
