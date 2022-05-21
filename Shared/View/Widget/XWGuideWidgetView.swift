@@ -23,11 +23,8 @@ struct XWGuideWidgetView: XWWidgetView {
         ZStack {
             VStack(alignment: .leading, spacing: 10) {
                 let fontSize: CGFloat = getFontSize()
-//                Image("app_icon_rounded")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//                    .frame(width: 60, height: 60)
-//                    .mask(RoundedRectangle(cornerRadius: 15))
+                Image("AppIcon60x60")
+                    .cornerRadius(10)
                 Group {
                     Text("DefaultWidget tip1")
                     Text("DefaultWidget tip2")

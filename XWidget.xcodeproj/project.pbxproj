@@ -197,6 +197,10 @@
 		EFB87D17282A12B100C65B1A /* XWWidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D16282A12B100C65B1A /* XWWidgetManager.swift */; };
 		EFB87D18282A12B100C65B1A /* XWWidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D16282A12B100C65B1A /* XWWidgetManager.swift */; };
 		EFB87D19282A12B100C65B1A /* XWWidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D16282A12B100C65B1A /* XWWidgetManager.swift */; };
+		EFB87D1A2838B50500C65B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B8583F27F5CAF200436B55 /* Assets.xcassets */; };
+		EFB87D1C2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
+		EFB87D1D2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
+		EFB87D1E2838B67500C65B1A /* XWAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB87D1B2838B67500C65B1A /* XWAboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -317,6 +321,7 @@
 		EFB87D0C282A060000C65B1A /* XWCountdownDaysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountdownDaysModel.swift; sourceTree = "<group>"; };
 		EFB87D12282A080D00C65B1A /* XWCountdownDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCountdownDaysView.swift; sourceTree = "<group>"; };
 		EFB87D16282A12B100C65B1A /* XWWidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWidgetManager.swift; sourceTree = "<group>"; };
+		EFB87D1B2838B67500C65B1A /* XWAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +498,7 @@
 				44B8590127F5D5F100436B55 /* Picker */,
 				44B858DF27F5D33A00436B55 /* Widget */,
 				EF8606E72828BDB30038C47B /* WidgetEditer */,
+				EFB87D1B2838B67500C65B1A /* XWAboutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -745,6 +751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB87D1A2838B50500C65B1A /* Assets.xcassets in Resources */,
 				44B8589227F5CBB500436B55 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +786,7 @@
 				44B858CA27F5D11800436B55 /* XWFontWrapper.swift in Sources */,
 				44B8589527F5CBB500436B55 /* XWidget.intentdefinition in Sources */,
 				44B858F927F5D53000436B55 /* XWCalendarView.swift in Sources */,
+				EFB87D1C2838B67500C65B1A /* XWAboutView.swift in Sources */,
 				44B858B827F5D03600436B55 /* XWWidgetEntry.swift in Sources */,
 				44BBD38A280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
 				44B858F327F5D4DF00436B55 /* XWWidgetView.swift in Sources */,
@@ -851,6 +859,7 @@
 				44BBD382280D975100204726 /* QWSearchCityAction.swift in Sources */,
 				EF8606F02828C33D0038C47B /* XWWidgetModelEditer.swift in Sources */,
 				44B8590427F5D61300436B55 /* XWWidgetEditView.swift in Sources */,
+				EFB87D1D2838B67500C65B1A /* XWAboutView.swift in Sources */,
 				44BBD376280D96F800204726 /* QWResponse.swift in Sources */,
 				EFB87D18282A12B100C65B1A /* XWWidgetManager.swift in Sources */,
 				44BBD38B280DA17500204726 /* QWWeatherNowAction.swift in Sources */,
@@ -932,6 +941,7 @@
 				EF2D04662828F26E00F517BB /* XWWidgetEntry.swift in Sources */,
 				EF2D04772828F2DD00F517BB /* XWURLHelper.swift in Sources */,
 				EF2D046F2828F29A00F517BB /* XWAnyWidgetView.swift in Sources */,
+				EFB87D1E2838B67500C65B1A /* XWAboutView.swift in Sources */,
 				44B8588F27F5CBB400436B55 /* XWidget.swift in Sources */,
 				44BBD371280D96F800204726 /* QWeatherAPI.swift in Sources */,
 				44BBD374280D96F800204726 /* QWAPIURLWrapper.swift in Sources */,
