@@ -38,15 +38,15 @@ struct XWWidgetManager {
     static func updateWidget(widget: XWWidgetEntry, family: WidgetFamily) {
         switch family {
         case .systemSmall:
-            if let index = smallWidgetConfiguration.firstIndex(where: { $0.idForSave == widget.idForSave } ) {
+            if let index = smallWidgetConfiguration.firstIndex(where: { $0.id == widget.id } ) {
                 smallWidgetConfiguration[index] = widget
             }
         case .systemMedium:
-            if let index = mediumWidgetConfiguration.firstIndex(where: { $0.idForSave == widget.idForSave } ) {
+            if let index = mediumWidgetConfiguration.firstIndex(where: { $0.id == widget.id } ) {
                 mediumWidgetConfiguration[index] = widget
             }
         case .systemLarge:
-            if let index = largeWidgetConfiguration.firstIndex(where: { $0.idForSave == widget.idForSave } ) {
+            if let index = largeWidgetConfiguration.firstIndex(where: { $0.id == widget.id } ) {
                 largeWidgetConfiguration[index] = widget
             }
         default:
@@ -103,7 +103,7 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         case .clock:
             getMinutesTimeline(for: widgetEntry, in: context, completion: completion)
         case .checkin:
-            getNextDayTimeline(for: widgetEntry, in: context, completion: completion)
+            getCheckInTimeline(for: widgetEntry, in: context, completion: completion)
         case .countdonw_days:
             getCountdownDaysTimeline(for: widgetEntry, in: context, completion: completion)
         case .gif:
@@ -169,7 +169,7 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         var entry = widgetEntry
         entry.date = now
         entries.append(entry)
-        XWWidgetManager.updateWidget(widget: widgetEntry, family: context.family)
+        XWWidgetManager.updateWidget(widget: entry, family: context.family)
         
         let timeline = Timeline(entries: entries, policy: .after(refleshDate))
         completion(timeline)
@@ -186,8 +186,8 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         entry.date = now
         entry.checkInModel.checkValidWithReset()
         entries.append(entry)
-        XWWidgetManager.updateWidget(widget: widgetEntry, family: context.family)
-        
+        XWWidgetManager.updateWidget(widget: entry, family: context.family)
+
         let timeline = Timeline(entries: entries, policy: .after(refleshDate))
         completion(timeline)
     }
@@ -203,7 +203,7 @@ extension IntentTimelineProvider where Entry == XWWidgetEntry {
         entry.date = now
         entry.countdownDaysModel.checkAndSetRepeat(from: now)
         entries.append(entry)
-        XWWidgetManager.updateWidget(widget: widgetEntry, family: context.family)
+        XWWidgetManager.updateWidget(widget: entry, family: context.family)
 
         let timeline = Timeline(entries: entries, policy: .after(refleshDate))
         completion(timeline)

@@ -29,7 +29,7 @@ enum XWCheckInRepeat: Codable, Equatable {
 
 struct XWCheckInModel: Codable, Equatable {
     var createDate: Date = Date()
-    var dateInterval: DateInterval
+    var dateInterval: DateInterval { checkInRepeat.dateInterval(from: createDate) }
     
     var title: String
     var currentNumber: Int
@@ -42,7 +42,6 @@ struct XWCheckInModel: Codable, Equatable {
 
     init(createDate: Date, tilte: String, currentNumber: Int, targetNumber: Int, checkInRepeat: XWCheckInRepeat, kind: String) {
         self.createDate = createDate
-        self.dateInterval = checkInRepeat.dateInterval(from: createDate)
         self.title = tilte
         self.currentNumber = currentNumber
         self.targetNumber = targetNumber

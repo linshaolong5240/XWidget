@@ -39,6 +39,9 @@ public class Store: ObservableObject {
         case .error(let error):
             XWAppState.error = error
         case .saveWidget(var widget, let family):
+            widget.editedTime = Date()
+            widget.checkInModel.createDate = Date()
+            
             func getValidConfiguration(configurations: [XWWidgetEntry], configuration: XWWidgetEntry) -> Int {
                 let id = configurations.filter({ item in
                     item.kind == configuration.kind
@@ -62,22 +65,26 @@ public class Store: ObservableObject {
                 break
             }
         case .updateWidget(var widget, let family):
+            widget.editedTime = Date()
+            widget.checkInModel.createDate = Date()
+            
             setWidgetThumbnail(widget: &widget, family: family)
+            
             switch family {
             case .systemSmall:
-                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.id == widget.id } ) {
                     appState.widget.smallWidgetConfiguration[index] = widget
                     appState.widget.smallWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
                     appCommand = WidgetReloadCommand(kind: XWidgetKind.small.rawValue)
                 }
             case .systemMedium:
-                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.id == widget.id } ) {
                     appState.widget.mediumWidgetConfiguration[index] = widget
                     appState.widget.mediumWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
                     appCommand = WidgetReloadCommand(kind: XWidgetKind.medium.rawValue)
                 }
             case .systemLarge:
-                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.id == widget.id } ) {
                     appState.widget.largeWidgetConfiguration[index] = widget
                     appState.widget.largeWidgetConfiguration.move(fromOffsets: .init(integer: index), toOffset: 0)
                     appCommand = WidgetReloadCommand(kind: XWidgetKind.large.rawValue)
@@ -88,15 +95,15 @@ public class Store: ObservableObject {
         case .deleteWidget(let widget, let family):
             switch family {
             case .systemSmall:
-                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.id == widget.id } ) {
                     appState.widget.smallWidgetConfiguration.remove(at: index)
                 }
             case .systemMedium:
-                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.id == widget.id } ) {
                     appState.widget.mediumWidgetConfiguration.remove(at: index)
                 }
             case .systemLarge:
-                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.idForSave == widget.idForSave } ) {
+                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.id == widget.id } ) {
                     appState.widget.largeWidgetConfiguration.remove(at: index)
                 }
             case .systemExtraLarge:
@@ -130,20 +137,27 @@ public class Store: ObservableObject {
             if let image = imageURL.image {
                 appCommand = WidgetPostionImageMakeCommand(image: image, colorScheme: colorScheme)
             }
-        case .widgetCheckin(let widgetID, let family):
+        case .widgetCheckin(let id, let family):
             switch family {
             case .systemSmall:
-                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.id == widgetID } ) {
+                if let index = appState.widget.smallWidgetConfiguration.firstIndex( where: { $0.id == id } ) {
                     if !appState.widget.smallWidgetConfiguration[index].checkInModel.isCompleted {
                         appState.widget.smallWidgetConfiguration[index].checkInModel.checkIn()
                         #if canImport(UIKit)
                         UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
                         #endif
                         appCommand = WidgetReloadCommand()
+                        #if DEBUG
+                        print("Check In succeed")
+                        #endif
+                    } else {
+                        #if DEBUG
+                        print("Check In is completed")
+                        #endif
                     }
                 }
             case .systemMedium:
-                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.id == widgetID } ) {
+                if let index = appState.widget.mediumWidgetConfiguration.firstIndex( where: { $0.id == id } ) {
                     if !appState.widget.mediumWidgetConfiguration[index].checkInModel.isCompleted {
                         appState.widget.mediumWidgetConfiguration[index].checkInModel.checkIn()
                         #if canImport(UIKit)
@@ -153,7 +167,7 @@ public class Store: ObservableObject {
                     }
                 }
             case .systemLarge, .systemExtraLarge:
-                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.id == widgetID } ) {
+                if let index = appState.widget.largeWidgetConfiguration.firstIndex( where: { $0.id == id } ) {
                     if !appState.widget.largeWidgetConfiguration[index].checkInModel.isCompleted {
                         appState.widget.largeWidgetConfiguration[index].checkInModel.checkIn()
                         #if canImport(UIKit)

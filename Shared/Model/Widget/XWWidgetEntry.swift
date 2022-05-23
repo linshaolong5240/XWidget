@@ -68,8 +68,8 @@ struct XWPhotoWidgetConfiguration: XWWidgetConfiguration {
 struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiable {
     var date = Date()
     var editedTime: Date = Date()
-    var id: String { "\(kind)_\(style)_\(theme.id)_\(orderID)" }
-    var idForSave: String { "\(kind)_\(style)_\(orderID)" }
+    var id: String { "\(uuidString)_\(orderID)" }
+    var uuidString: String = UUID().uuidString
     var intentThumbnailURL: URL?
     var kind: XWWidgetKind
     var style: XWWidgetStyle
@@ -91,13 +91,13 @@ struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiabl
 
 extension XWWidgetEntry {
     func intentThumbnailName(_ family: WidgetFamily) -> String {
-        "intent_thumbnail#\(family)#\(idForSave)"
+        "intent_thumbnail#\(family)#\(id)"
     }
     func photoName(_ family: WidgetFamily) -> String {
-        "photo#\(family)#\(idForSave)"
+        "photo#\(family)#\(id)"
     }
     func backgroundImageName(_ family: WidgetFamily) ->String {
-        "background#\(family)#\(idForSave)"
+        "background#\(family)#\(id)"
     }
 }
 

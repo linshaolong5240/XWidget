@@ -48,7 +48,7 @@ UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
 #endif
                 return
             }
-            Store.shared.dispatch(.widgetCheckin(widgetID: id, family: family))
+            Store.shared.dispatch(.widgetCheckin(id: id, family: family))
 //        case "/DailyMood":
 //            let query = url.queryDictionary
 //            guard let id = query["id"], let familyValue = query["family"], let family = WidgetFamily(rawValue: Int(familyValue) ?? 0), let indexString = query["index"], let index = Int(indexString) else {
