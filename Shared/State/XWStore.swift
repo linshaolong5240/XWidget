@@ -31,13 +31,13 @@ public class Store: ObservableObject {
     
     
     func reduce(state: XWAppState, action: XWAppAction) -> (XWAppState, AppCommand?) {
-        var XWAppState = state
+        var appState = state
         var appCommand: AppCommand? = nil
         switch action {
         case .initAction:
             appCommand = InitActionCommand()
         case .error(let error):
-            XWAppState.error = error
+            appState.error = error
         case .saveWidget(var widget, let family):
             widget.editedTime = Date()
             widget.checkInModel.createDate = Date()
@@ -119,9 +119,7 @@ public class Store: ObservableObject {
                 appState.widget.widgetTransparentConfiguration.lightWidgetPostionImageURLDict = dict
             case .dark:
                 appState.widget.widgetTransparentConfiguration.darkWidgetPostionImageURLDict = dict
-            @unknown default:
-                break
-//                fatalError()
+            @unknown default: break
             }
         case .setWidgetTransparentBackground(let imageURL, let colorScheme):
             switch colorScheme {
@@ -129,9 +127,7 @@ public class Store: ObservableObject {
                 appState.widget.widgetTransparentConfiguration.lightImageURL = imageURL
             case .dark:
                 appState.widget.widgetTransparentConfiguration.darkImageUrl = imageURL
-            @unknown default:
-                break
-//                fatalError()
+            @unknown default: break
             }
             
             if let image = imageURL.image {
@@ -164,6 +160,13 @@ public class Store: ObservableObject {
                         UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
                         #endif
                         appCommand = WidgetReloadCommand()
+                        #if DEBUG
+                        print("Check In succeed")
+                        #endif
+                    } else {
+                        #if DEBUG
+                        print("Check In is completed")
+                        #endif
                     }
                 }
             case .systemLarge, .systemExtraLarge:
@@ -174,13 +177,20 @@ public class Store: ObservableObject {
                         UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
                         #endif
                         appCommand = WidgetReloadCommand()
+                        #if DEBUG
+                        print("Check In succeed")
+                        #endif
+                    } else {
+                        #if DEBUG
+                        print("Check In is completed")
+                        #endif
                     }
                 }
             default: break
             }
         }
         
-        return (XWAppState, appCommand)
+        return (appState, appCommand)
     }
 }
 
