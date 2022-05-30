@@ -22,7 +22,9 @@ struct XWClockWidgetView: XWWidgetView {
     var body: some View {
         switch configuration.style {
         case .clock_analog_plain:
-            widgetStyle(XWAnalogPlainClockWidgetStyle())
+            widgetStyle(XWPlainAnalogClockWidgetStyle())
+        case .clock_digital_plain:
+            widgetStyle(XWPlainDigitalClockWidgetStyle())
         default:
             EmptyView()
         }
@@ -32,18 +34,18 @@ struct XWClockWidgetView: XWWidgetView {
 #if DEBUG
 struct XWClockWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        let config = XWClockWidgetConfiguration.analog_plain
-        XWClockWidgetView(configuration: config, family: .systemSmall)
+        let entry: XWWidgetEntry = .clock_digital_plain
+        XWAnyWidgeView(entry: .constant(entry), family: .systemSmall)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-        XWClockWidgetView(configuration: config, family: .systemMedium)
+        XWAnyWidgeView(entry: .constant(entry), family: .systemMedium)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
-        XWClockWidgetView(configuration: config, family: .systemLarge)
+        XWAnyWidgeView(entry: .constant(entry), family: .systemLarge)
             .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
 #endif
 
-struct XWAnalogPlainClockWidgetStyle: XWWidgetViewStyle {
+struct XWPlainAnalogClockWidgetStyle: XWWidgetViewStyle {
     typealias Configuration = XWClockWidgetConfiguration
     
     func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
@@ -75,5 +77,14 @@ struct XWAnalogPlainClockWidgetStyle: XWWidgetViewStyle {
             }
             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
         }
+    }
+}
+
+struct XWPlainDigitalClockWidgetStyle: XWWidgetViewStyle {
+    typealias Configuration = XWClockWidgetConfiguration
+    
+    func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
+        XWSecondsRefreshTimeView(configuration.date)
+            .font(.custom("LESLIE", size: 30))
     }
 }

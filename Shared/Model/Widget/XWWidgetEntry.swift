@@ -120,6 +120,7 @@ extension XWWidgetEntry {
     static let calendar_plain = XWWidgetEntry(kind: .calendar, style: .calendar_plain, theme: .calendar_plain)
     static let checkin_plain = XWWidgetEntry(kind: .checkin, style: .checkin_plain, theme: .checkin_plain)
     static let clock_analog_plain = XWWidgetEntry(kind: .clock, style: .clock_analog_plain, theme: .clock_analog_plain)
+    static let clock_digital_plain = XWWidgetEntry(kind: .clock, style: .clock_digital_plain, theme: .clock_digital_plain)
     static let countdown_days_plain = XWWidgetEntry(kind: .countdonw_days, style: .countdown_days_plain, theme: .countdown_days_plain)
     static let countup_days_plain = XWWidgetEntry(kind: .countup_days, style: .countup_days_plain, theme: .countup_days_plain)
     static let gif = XWWidgetEntry(kind: .gif, style: .gif, theme: .gif)
@@ -130,7 +131,7 @@ extension XWWidgetEntry {
 extension Array where Element == XWWidgetEntry {
     static let calendars: [XWWidgetEntry] = [.calendar_plain]
     static let checins: [XWWidgetEntry] = [.checkin_plain]
-    static let clocks: [XWWidgetEntry] = [.clock_analog_plain]
+    static let clocks: [XWWidgetEntry] = [.clock_analog_plain, .clock_digital_plain]
     static let countDays: [XWWidgetEntry] = [.countdown_days_plain, .countup_days_plain]
     static let photos: [XWWidgetEntry] = [.photo_plain, .gif]
     static let allItems: [XWWidgetEntry] = [.calendar_plain, .clock_analog_plain, .photo_plain]

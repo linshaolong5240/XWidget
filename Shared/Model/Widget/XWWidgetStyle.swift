@@ -13,7 +13,7 @@ enum XWWidgetStyle: String, Codable {
     case calendar_plain
     case checkin_plain
     case clock_analog_plain
-    case clock_seconds_refresh
+    case clock_digital_plain
     case countdown_days_plain
     case countup_days_plain
     case gif

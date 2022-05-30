@@ -181,6 +181,12 @@
 		EF4E57112833270500919582 /* XWCheckInWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E570F2833270500919582 /* XWCheckInWidgetView.swift */; };
 		EF4E57122833270500919582 /* XWCheckInWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4E570F2833270500919582 /* XWCheckInWidgetView.swift */; };
 		EF69CD8B283222C100D2E003 /* XWCheckInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69CD8A283222C100D2E003 /* XWCheckInModel.swift */; };
+		EF773B462844513F005D2515 /* LESLIE.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF773B452844513F005D2515 /* LESLIE.ttf */; };
+		EF773B472844513F005D2515 /* LESLIE.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF773B452844513F005D2515 /* LESLIE.ttf */; };
+		EF773B482844513F005D2515 /* LESLIE.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF773B452844513F005D2515 /* LESLIE.ttf */; };
+		EF773B4A2844553C005D2515 /* XWSecondsRefreshTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF773B492844553C005D2515 /* XWSecondsRefreshTimeView.swift */; };
+		EF773B4B2844553C005D2515 /* XWSecondsRefreshTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF773B492844553C005D2515 /* XWSecondsRefreshTimeView.swift */; };
+		EF773B4C2844553C005D2515 /* XWSecondsRefreshTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF773B492844553C005D2515 /* XWSecondsRefreshTimeView.swift */; };
 		EF8606DF2828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
 		EF8606E02828B18D0038C47B /* XWGifWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */; };
 		EF8606E22828B8AB0038C47B /* XWURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8606E12828B8AB0038C47B /* XWURLHelper.swift */; };
@@ -333,6 +339,8 @@
 		EF2D04952828FDE000F517BB /* Intent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Intent.entitlements; sourceTree = "<group>"; };
 		EF4E570F2833270500919582 /* XWCheckInWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCheckInWidgetView.swift; sourceTree = "<group>"; };
 		EF69CD8A283222C100D2E003 /* XWCheckInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCheckInModel.swift; sourceTree = "<group>"; };
+		EF773B452844513F005D2515 /* LESLIE.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LESLIE.ttf; sourceTree = "<group>"; };
+		EF773B492844553C005D2515 /* XWSecondsRefreshTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSecondsRefreshTimeView.swift; sourceTree = "<group>"; };
 		EF8606DE2828B18D0038C47B /* XWGifWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWGifWidgetView.swift; sourceTree = "<group>"; };
 		EF8606E12828B8AB0038C47B /* XWURLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWURLHelper.swift; sourceTree = "<group>"; };
 		EF8606E42828B9680038C47B /* XWSnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSnapshotHelper.swift; sourceTree = "<group>"; };
@@ -389,12 +397,13 @@
 		44B8583727F5CAF200436B55 = {
 			isa = PBXGroup;
 			children = (
-				EF2D04942828FDCF00F517BB /* XWidgetExtension.entitlements */,
 				EF2D04932828FD9600F517BB /* XWidget (iOS).entitlements */,
+				EF2D04942828FDCF00F517BB /* XWidgetExtension.entitlements */,
 				EF2D04612828EC5600F517BB /* XWidget--iOS--Info.plist */,
 				44B8583C27F5CAF200436B55 /* Shared */,
-				44B8584B27F5CAF200436B55 /* macOS */,
+				EF773B4428445129005D2515 /* Font */,
 				44B8588D27F5CBB400436B55 /* XWidget */,
+				44B8584B27F5CAF200436B55 /* macOS */,
 				44B8587C27F5CB5900436B55 /* Intent */,
 				44B8586027F5CB3900436B55 /* Frameworks */,
 				44B8584527F5CAF200436B55 /* Products */,
@@ -518,6 +527,7 @@
 				EFB87D1B2838B67500C65B1A /* XWAboutView.swift */,
 				44B858F827F5D53000436B55 /* XWCalendarView.swift */,
 				44B858FE27F5D5CF00436B55 /* XWMyWidgetVeiw.swift */,
+				EF773B492844553C005D2515 /* XWSecondsRefreshTimeView.swift */,
 				44B8590227F5D61300436B55 /* XWWidgetEditView.swift */,
 				44B858FB27F5D5B000436B55 /* XWWidgetHomeView.swift */,
 				EFB1307F28334810006ADADF /* XWWidgetInAppPreview.swift */,
@@ -586,6 +596,14 @@
 				44BBD389280DA17500204726 /* QWWeatherNowAction.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		EF773B4428445129005D2515 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EF773B452844513F005D2515 /* LESLIE.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		EF8606E72828BDB30038C47B /* WidgetEditer */ = {
@@ -755,6 +773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B8585127F5CAF200436B55 /* Assets.xcassets in Resources */,
+				EF773B462844513F005D2515 /* LESLIE.ttf in Resources */,
 				44B8592327F5D92C00436B55 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -764,6 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B8585227F5CAF200436B55 /* Assets.xcassets in Resources */,
+				EF773B472844513F005D2515 /* LESLIE.ttf in Resources */,
 				44B8592427F5D92C00436B55 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,6 +800,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF773B482844513F005D2515 /* LESLIE.ttf in Resources */,
 				EFB87D1A2838B50500C65B1A /* Assets.xcassets in Resources */,
 				EFB1308328339D11006ADADF /* Localizable.strings in Resources */,
 				44B8589227F5CBB500436B55 /* Assets.xcassets in Resources */,
@@ -857,6 +878,7 @@
 				44BBD378280D96F800204726 /* QWAPIAction.swift in Sources */,
 				44B858D027F5D1C100436B55 /* XWBundleHelper.swift in Sources */,
 				44B858D627F5D27A00436B55 /* XWWidgetTransparentConfiguration.swift in Sources */,
+				EF773B4A2844553C005D2515 /* XWSecondsRefreshTimeView.swift in Sources */,
 				44B858A827F5CEDC00436B55 /* XWUserStoregeHelper.swift in Sources */,
 				44B8591527F5D6FF00436B55 /* XWWidgetFontColorPicker.swift in Sources */,
 				44B8592A27F5DA2A00436B55 /* Color+XW.swift in Sources */,
@@ -880,6 +902,7 @@
 				44B858D127F5D1C100436B55 /* XWBundleHelper.swift in Sources */,
 				44B858D427F5D1F000436B55 /* XWWidgetKind.swift in Sources */,
 				44B858DA27F5D2BF00436B55 /* XWCryptoHelper.swift in Sources */,
+				EF773B4B2844553C005D2515 /* XWSecondsRefreshTimeView.swift in Sources */,
 				44B858C527F5D0C900436B55 /* XWImageHelper.swift in Sources */,
 				EF8606E02828B18D0038C47B /* XWGifWidgetView.swift in Sources */,
 				44B858A527F5CE9300436B55 /* XWAppState.swift in Sources */,
@@ -997,6 +1020,7 @@
 				44BBD37F280D970E00204726 /* QWTopCititesAction.swift in Sources */,
 				EF2D04782828F30C00F517BB /* XWAnalogClockHelper.swift in Sources */,
 				EF2D04692828F27500F517BB /* XWWidgetTheme.swift in Sources */,
+				EF773B4C2844553C005D2515 /* XWSecondsRefreshTimeView.swift in Sources */,
 				EF2D04712828F2A000F517BB /* XWClockWidgetView.swift in Sources */,
 				EF2D046E2828F29200F517BB /* XWCalendarView.swift in Sources */,
 				EF2D04682828F27300F517BB /* XWWidgetStyle.swift in Sources */,

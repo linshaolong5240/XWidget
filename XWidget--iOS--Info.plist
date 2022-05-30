@@ -8,5 +8,9 @@
 		<string>XWMediumWidgetConfigurationIntent</string>
 		<string>XWLargeWidgetConfigurationIntent</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LESLIE.ttf</string>
+	</array>
 </dict>
 </plist>
