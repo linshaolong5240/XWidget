@@ -18,7 +18,9 @@ enum XWAppAction {
     case updateWidget(widget: XWWidgetEntry, family: WidgetFamily)
     case deleteWidget(widget: XWWidgetEntry, family: WidgetFamily)
     case reloadWidget(kind: String? = nil)
+    #if os(iOS)
     case setWidgetPostionImageDict(dict: [WidgetPosition : URL], colorScheme: ColorScheme)
     case setWidgetTransparentBackground(imageURL: URL, colorScheme: ColorScheme)
+    #endif
     case widgetCheckin(id: String, family: WidgetFamily)
 }

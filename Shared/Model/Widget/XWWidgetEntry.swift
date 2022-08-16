@@ -89,12 +89,14 @@ struct XWWidgetEntry: TimelineEntry, XWWidgetConfiguration, Codable, Identifiabl
     var gifModel: XWGifWidgetConfiguration.GifModel = .init()
     var photoModel: XWPhotoWidgetConfiguration.PhotoModel = .init()
 
+    #if os(iOS)
     mutating func setTransparentBackground(lightWidgetPostionImageURLDict: [WidgetPosition: URL], darkWidgetPostionImageURLDict: [WidgetPosition: URL], postion: WidgetPosition) {
         if let lightImageURL = lightWidgetPostionImageURLDict[postion] {
             let darkImageURL = darkWidgetPostionImageURLDict[postion]
             theme.background = XWWidgetBackground(transparent: (lightImageURL: lightImageURL, darkImageURL: darkImageURL ?? lightImageURL))
         }
     }
+    #endif
 }
 
 extension XWWidgetEntry {

@@ -113,6 +113,7 @@ public class Store: ObservableObject {
             }
         case .reloadWidget(let kind):
             appCommand = WidgetReloadCommand(kind: kind)
+        #if os(iOS)
         case .setWidgetPostionImageDict(let dict, let colorScheme):
             switch colorScheme {
             case .light:
@@ -133,6 +134,7 @@ public class Store: ObservableObject {
             if let image = imageURL.image {
                 appCommand = WidgetPostionImageMakeCommand(image: image, colorScheme: colorScheme)
             }
+        #endif
         case .widgetCheckin(let id, let family):
             switch family {
             case .systemSmall:
@@ -198,7 +200,7 @@ extension Store {
     func setWidgetThumbnail(widget: inout XWWidgetEntry, family: WidgetFamily) {
         guard let thumbnail = XWAnyWidgeView(entry: .constant(widget), family: family)
             .modifier(WidgetPreviewModifier(family: family))
-            .snapshot()?.resize(family.thumbnailSize) else {
+            .snapshot()?.resize(to: family.thumbnailSize) else {
             return
         }
         widget.intentThumbnailURL = try? FileManager.save(image: thumbnail)

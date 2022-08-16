@@ -72,7 +72,9 @@ struct XWMyWidgetView: View {
                     }
                 }
             }
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 XWWidgetFamilyPicker(selection: $family)
             }

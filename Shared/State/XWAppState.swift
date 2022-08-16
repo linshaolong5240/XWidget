@@ -29,9 +29,10 @@ extension XWAppState {
     }
     
     struct Widget {
+        #if os(iOS)
         @CombineUserStorge(key: .widgetTransparentConfiguration, container: .group)
         var widgetTransparentConfiguration: XWWidgetTransparentConfiguration = XWWidgetTransparentConfiguration()
-
+        #endif
         @CombineUserStorge(key: .smallWidgetConfiguration, container: .group)
         var smallWidgetConfiguration: [XWWidgetEntry] = []
 

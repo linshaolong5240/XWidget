@@ -25,7 +25,7 @@ struct XWWidgetPhotoPicker: View {
                     showImagePicker.toggle()
                 } label: {
                     if let image = selection?.image {
-                        Image(uiImage: image)
+                        Image(crossImage: image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 44, height: 44)
@@ -48,7 +48,9 @@ struct XWWidgetPhotoPicker: View {
 #endif
         .onChange(of: uiImage) { newValue in
             guard let image = newValue else { return }
-            let resizeImage = image.crop(ratio: family.ratio).resize(CGSize(width: family.miniSize.width * 0.5, height: family.miniSize.height * 0.5))
+            guard let resizeImage = image.crop(ratio: family.ratio)?.resize(to: CGSize(width: family.miniSize.width * 0.5, height: family.miniSize.height * 0.5)) else {
+                return
+            }
             do {
                 if let imageURL = try FileManager.save(image: resizeImage) {
                     selection = imageURL

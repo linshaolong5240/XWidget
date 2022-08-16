@@ -39,8 +39,8 @@ struct XWPlainPhotoWidgetStyle: XWWidgetViewStyle {
 
     func makeBody(_ configuration: Configuration, family: WidgetFamily, colorScheme: ColorScheme) -> some View {
         ZStack {
-            if let path = configuration.model.photoImageURL?.path, let uiImage = UIImage(contentsOfFile: path) {
-                Image(uiImage: uiImage).resizable().aspectRatio(contentMode: .fill)
+            if let path = configuration.model.photoImageURL?.path, let uiImage = CrossImage(contentsOfFile: path) {
+                Image(crossImage: uiImage).resizable().aspectRatio(contentMode: .fill)
             } else {
                 Image(family == .systemMedium ? "photo_widget_default_background_image2" : "photo_widget_default_background_image1")
                     .resizable()

@@ -19,6 +19,7 @@ struct InitActionCommand: AppCommand {
     }
 }
 
+#if os(iOS)
 struct WidgetPostionImageMakeCommand: AppCommand {
     let image: UIImage
     let colorScheme: ColorScheme
@@ -27,9 +28,10 @@ struct WidgetPostionImageMakeCommand: AppCommand {
         DispatchQueue.global().async {
             var dict = [WidgetPosition : URL]()
             WidgetPosition.allCases.forEach { item in
-                let rectImage = image.cropAtRect(rect: item.rect)
-                let url = try? FileManager.save(image: rectImage, name: item.imageSaveName(colorScheme: colorScheme))
-                dict[item] = url
+                if let rectImage = image.crop(to: item.rect) {
+                    let url = try? FileManager.save(image: rectImage, name: item.imageSaveName(colorScheme: colorScheme))
+                    dict[item] = url
+                }
             }
             DispatchQueue.main.async {
                 store.dispatch(.setWidgetPostionImageDict(dict: dict, colorScheme: colorScheme))
@@ -38,6 +40,7 @@ struct WidgetPostionImageMakeCommand: AppCommand {
         }
     }
 }
+#endif
 
 struct WidgetReloadCommand: AppCommand {
     var kind: String? = nil

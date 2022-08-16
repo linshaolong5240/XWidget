@@ -71,7 +71,7 @@ struct XWWidgetBackgroundPicker: View {
                         }) {
                             VStack {
                                 if let image = selection.imageURL?.image {
-                                    Image(uiImage: image)
+                                    Image(crossImage: image)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 44, height: 44)
@@ -86,7 +86,9 @@ struct XWWidgetBackgroundPicker: View {
                         }
                         .onChange(of: uiImage) { newValue in
                             guard let image = newValue else { return }
-                            let resizeImage = image.crop(ratio: family.ratio).resize(CGSize(width: family.miniSize.width * 0.5, height: family.miniSize.height * 0.5))
+                            guard let resizeImage = image.crop(ratio: family.ratio)?.resize(to: CGSize(width: family.miniSize.width * 0.5, height: family.miniSize.height * 0.5)) else {
+                                return
+                            }
                             do {
                                 if let imageURL = try FileManager.save(image: resizeImage) {
                                     selection = .init(imageURL: imageURL)
@@ -102,11 +104,13 @@ struct XWWidgetBackgroundPicker: View {
                         }
                         
                         Button {
+                            #if os(iOS)
                             if Store.shared.appState.widget.widgetTransparentConfiguration.isEmpty {
                                 showScreenShotSetting.toggle()
                             } else {
                                 showTransparentBackgroundPicker.toggle()
                             }
+                            #endif
                         } label: {
                             Text("Transparent Background")
                                 .lineLimit(2)

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct XWAboutView: View {
     var body: some View {
-            Image(uiImage: UIImage(named: "AppIcon60x60") ?? UIImage())
+            Image(crossImage: CrossImage(named: "AppIcon60x60") ?? CrossImage())
                 .cornerRadius(10)
     }
 }

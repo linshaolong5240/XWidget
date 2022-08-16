@@ -75,7 +75,9 @@ struct XWWidgetEditView: View {
         }
         .padding(.horizontal)
         .navigationTitle(LocalizedStringKey(viewModel.widget.kind.name))
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }
 

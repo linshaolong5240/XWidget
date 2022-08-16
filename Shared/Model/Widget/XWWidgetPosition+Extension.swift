@@ -26,7 +26,7 @@ extension WidgetPosition {
     }
     
     var origin: CGPoint {
-        switch ScreenInfo(size: CrossScreen.main.bounds.size).type {
+        switch XWScreenInfo(size: CrossScreen.main.bounds.size).type {
         case .iPhone_428_926:
             switch self {
             case .smallTopLeft:

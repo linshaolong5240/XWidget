@@ -16,7 +16,7 @@ struct XWWidgetBackground: Codable, Hashable, Equatable {
         case imageName(String)
         case imageNameFamily(small: String, medium: String, large: String)
         case imageURL(URL)
-        #if canImport(UIKit)
+        #if os(iOS)
         case transparent(lightImageURL: URL, darkImageURL: URL)
         #endif
     }
@@ -47,7 +47,7 @@ struct XWWidgetBackground: Codable, Hashable, Equatable {
         self.type = .imageNameFamily(small: small, medium: medium, large: large)
     }
     
-#if canImport(UIKit)
+#if os(iOS)
     init(transparent: (lightImageURL: URL, darkImageURL: URL)) {
         self.type = .transparent(lightImageURL: transparent.lightImageURL, darkImageURL: transparent.darkImageURL)
     }
@@ -57,8 +57,10 @@ struct XWWidgetBackground: Codable, Hashable, Equatable {
         switch type {
         case .imageURL(let url):
             return url
+        #if canImport(iOS)
         case .transparent(let lightImageURL, _):
             return lightImageURL
+        #endif
         default:
             return nil
         }
@@ -80,28 +82,30 @@ struct XWWidgetBackground: Codable, Hashable, Equatable {
             default: EmptyView()
             }
         case .imageURL(let url):
-            if let uiImage = UIImage(contentsOfFile: url.path) {
-                Image(uiImage: uiImage).resizable()
-            }else {
+            if let uiImage = CrossImage(contentsOfFile: url.path) {
+                Image(crossImage: uiImage).resizable()
+            } else {
                 EmptyView()
             }
+            #if os(iOS)
         case .transparent(let lightImageURL, let darkImageURL):
             switch colorScheme {
             case .light:
-                if let uiImage = UIImage(contentsOfFile: lightImageURL.path) {
-                    Image(uiImage: uiImage).resizable().aspectRatio(contentMode: .fit)
+                if let uiImage = CrossImage(contentsOfFile: lightImageURL.path) {
+                    Image(crossImage: uiImage).resizable().aspectRatio(contentMode: .fit)
                 } else {
                     EmptyView()
                 }
             case .dark:
-                if let uiImage = UIImage(contentsOfFile: darkImageURL.path) {
-                    Image(uiImage: uiImage).resizable().aspectRatio(contentMode: .fit)
+                if let uiImage = CrossImage(contentsOfFile: darkImageURL.path) {
+                    Image(crossImage: uiImage).resizable().aspectRatio(contentMode: .fit)
                 } else {
                     EmptyView()
                 }
             default:
                 EmptyView()
             }
+            #endif
         }
     }
 }

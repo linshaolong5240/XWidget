@@ -8,10 +8,78 @@
 
 import SwiftUI
 
-import SwiftUI
+extension CrossImage {
+    #if canImport(AppKit)
+    var cgImage: CGImage? {
+        cgImage(forProposedRect: nil, context: nil, hints: nil)
+    }
+    #endif
+    
+    func crop(ratio: CGFloat) -> CrossImage? {
+        var newSize: CGSize = .zero
+        if size.width / size.height > ratio {
+            newSize = CGSize(width: size.height * ratio, height: size.height)
+        }else {
+            newSize = CGSize(width: size.width, height: size.width / ratio)
+        }
+     
+        var rect: CGRect = .zero
+        rect.size.width  = size.width
+        rect.size.height = size.height
+        rect.origin.x    = (newSize.width - size.width ) / 2.0
+        rect.origin.y    = (newSize.height - size.height ) / 2.0
+         
+        return crop(to: rect)
+    }
+    
+    func crop(to rect: CGRect) -> CrossImage? {
+        guard let cropedCGImage = cgImage?.cropping(to: rect) else {
+            return nil
+        }
+        #if canImport(AppKit)
+        return CrossImage(cgImage: cropedCGImage, size: .init(width: cropedCGImage.width, height: cropedCGImage.height))
+        #endif
+        #if canImport(UIKit)
+        return CrossImage(cgImage: cropedCGImage)
+        #endif
+    }
+    
+    func resize(to size: CGSize) -> CrossImage? {
+        guard let cgImage = cgImage else {
+            return nil
+        }
+        let width: Int = Int(size.width)
+        let height: Int = Int(size.height)
 
-//Basic Extension
+        let bytesPerPixel = cgImage.bitsPerPixel / cgImage.bitsPerComponent
+        let destBytesPerRow = width * bytesPerPixel
+
+        guard let colorSpace = cgImage.colorSpace else {
+            return nil
+        }
+        
+        guard let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: cgImage.bitsPerComponent, bytesPerRow: destBytesPerRow, space: colorSpace, bitmapInfo: cgImage.alphaInfo.rawValue) else {
+            return nil
+        }
+
+        context.interpolationQuality = .high
+        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+        
+        guard let resizedCGImage = context.makeImage() else {
+            return nil
+        }
+
+        #if canImport(AppKit)
+        return context.makeImage().flatMap { CrossImage(cgImage: $0, size: size) }
+        #endif
+        #if canImport(UIKit)
+        return CrossImage(cgImage: resizedCGImage)
+        #endif
+    }
+}
+
 #if canImport(AppKit)
+//Basic Extension
 extension NSImage {
     func pngData() -> Data? {
         guard let cgImage = cgImage(forProposedRect: nil, context: nil, hints: nil) else {
@@ -46,127 +114,10 @@ extension NSView {
 }
 #endif
 
-//resize
-extension CrossImage {
-    #if canImport(AppKit)
-    var cgImage: CGImage? {
-        cgImage(forProposedRect: nil, context: nil, hints: nil)
-    }
-    #endif
-    
-    func crop(ratio: CGFloat) -> CrossImage? {
-        var newSize: CGSize = .zero
-        if size.width / size.height > ratio {
-            newSize = CGSize(width: size.height * ratio, height: size.height)
-        }else {
-            newSize = CGSize(width: size.width, height: size.width / ratio)
-        }
-     
-        var rect: CGRect = .zero
-        rect.size.width  = size.width
-        rect.size.height = size.height
-        rect.origin.x    = (newSize.width - size.width ) / 2.0
-        rect.origin.y    = (newSize.height - size.height ) / 2.0
-         
-        return crop(rect: rect)
-    }
-    
-    func crop(rect: CGRect) -> CrossImage? {
-        guard let cropedCGImage = cgImage?.cropping(to: rect) else {
-            return nil
-        }
-        #if canImport(AppKit)
-        return CrossImage(cgImage: cropedCGImage, size: .init(width: cropedCGImage.width, height: cropedCGImage.height))
-        #endif
-        #if canImport(UIKit)
-        return CrossImage(cgImage: cropedCGImage)
-        #endif
-    }
-    
-    func resize(to size: CGSize) -> CrossImage? {
-        guard let cgImage = cgImage else {
-            return nil
-        }
-        let width: Int = Int(size.width)
-        let height: Int = Int(size.height)
-
-        let bytesPerPixel = cgImage.bitsPerPixel / cgImage.bitsPerComponent
-        let destBytesPerRow = width * bytesPerPixel
-
-
-        guard let colorSpace = cgImage.colorSpace else { return nil }
-        guard let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: cgImage.bitsPerComponent, bytesPerRow: destBytesPerRow, space: colorSpace, bitmapInfo: cgImage.alphaInfo.rawValue) else { return nil }
-
-        context.interpolationQuality = .high
-        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
-        
-        guard let resizedCGImage = context.makeImage() else {
-            return nil
-        }
-
-        #if canImport(AppKit)
-        return context.makeImage().flatMap { CrossImage(cgImage: $0, size: size) }
-        #endif
-        #if canImport(UIKit)
-        return CrossImage(cgImage: resizedCGImage)
-        #endif
-    }
-}
-
 #if canImport(UIKit)
 import UIKit
 
 extension UIImage {
-    // 截取部分图片
-    func cropAtRect(rect: CGRect) -> UIImage {
-            var rect = rect
-        rect.origin.x *= UIScreen.main.scale
-        rect.origin.y *= UIScreen.main.scale
-        rect.size.width *= UIScreen.main.scale
-        rect.size.height *= UIScreen.main.scale
-            let imageRef = self.cgImage!.cropping(to: rect)
-            let image = UIImage(cgImage: imageRef!, scale: self.scale, orientation: self.imageOrientation)
-            return image
-    }
-    
-    //将图片裁剪成指定比例（多余部分自动删除）
-    func crop(ratio: CGFloat) -> UIImage {
-        //计算最终尺寸
-        var newSize:CGSize!
-        if size.width/size.height > ratio {
-            newSize = CGSize(width: size.height * ratio, height: size.height)
-        }else {
-            newSize = CGSize(width: size.width, height: size.width / ratio)
-        }
-     
-        ////图片绘制区域
-        var rect = CGRect.zero
-        rect.size.width  = size.width
-        rect.size.height = size.height
-        rect.origin.x    = (newSize.width - size.width ) / 2.0
-        rect.origin.y    = (newSize.height - size.height ) / 2.0
-         
-        //绘制并获取最终图片
-        UIGraphicsBeginImageContextWithOptions(newSize, false, UIScreen.main.scale)
-//        UIGraphicsBeginImageContext(newSize)
-        draw(in: rect)
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-         
-        return scaledImage!
-    }
-    
-    func resize(_ newSize: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(newSize, false, UIScreen.main.scale)
-//        UIGraphicsBeginImageContext(newSize)
-        //draw resized image on Context
-        self.draw(in: CGRect(x: 0, y: 0, width: newSize.width.rounded(.up), height: newSize.height.rounded(.up)))
-        //create UIImage
-        let resizedImg = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return resizedImg!
-    }
-    
     func compress(maxOfBytes: Int64) -> UIImage? {
         guard let data = compressData(maxOfBytes: maxOfBytes) else {
             return nil

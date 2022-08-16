@@ -10,8 +10,6 @@ import SwiftUI
 import WidgetKit
 
 struct XWWidgetHomeView: View {
-    let client = QWeatherAPI(key: "e2f0d3d36f50457785587c459a5843b4")
-
     @EnvironmentObject private var store: Store
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
@@ -68,20 +66,9 @@ struct XWWidgetHomeView: View {
                 }
             }
         }
+        #if os(iOS)
         .navigationBarHidden(true)
-    }
-    
-    func getPostionItems(family: WidgetFamily) -> [WidgetPosition] {
-        switch family {
-        case .systemSmall:
-            return .smallItems
-        case .systemMedium:
-            return .mediumItems
-        case .systemLarge:
-            return .largeItems
-        default:
-            return []
-        }
+        #endif
     }
     
     func request() {

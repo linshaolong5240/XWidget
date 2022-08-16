@@ -42,9 +42,6 @@ public struct WidgetPreviewModifierDemoView: View {
     }
 }
 
-#if canImport(UIKit)
-import UIKit
-
 #if DEBUG
 struct WidgetPreviewModifier_Previews: PreviewProvider {
     static var previews: some View {
@@ -55,7 +52,7 @@ struct WidgetPreviewModifier_Previews: PreviewProvider {
 
 extension WidgetFamily {
     var widgetSmallSize: CGSize {
-        switch UIScreen.screenType  {
+        switch CrossScreen.screenType  {
         case .iPhone_428_926:   return CGSize(width: 170, height: 170)
         case .iPhone_414_896:   return CGSize(width: 169, height: 169)
         case .iPhone_414_736:   return CGSize(width: 157, height: 157)//CGSize(width: 159, height: 159)
@@ -64,12 +61,12 @@ extension WidgetFamily {
         case .iPhone_375_667:   return CGSize(width: 148, height: 148)
         case .iPhone_360_780_375_812_mini:   return CGSize(width: 149, height: 149)//CGSize(width: 155, height: 155)
         case .iPhone_320_568:   return CGSize(width: 141, height: 141)
-        case .unknown:          return .zero
+        case .unknown:          return miniSize
         }
     }
     
     var widgetMediumSize: CGSize {
-        switch UIScreen.screenType  {
+        switch CrossScreen.screenType  {
         case .iPhone_428_926:   return CGSize(width: 364, height: 170)
         case .iPhone_414_896:   return CGSize(width: 360, height: 169)
         case .iPhone_414_736:   return CGSize(width: 348, height: 157)//CGSize(width: 348, height: 159)
@@ -78,12 +75,12 @@ extension WidgetFamily {
         case .iPhone_375_667:   return CGSize(width: 321, height: 148)
         case .iPhone_360_780_375_812_mini:   return CGSize(width: 316, height: 149)//CGSize(width: 329, height: 155)
         case .iPhone_320_568:   return CGSize(width: 292, height: 141)
-        case .unknown:          return .zero
+        case .unknown:          return miniSize
         }
    }
     
     var widgetLargeSize: CGSize {
-        switch UIScreen.screenType  {
+        switch CrossScreen.screenType  {
         case .iPhone_428_926:   return CGSize(width: 364, height: 382)
         case .iPhone_414_896:   return CGSize(width: 360, height: 379)
         case .iPhone_414_736:   return CGSize(width: 348, height: 351)//CGSize(width: 348, height: 357)
@@ -92,7 +89,7 @@ extension WidgetFamily {
         case .iPhone_375_667:   return CGSize(width: 321, height: 324)
         case .iPhone_360_780_375_812_mini:   return CGSize(width: 316, height: 331.2)//CGSize(width: 329, height: 345)
         case .iPhone_320_568:   return CGSize(width: 292, height: 311)
-        case .unknown:          return .zero
+        case .unknown:          return miniSize
         }
    }
     
@@ -143,8 +140,4 @@ extension WidgetFamily {
         @unknown default: return 11
         }
     }
-    
 }
-
-#endif
-

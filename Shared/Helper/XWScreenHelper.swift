@@ -7,17 +7,21 @@
 //
 
 import Foundation
-import CoreGraphics
-import UIKit
+import SwiftUI
 
-extension UIScreen {
-    public static var screenType: ScreenType { screenInfo.type }
-    public static var screenInfo: ScreenInfo {
-        .init(size: self.main.bounds.size)
+extension CrossScreen {
+    public static var screenType: XWScreenType { screenInfo.type }
+    public static var screenInfo: XWScreenInfo {
+        #if os(iOS)
+        return XWScreenInfo(size: main.bounds.size)
+        #endif
+        #if os(macOS)
+        return XWScreenInfo(size: main?.frame.size ?? .zero)
+        #endif
     }
 }
 
-public enum ScreenType {
+public enum XWScreenType {
     case iPhone_428_926//iPhone 13 Pro Max
     case iPhone_414_896//iPhone 11 Pro Max
     case iPhone_414_736//iPhone 8 Plus
@@ -29,14 +33,16 @@ public enum ScreenType {
     case unknown
 }
 
-public struct ScreenInfo {
-    var type: ScreenType
+public struct XWScreenInfo {
+    var type: XWScreenType
     var size: CGSize
     
+    #if os(iOS)
     //Fixed iPhone mini
     static var isMini: Bool {
         UIScreen.main.nativeBounds.size.equalTo(CGSize(width: 1080, height: 2340))
     }
+    #endif
     
     init(size: CGSize) {
         switch size {
@@ -53,13 +59,18 @@ public struct ScreenInfo {
             self.type = .iPhone_390_844
             self.size = CGSize(width: 390, height: 844)
         case CGSize(width: 375, height: 812):
-            if ScreenInfo.isMini {
+            #if os(iOS)
+            if XWScreenInfo.isMini {
                 self.type = .iPhone_360_780_375_812_mini
                 self.size = CGSize(width: 360, height: 780)
             } else {
                 self.type = .iPhone_375_812
                 self.size = CGSize(width: 375, height: 812)
             }
+            #else
+            self.type = .iPhone_375_812
+            self.size = CGSize(width: 375, height: 812)
+            #endif
         case CGSize(width: 375, height: 667):
             self.type = .iPhone_375_667
             self.size = CGSize(width: 375, height: 667)
@@ -75,5 +86,3 @@ public struct ScreenInfo {
         }
     }
 }
-
-
